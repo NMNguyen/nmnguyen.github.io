@@ -1,0 +1,624 @@
+<style>
+    /*doccument style*/
+    .main-page-wrapper {
+        overflow-x:hidden;
+        background-color: #ffffff;
+    }
+
+    .theme-inner-banner {
+        border-bottom: 1px solid #f2f2f2;
+        margin-bottom: 100px;
+    }
+
+    .theme-inner-banner .bg {
+        background: url(../vn/assests/img/blog-header.jpg) no-repeat center;
+        background-size: cover;
+    }
+
+    .theme-inner-banner .bg .opacity {
+        background: rgba(251,253,255,0.8);
+        text-align: center;
+        padding: 75px 0 85px 0;
+    }
+
+    .theme-inner-banner .bg .opacity h2 {
+        font-weight: 600;
+        font-size: 40px;
+    }
+
+    @media (max-width: 768px) {
+        .theme-inner-banner .bg .opacity {
+            background: rgba(251, 253, 255, 0.8);
+            text-align: center;
+            padding: 0px 0 0px 0;
+        }
+
+        .theme-inner-banner {
+            border-bottom: 1px solid #f2f2f2;
+            margin-bottom: 10px;
+        }
+    }
+
+    .page-pagination li:last-child a:hover {color: #fff;}
+
+    .blog-list .latest-news .single-news .post h4 a {
+        font-size: 28px;
+    }
+
+    .blog-grid {
+        width: 100%;
+    }
+
+    .blog-large-sidebar {
+        width: 100%;
+        margin-top: 71px;
+    }
+
+    @media (max-width: 991px) {
+        .blog-large-sidebar {
+            padding: 0 0 50px 0;
+        }
+    }
+
+    /*----------------------------- Latest News ----------------------*/
+    .latest-news .theme-title {margin: 100px 0 55px 0;}
+    .latest-news .single-news img {border-radius: 5px 5px 0 0;}
+    .latest-news .single-news  {margin-bottom: 65px;}
+    .latest-news .single-news .post {
+        border: 1px solid #eeeeee;
+        border-top: none;
+        border-radius: 0 0 5px 5px;
+        padding: 20px 30px 28px 30px;
+    }
+    .latest-news .single-news .post span {
+        display: block;
+        margin-bottom: 8px;
+    }
+    .latest-news .single-news .post h4 a {
+        font-weight: 700;
+        line-height: 30px;
+        color: #282828;
+        display: block;
+        margin: 0 0 8px 0;
+    }
+
+    /*------------------------------------ Transition --------------------------------*/
+    .tran3s,.hesperiden.tparrows,.panel-heading:before,.service-style-one .single-service div span,.service-style-one .single-service p,
+    .service-style-one .single-service i,.service-style-one .single-service:before,.owl-theme .owl-nav [class*=owl-],.theme-button,
+    .bootstrap-select.btn-group .dropdown-menu li a,.contact-style-two .opacity .wrapper .form-wrapper button i,.mixitUp-menu ul li:before,
+    .details-page-wrapper .details-page-sidebar .sidebar-list li a:before,.details-page-wrapper .details-page-sidebar .carousel-indicators li,
+    .project-details .project-info .text ul li:before,.nav-tabs > li > a  {
+        -webkit-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+    }
+
+    /*---------------------------- Blog Details -------------------------*/
+    .blog-details-page .single-news>img {border-radius: 5px 5px 0 0;}
+    .blog-details-page .single-news .post {
+        border: 1px solid #eeeeee;
+        border-top: none;
+        border-radius: 0 0 5px 5px;
+        padding: 20px 30px 0 30px;
+        margin-bottom: 70px;
+    }
+    .blog-details-page .single-news .post>span {
+        display: block;
+        margin-bottom: 8px;
+    }
+    .blog-details-page .single-news .post h4 {
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 32px;
+        color: #282828;
+        display: block;
+        margin: 0 0 15px 0;
+    }
+    .blog-details-page .single-news .post h5 {margin:40px 0 20px 0;}
+    .blog-details-page .single-news .post .mark-text {
+        background: url(../images/home/shape3.png) no-repeat center center;
+        background-color: #f3f3f3;
+        margin: 20px 0 28px 0;
+        padding: 28px 10px 40px 10px;
+        position: relative;
+        text-align: center;
+        border-radius: 3px;
+    }
+    .blog-details-page .single-news .post .mark-text p {
+        font-size: 36px;
+        font-weight: 300;
+        color: #212121;
+        line-height: 46px;
+    }
+    .blog-details-page .single-news .post .mark-text span {
+        font-style: italic;
+        position: absolute;
+        right: 50px;
+        bottom: 28px;
+    }
+    .blog-details-page .single-news .post .share-option {
+        margin: 40px -30px 0 -30px;
+        border-top: 1px solid #eeeeee;
+    }
+    .blog-details-page .single-news .post .share-option ul li {display: inline-block;}
+    .blog-details-page .single-news .post .share-option ul.float-left {padding-left: 20px; line-height: 55px;}
+    .blog-details-page .single-news .post .share-option ul.float-left li a {
+        line-height: 30px;
+        border-radius: 3px;
+        font-size: 14px;
+        color: #7a7a7a;
+        background: #f3f3f3;
+        margin-right: 8px;
+        padding: 0 20px;
+    }
+    .blog-details-page .single-news .post .share-option ul.float-left li a:hover,
+    .blog-details-page .single-news .post .share-option ul.float-right li a:hover {color: #fff;}
+    .blog-details-page .single-news .post .share-option ul.float-right li a {
+        width: 54px;
+        text-align: center;
+        border-left: 1px solid #eeeeee;
+        line-height: 55px;
+        color: #cdd2da;
+        margin-left: -4px;
+    }
+    .blog-details-page .single-news .post .share-option ul.float-right li:first-child {
+        color: #25292f;
+        line-height: 55px;
+        margin-right: 15px;
+        font-weight: 600;
+    }
+    .blog-details-page h2 {
+        font-size: 36px;
+        font-weight: 700;
+    }
+    .blog-details-page .comment-section h2 {margin-bottom: 38px;}
+    .blog-details-page .comment-section .single-comment img {
+        width: 80px;
+        height: 80px;
+    }
+    .blog-details-page .comment-section .single-comment .comment {
+        width: calc(100% - 80px);
+        padding-left: 20px;
+        position: relative;
+    }
+    .blog-details-page .comment-section .single-comment .comment h6 {
+        font-weight: 500;
+    }
+    .blog-details-page .comment-section .single-comment .comment span { font-size: 14px;}
+    .blog-details-page .comment-section .single-comment .comment p {
+        margin-top: 10px;
+    }
+    .blog-details-page .comment-section .single-comment {
+        border-top: 1px solid #ebebeb;
+        padding: 28px 0 25px;
+    }
+    .blog-details-page .comment-section .single-comment:last-child {border-bottom: 1px solid #ebebeb;}
+    .blog-details-page .comment-section .single-comment.reply-comment {margin-left: 110px;}
+    .blog-details-page .comment-section .single-comment button {
+        width: 60px;
+        height: 30px;
+        background: #f4f4f4;
+        font-size: 13px;
+        color: #b1b1b1;
+        border-radius: 3px;
+        font-weight: 600;
+        position: absolute;
+        top:0;
+        right: 0;
+        text-transform: uppercase;
+    }
+    .blog-details-page .comment-section .single-comment button:hover {color:#fff;}
+    .blog-details-page .comment-section {padding-bottom: 60px;}
+    .blog-details-page .leave-reply-area  p {
+        font-size: 18px;
+        margin: 8px 0 35px 0;
+    }
+    .blog-details-page .leave-reply-area input,
+    .blog-details-page .leave-reply-area textarea {
+        background: #f7fafa;
+        border: 1px solid #f3f3f3;
+        margin-bottom: 20px;
+        padding: 0 20px;
+        width: 100%;
+        max-width: 100%;
+    }
+    .blog-details-page .leave-reply-area input {
+        height: 60px;
+    }
+    .blog-details-page .leave-reply-area textarea {
+        height: 230px;
+        padding: 20px;
+        max-height: 230px;
+        resize:none;
+    }
+    .blog-details-page .leave-reply-area button {
+        width: 172px;
+        height: 50px;
+        color: #fff;
+        font-size: 15px;
+        text-transform: uppercase;
+        color: #fff;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        border-radius: 3px;
+    }
+
+    .feature-img-post {
+        height: 196px;
+    }
+
+    .post-title {
+        font-size: 40px;
+        font-weight: 600;
+        text-align: center;
+        padding-bottom: 30px;
+    }
+
+    .strong-text {
+        font-weight: 700;
+    }
+
+    .margin-auto {
+        margin: auto;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+</style>
+
+<div class="main-page-wrapper">
+
+<!--    <div class="theme-inner-banner">
+        <div class="bg">
+            <div class="opacity">
+                <div class="container">
+                    <h2>Tài liệu</h2>
+                </div>
+            </div> &lt;!&ndash; /.opacity &ndash;&gt;
+        </div> &lt;!&ndash; /.bg &ndash;&gt;
+    </div>-->
+
+    <div class="blog-grid blog-inner-page">
+        <div class="container">
+            <div class="blog-large-sidebar latest-news">
+                <div class="single-news">
+                    <div class="post">
+                        <h1 class="post-title">Cách tính KPI phù hợp cho từng nhân viên</h1>
+
+                        <p>
+                            Hiện nay, rất nhiều doanh nghiệp tại Việt Nam dùng KPI để đo lường hiệu
+                            suất công việc. Tuy nhiên, không phải đơn vị nào cũng biết cách tính KPI
+                            đúng.
+                        </p>
+                        <p>
+                            Muốn có kết quả đo lường chuẩn xác, mọi KPI được thiết lập đều cần đảm bảo:
+                        </p>
+                        <h2 class="strong-text">
+                            Tính mục đích:
+                        </h2>
+                        <ul type="disc">
+                            <li>
+                                Giúp nhân viên hiểu rõ vai trò, nhiệm vụ, cũng như đóng góp của mình
+                                đối với tập thể. Từ đó, chủ động phân chia thời gian và nguồn lực để
+                                làm việc hiệu quả.
+                            </li>
+                            <li>
+                                Giúp đánh giá chính xác hiệu suất làm việc của nhân viên qua từng giai
+                                đoạn. Từ đó, không ngừng cải tiến để nâng cao năng suất.
+                            </li>
+                        </ul>
+                        <h2 class="strong-text">
+                            Tính nguyên tắc:
+                        </h2>
+                        <p>
+                            Nội dung của từng bộ KPI có thể thay đổi linh hoạt tùy theo mục tiêu công
+                            việc của mỗi cá nhân, phòng ban, tổ chức tại từng giai đoạn. Trái lại, các
+                            nguyên tắc tính KPI cần phải được thống nhất và thực hiện đồng bộ, triệt
+                            để.
+                        </p>
+                        <p>
+                            Cụ thể, cách tính KPI được coi là đúng khi tuân theo 2 nguyên tắc quan
+                            trọng nhất sau đây.
+                        </p>
+                        <p>
+                            <strong> </strong>
+                        </p>
+                        <h3 class="strong-text">
+                            1. Nguyên tắc phân chia KPI theo trọng số.
+                        </h3>
+                        <p>
+                            Một nhân viên có thể đảm nhiệm cùng lúc 5-7 đầu công việc. Song, không phải
+                            tất cả những phần việc này đều quan trọng và có đóng góp ngang nhau cho tổ
+                            chức.
+                        </p>
+                        <p>
+                            Nhìn chung, mọi công việc đều có thể phân chia về 3 nhóm chính như sau:
+                        </p>
+                        <ul type="disc">
+                            <li>
+                                Nhóm A: tốn <strong><em>nhiều thời gian</em></strong> để thực hiện,        <strong><em>ảnh hưởng nhiều</em></strong> đến mục tiêu chung.
+                            </li>
+                            <li>
+                                Nhóm B: tốn <strong><em>ít thời gian</em></strong> để thực hiện,        <strong><em>ảnh hưởng nhiều</em></strong> đến mục tiêu chung HOẶC/VÀ
+                                tốn <strong><em>nhiều thời gian</em></strong> để thực hiện,        <strong><em>ảnh hưởng ít</em></strong> đến mục tiêu chung.
+                            </li>
+                            <li>
+                                Nhóm C: tốn <strong><em>ít thời gian</em></strong>,        <strong><em>ảnh hưởng ít</em></strong>.
+                            </li>
+                        </ul>
+                        <p align="center">
+                            <img src="../../assests/img/cach-tinh-kpi/cach_tinh_kpi_1.jpg" alt="cách tính kpi phù hợp cho từng nhân viên"/>
+                        </p>
+                        <p>
+                            Như vậy, trọng số của mỗi nhóm công việc sẽ được tính bằng đơn vị %, và dựa
+                            trên mức độ quan trọng/đóng góp của chúng.
+                        </p>
+                        <p>
+                            <em>
+                                Ví dụ, nhân viên X có 5 KPI, trong đó 2 KPI thuộc nhóm A, 2 KPI thuộc
+                                nhóm B, và 1 KPI thuộc nhóm C. Như vậy, cách tính KPI dựa trên trọng số
+                                có thể như sau:
+                            </em>
+                        </p>
+                        <table border="0" cellspacing="0" cellpadding="0">
+                            <tbody>
+                            <tr>
+                                <td width="72" valign="top">
+                                    <p align="center">
+                                        <strong>KPI</strong>
+                                    </p>
+                                </td>
+                                <td width="113" valign="top">
+                                    <p align="center">
+                                        <strong>Nhóm KPI</strong>
+                                    </p>
+                                </td>
+                                <td width="121" valign="top">
+                                    <p align="center">
+                                        <strong>Trọng số KPI</strong>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="72" valign="top">
+                                    <p align="center">
+                                        (1)
+                                    </p>
+                                </td>
+                                <td width="113" valign="top">
+                                    <p align="center">
+                                        A
+                                    </p>
+                                </td>
+                                <td width="121" valign="top">
+                                    <p align="center">
+                                        30%
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="72" valign="top">
+                                    <p align="center">
+                                        (2)
+                                    </p>
+                                </td>
+                                <td width="113" valign="top">
+                                    <p align="center">
+                                        A
+                                    </p>
+                                </td>
+                                <td width="121" valign="top">
+                                    <p align="center">
+                                        30%
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="72" valign="top">
+                                    <p align="center">
+                                        (3)
+                                    </p>
+                                </td>
+                                <td width="113" valign="top">
+                                    <p align="center">
+                                        B
+                                    </p>
+                                </td>
+                                <td width="121" valign="top">
+                                    <p align="center">
+                                        15%
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="72" valign="top">
+                                    <p align="center">
+                                        (4)
+                                    </p>
+                                </td>
+                                <td width="113" valign="top">
+                                    <p align="center">
+                                        B
+                                    </p>
+                                </td>
+                                <td width="121" valign="top">
+                                    <p align="center">
+                                        15%
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="72" valign="top">
+                                    <p align="center">
+                                        (5)
+                                    </p>
+                                </td>
+                                <td width="113" valign="top">
+                                    <p align="center">
+                                        C
+                                    </p>
+                                </td>
+                                <td width="121" valign="top">
+                                    <p align="center">
+                                        10%
+                                    </p>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <h3 class="strong-text">
+                            2. Nguyên tắc tính điểm của KPI theo hiệu suất và giai đoạn.
+                        </h3>
+                        <p>
+                            Đo lường hiệu suất sao cho không cảm tính, không ước lượng bừa bãi, nhưng
+                            cũng không sa đà vào chi tiết vụn vặt – là một câu hỏi khó.
+                        </p>
+                        <p align="center">
+                            <img src="../../assests/img/cach-tinh-kpi/cach_tinh_kpi_2.jpg" alt="cách tính kpi cho từng nhân viên"/>
+                        </p>
+                        <p>
+                            Cloudjet giới thiệu một số cách tính điểm KPI (phổ biến) theo các căn cứ:
+                        </p>
+                        <ul type="disc">
+                            <li>
+                                <strong>Cách tính KPI theo hiệu suất </strong>
+                                <strong>thành phần</strong>
+                                , với công thức:
+                            </li>
+                        </ul>
+                        <p align="center">
+                            Hiệu suất KPI thành phần = (Kết quả thực tế / Mục tiêu) * Trọng số
+                        </p>
+                        <p>
+                            <em>
+                                Ví dụ, nhân viên X có KPI (1) thuộc nhóm A, có trọng số 30%. Mục tiêu
+                                đặt ra cho KPI (1) là 100, kết quả đạt được thực tế là 90.
+                            </em>
+                        </p>
+                        <p>
+                            <em>Như vậy, hiệu suất KPI (1) của nhân viên X sẽ được tính như sau:</em>
+                        </p>
+                        <table border="0" cellspacing="0" cellpadding="0">
+                            <tbody>
+                            <tr>
+                                <td width="303" valign="top">
+                                    <p align="center">
+                                        <em>(90 / 100) * 30 = 27 (đơn vị:%)</em>
+                                    </p>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <p>
+                            <em></em>
+                        </p>
+                        <ul type="disc">
+                            <li>
+                                <strong>Cách tính KPI theo hiệu suất tổng,</strong>
+                                với công thức:
+                            </li>
+                        </ul>
+                        <p align="center">
+                            Hiệu suất KPI tổng = Hiệu suất KPI thành phần (1) + Hiệu suất KPI thành
+                            phần (2) + …
+                        </p>
+                        <p>
+                            <em>
+                                Ví dụ: nhân viên X có tổng cộng 3 KPI, trong đó: KPI (1) đạt 27%, KPI
+                                (2) đạt 36%, KPI (3) đạt 25%.
+                            </em>
+                        </p>
+                        <p>
+                            <em>Như vậy, hiệu suất làm việc của nhân viên X sẽ là:</em>
+                        </p>
+                        <table border="0" cellspacing="0" cellpadding="0">
+                            <tbody>
+                            <tr>
+                                <td width="303" valign="top">
+                                    <p align="center">
+                                        <em>27 + 36 + 25 = 88 (đơn vị: %)</em>
+                                    </p>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <p>
+                            <em></em>
+                        </p>
+                        <p align="center">
+                            <em></em>
+                        </p>
+                        <ul type="disc">
+                            <li>
+                                <strong>Cách tính KPI theo giai đoạn thời gian</strong>
+                                : điểm KPI của mỗi quý được tính dựa trên điểm KPI của các tháng trong
+                                quý đó.
+                            </li>
+                        </ul>
+                        <p align="center">
+                            <img src="../../assests/img/cach-tinh-kpi/cach_tinh_kpi_3.jpg" alt="cách tính kpi phù hợp"/>
+                        </p>
+                        <h3 class="strong-text">
+                            Lưu ý:
+                        </h3>
+                        <p>
+                            Cách tính KPI dựa theo 2 nguyên tắc nói trên có thể coi là phương pháp phổ
+                            biến và tương đối chuẩn mực. Tuy nhiên, vẫn có những thách thức đặt ra, đòi
+                            hỏi doanh nghiệp cần linh hoạt cũng như có kinh nghiệm trong quá trình áp
+                            dụng để đạt hiệu quả tốt nhất.
+                        </p>
+                        <p>
+                            <em>
+                                Ví dụ, khi tính KPI theo trọng số, không phải doanh nghiệp nào cũng có
+                                đủ dữ liệu để xác định tầm quan trọng của từng KPI ngay từ đầu.
+                            </em>
+                        </p>
+                        <p>
+                            <em>
+                                Trong trường hợp này, doanh nghiệp sẽ cần thời gian để điều chỉnh dần
+                                trọng số sau một vài kì đánh giá KPI cho phù hợp hơn.
+                            </em>
+                        </p>
+                        <p>
+                            <em></em>
+                        </p>
+                        <p>
+                            <strong>
+                                Cloudjet KPI hiện là giải pháp chiến lược của Cloudjet Solutions giúp
+                                các doanh nghiệp xây dựng bộ KPI hoàn chỉnh cho cá nhân và phòng ban để
+                                từ đó đánh giá KPI chính xác, đồng thời cung cấp hệ thống đo lường giúp
+                                việc quản lý KPI đơn giản và hiệu quả.
+                            </strong>
+                        </p>
+                        <p>
+                            <strong></strong>
+                        </p>
+                        <p>
+                            <strong>CLOUDJET SOLUTIONS CORP.</strong>
+                        </p>
+                        <p>
+                            Website: www.cloudjetkpi.com
+                        </p>
+                        <p>
+                            ĐT: (028) 66 808 662 hoặc (028) 665 99 998
+                        </p>
+                        <p>
+                            Email:
+                            <a href="mailto:hello@cloudjetsolutions.com">
+                                hello@cloudjetsolutions.com
+                            </a>
+                        </p>
+
+                    </div> <!-- /.post -->
+                </div> <!-- /.single-news -->
+            </div> <!-- /.blog-large-sidebar -->
+        </div> <!-- /.container -->
+    </div> <!-- /.blog-grid -->
+</div>
+<script>
+    $(document).ready(function(){
+        $('#library-active').addClass('active');
+    })
+</script>

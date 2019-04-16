@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <%- include head.ejs %>
+</head>
+
+
+<body class="side-menu-push">
+<div id="fb-root"></div>
+<!-- Thang test-->
+<script>(function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=564647290251137";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+<div class="none-display">
+    <!-- Google Code for Global English Cloudjet KPI List -->
+    <!-- Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. For instructions on adding this tag and more information on the above requirements, read the setup guide: google.com/ads/remarketingsetup -->
+    <script type="text/javascript">
+        /* <![CDATA[ */
+        var google_conversion_id = 1047959242;
+        var google_conversion_label = "yBSTCNvfoV8Qyq3a8wM";
+        var google_custom_params = window.google_tag_params;
+        var google_remarketing_only = true;
+        /* ]]> */
+    </script>
+    <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+    </script>
+    <noscript>
+        <div class="inline-display">
+            <img class="img-no-border" alt="cloudjet solutions" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1047959242/?value=1.00&amp;currency_code=USD&amp;label=yBSTCNvfoV8Qyq3a8wM&amp;guid=ON&amp;script=0"
+            />
+        </div>
+    </noscript>
+
+</div>
+<!-- Start Header -->
+<%- include header.ejs %>
+<!-- End Header -->
+
+<!-- Start Body -->
+<%- yield %>
+<!-- End Body -->
+
+<!-- Start Footer -->
+<%- include footer.ejs %>
+<!-- End Footer -->
+
+</body>
+
+</html>

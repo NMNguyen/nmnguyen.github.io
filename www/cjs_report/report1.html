@@ -1,0 +1,229 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Report 1</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet"
+          type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,700,700italic&subset=latin,vietnamese,latin-ext'
+          rel='stylesheet' type='text/css'>
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link href="css/style.css" rel="stylesheet" media="screen">
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+</head>
+
+<body>
+<header class="header">
+    <div class="">
+        <div class="col-md-5 title-head">Kết quả đánh giá quý 2</div>
+        <div class="title-head title-report">Mục tiêu công ty quý 2</div>
+        <div class="clearfix"></div>
+    </div>
+</header>
+
+<!-- Services Section -->
+<section id="main-1">
+    <div class="">
+        <div class="col-md-6">
+            <table class="table table-striped">
+                <thead>
+                <tr class="rp1-head1">
+                    <th colspan="7">Kết quả đánh giá Quý 2</th>
+                </tr>
+                <tr class="rp1-head2">
+                    <th></th>
+                    <th></th>
+                    <th>Nhóm 1</th>
+                    <th>Nhóm 2</th>
+                    <th>Nhóm 3</th>
+                    <th>Nhóm 4</th>
+                    <th>Nhóm 5</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="txt-bold">
+                    <td></td>
+                    <td></td>
+                    <td><30%</td>
+                    <td>30-50%</td>
+                    <td>50-80%</td>
+                    <td>80-100%</td>
+                    <td><100%</td>
+                </tr>
+                <tr class="txt-bold">
+                    <td>Tất cả KPIs</td>
+                    <td>40<br> (100%)</td>
+                    <td>8 (19%)</td>
+                    <td>1 (2%)</td>
+                    <td>12 (27%)</td>
+                    <td>21 (47%)</td>
+                    <td>2 (4%)</td>
+                </tr>
+                <tr>
+                    <td>Tài chính</td>
+                    <td>40<br>(100%)</td>
+                    <td>8<br>(19%)</td>
+                    <td>1<br>(2%)</td>
+                    <td>12<br>(27%)</td>
+                    <td>21<br>(47%)</td>
+                    <td>2<br>(4%)</td>
+                </tr>
+                <tr>
+                    <td>Khách hàng</td>
+                    <td>40<br>(100%)</td>
+                    <td>8<br>(19%)</td>
+                    <td>1<br>(2%)</td>
+                    <td>12<br>(27%)</td>
+                    <td>21<br>(47%)</td>
+                    <td>2<br>(4%)</td>
+                </tr>
+                <tr>
+                    <td>Quy trình</td>
+                    <td>40<br>(100%)</td>
+                    <td>8<br>(19%)</td>
+                    <td>1<br>(2%)</td>
+                    <td>12<br>(27%)</td>
+                    <td>21<br>(47%)</td>
+                    <td>2<br>(4%)</td>
+                </tr>
+                <tr>
+                    <td>Học tập & <br> phát triển</td>
+                    <td>40<br>(100%)</td>
+                    <td>8<br>(19%)</td>
+                    <td>1<br>(2%)</td>
+                    <td>12<br>(27%)</td>
+                    <td>21<br>(47%)</td>
+                    <td>2<br>(4%)</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-6">
+
+            <div class="chart1">
+                <div class="chart-title">Hiệu suất toàn công ty</div>
+                <div class="chart1Container" id="chart1Container">
+                </div>
+            </div>
+
+            <div class="chart1">
+                <div class="chart-title chart2-title">Số lượng KPI từng khía cạnh BSC</div>
+                <div class="chart1Container" id="chart2Container">
+                </div>
+            </div>
+
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
+    <div class="note-footer">
+        <ul>
+            <li>
+                Số lượng KPI quy trình khá nhiều so với các khía cạnh khác
+            </li>
+            <li>
+                Tỷ lệ các KPI có kết quả <=30% chiếm 20% tổng KPI
+            </li>
+        </ul>
+    </div>
+</section>
+
+<script type="text/javascript">
+
+    /* ------------ Chart hieu suat -----------*/
+    google.load('visualization', '1', {packages: ['corechart', 'bar']});
+    google.setOnLoadCallback(drawBasic);
+
+    function drawBasic() {
+
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', '');
+        data.addColumn('number', ' ');
+
+        data.addRows([
+            ['Nhóm 1', 21],
+            ['Nhóm 2', 1],
+            ['Nhóm 3', 8],
+            ['Nhóm 4', 12],
+            ['Nhóm 5', 2]
+        ]);
+
+        var options = {
+            title: 'Hiệu suất toàn công ty',
+            titlePosition: 'none',
+            legend: { position: "none" },
+            vAxis: {
+                title: ' ',
+                gridlines: {count: 5}
+            },
+            tooltip: {trigger: 'none'},
+            height: 230,
+            bar: { groupWidth: "30%" },
+            colors: ['#4baae8']
+        };
+
+        var chart = new google.visualization.ColumnChart(
+                document.getElementById('chart1Container'));
+        chart.draw(data, options);
+    }
+
+
+    /* ------------ Chart Số lượng KPI từng khía cạnh BSC -----------*/
+    //google.load('visualization', '1', {packages: ['corechart', 'bar']});
+    google.setOnLoadCallback(drawBasic2);
+
+    function drawBasic2() {
+
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', '');
+        data.addColumn('number', ' ');
+
+        data.addRows([
+            ['Tài chính', 9],
+            ['Khách hàng', 7],
+            ['Quy trình', 19],
+            ['Học tập & phát triển', 9]
+        ]);
+
+        var options = {
+            title: 'Số lượng KPI từng khía cạnh BSC',
+            titlePosition: 'none',
+            legend: { position: "none" },
+            vAxis: {
+                title: ' ',
+                gridlines: {count: 5}
+            },
+            tooltip: {trigger: 'none'},
+            height: 230,
+            bar: { groupWidth: "30%" },
+            colors: ['#008bb3']
+        };
+
+        var chart = new google.visualization.ColumnChart(
+                document.getElementById('chart2Container'));
+        chart.draw(data, options);
+    }
+
+</script>
+
+<!-- jQuery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>

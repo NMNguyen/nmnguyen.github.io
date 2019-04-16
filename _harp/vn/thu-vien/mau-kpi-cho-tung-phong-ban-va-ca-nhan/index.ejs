@@ -1,0 +1,1693 @@
+<style>
+    /*doccument style*/
+    .main-page-wrapper {
+        overflow-x:hidden;
+        background-color: #ffffff;
+    }
+
+    .theme-inner-banner {
+        border-bottom: 1px solid #f2f2f2;
+        margin-bottom: 100px;
+    }
+
+    .theme-inner-banner .bg {
+        background: url(../vn/assests/img/blog-header.jpg) no-repeat center;
+        background-size: cover;
+    }
+
+    .theme-inner-banner .bg .opacity {
+        background: rgba(251,253,255,0.8);
+        text-align: center;
+        padding: 75px 0 85px 0;
+    }
+
+    .theme-inner-banner .bg .opacity h2 {
+        font-weight: 600;
+        font-size: 40px;
+    }
+
+    @media (max-width: 768px) {
+        .theme-inner-banner .bg .opacity {
+            background: rgba(251, 253, 255, 0.8);
+            text-align: center;
+            padding: 0px 0 0px 0;
+        }
+
+        .theme-inner-banner {
+            border-bottom: 1px solid #f2f2f2;
+            margin-bottom: 10px;
+        }
+    }
+
+    .page-pagination li:last-child a:hover {color: #fff;}
+
+    .blog-list .latest-news .single-news .post h4 a {
+        font-size: 28px;
+    }
+
+    .blog-grid {
+        width: 100%;
+    }
+
+    .blog-large-sidebar {
+        width: 100%;
+        margin-top: 71px;
+    }
+
+    @media (max-width: 991px) {
+        .blog-large-sidebar {
+            padding: 0 0 50px 0;
+        }
+    }
+
+    /*----------------------------- Latest News ----------------------*/
+    .latest-news .theme-title {margin: 100px 0 55px 0;}
+    .latest-news .single-news img {border-radius: 5px 5px 0 0;}
+    .latest-news .single-news  {margin-bottom: 65px;}
+    .latest-news .single-news .post {
+        border: 1px solid #eeeeee;
+        border-top: none;
+        border-radius: 0 0 5px 5px;
+        padding: 20px 30px 28px 30px;
+    }
+    .latest-news .single-news .post span {
+        display: block;
+        margin-bottom: 8px;
+    }
+    .latest-news .single-news .post h4 a {
+        font-weight: 700;
+        line-height: 30px;
+        color: #282828;
+        display: block;
+        margin: 0 0 8px 0;
+    }
+
+    /*------------------------------------ Transition --------------------------------*/
+    .tran3s,.hesperiden.tparrows,.panel-heading:before,.service-style-one .single-service div span,.service-style-one .single-service p,
+    .service-style-one .single-service i,.service-style-one .single-service:before,.owl-theme .owl-nav [class*=owl-],.theme-button,
+    .bootstrap-select.btn-group .dropdown-menu li a,.contact-style-two .opacity .wrapper .form-wrapper button i,.mixitUp-menu ul li:before,
+    .details-page-wrapper .details-page-sidebar .sidebar-list li a:before,.details-page-wrapper .details-page-sidebar .carousel-indicators li,
+    .project-details .project-info .text ul li:before,.nav-tabs > li > a  {
+        -webkit-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+    }
+
+    /*---------------------------- Blog Details -------------------------*/
+    .blog-details-page .single-news>img {border-radius: 5px 5px 0 0;}
+    .blog-details-page .single-news .post {
+        border: 1px solid #eeeeee;
+        border-top: none;
+        border-radius: 0 0 5px 5px;
+        padding: 20px 30px 0 30px;
+        margin-bottom: 70px;
+    }
+    .blog-details-page .single-news .post>span {
+        display: block;
+        margin-bottom: 8px;
+    }
+    .blog-details-page .single-news .post h4 {
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 32px;
+        color: #282828;
+        display: block;
+        margin: 0 0 15px 0;
+    }
+    .blog-details-page .single-news .post h5 {margin:40px 0 20px 0;}
+    .blog-details-page .single-news .post .mark-text {
+        background: url(../images/home/shape3.png) no-repeat center center;
+        background-color: #f3f3f3;
+        margin: 20px 0 28px 0;
+        padding: 28px 10px 40px 10px;
+        position: relative;
+        text-align: center;
+        border-radius: 3px;
+    }
+    .blog-details-page .single-news .post .mark-text p {
+        font-size: 36px;
+        font-weight: 300;
+        color: #212121;
+        line-height: 46px;
+    }
+    .blog-details-page .single-news .post .mark-text span {
+        font-style: italic;
+        position: absolute;
+        right: 50px;
+        bottom: 28px;
+    }
+    .blog-details-page .single-news .post .share-option {
+        margin: 40px -30px 0 -30px;
+        border-top: 1px solid #eeeeee;
+    }
+    .blog-details-page .single-news .post .share-option ul li {display: inline-block;}
+    .blog-details-page .single-news .post .share-option ul.float-left {padding-left: 20px; line-height: 55px;}
+    .blog-details-page .single-news .post .share-option ul.float-left li a {
+        line-height: 30px;
+        border-radius: 3px;
+        font-size: 14px;
+        color: #7a7a7a;
+        background: #f3f3f3;
+        margin-right: 8px;
+        padding: 0 20px;
+    }
+    .blog-details-page .single-news .post .share-option ul.float-left li a:hover,
+    .blog-details-page .single-news .post .share-option ul.float-right li a:hover {color: #fff;}
+    .blog-details-page .single-news .post .share-option ul.float-right li a {
+        width: 54px;
+        text-align: center;
+        border-left: 1px solid #eeeeee;
+        line-height: 55px;
+        color: #cdd2da;
+        margin-left: -4px;
+    }
+    .blog-details-page .single-news .post .share-option ul.float-right li:first-child {
+        color: #25292f;
+        line-height: 55px;
+        margin-right: 15px;
+        font-weight: 600;
+    }
+    .blog-details-page h2 {
+        font-size: 36px;
+        font-weight: 700;
+    }
+    .blog-details-page .comment-section h2 {margin-bottom: 38px;}
+    .blog-details-page .comment-section .single-comment img {
+        width: 80px;
+        height: 80px;
+    }
+    .blog-details-page .comment-section .single-comment .comment {
+        width: calc(100% - 80px);
+        padding-left: 20px;
+        position: relative;
+    }
+    .blog-details-page .comment-section .single-comment .comment h6 {
+        font-weight: 500;
+    }
+    .blog-details-page .comment-section .single-comment .comment span { font-size: 14px;}
+    .blog-details-page .comment-section .single-comment .comment p {
+        margin-top: 10px;
+    }
+    .blog-details-page .comment-section .single-comment {
+        border-top: 1px solid #ebebeb;
+        padding: 28px 0 25px;
+    }
+    .blog-details-page .comment-section .single-comment:last-child {border-bottom: 1px solid #ebebeb;}
+    .blog-details-page .comment-section .single-comment.reply-comment {margin-left: 110px;}
+    .blog-details-page .comment-section .single-comment button {
+        width: 60px;
+        height: 30px;
+        background: #f4f4f4;
+        font-size: 13px;
+        color: #b1b1b1;
+        border-radius: 3px;
+        font-weight: 600;
+        position: absolute;
+        top:0;
+        right: 0;
+        text-transform: uppercase;
+    }
+    .blog-details-page .comment-section .single-comment button:hover {color:#fff;}
+    .blog-details-page .comment-section {padding-bottom: 60px;}
+    .blog-details-page .leave-reply-area  p {
+        font-size: 18px;
+        margin: 8px 0 35px 0;
+    }
+    .blog-details-page .leave-reply-area input,
+    .blog-details-page .leave-reply-area textarea {
+        background: #f7fafa;
+        border: 1px solid #f3f3f3;
+        margin-bottom: 20px;
+        padding: 0 20px;
+        width: 100%;
+        max-width: 100%;
+    }
+    .blog-details-page .leave-reply-area input {
+        height: 60px;
+    }
+    .blog-details-page .leave-reply-area textarea {
+        height: 230px;
+        padding: 20px;
+        max-height: 230px;
+        resize:none;
+    }
+    .blog-details-page .leave-reply-area button {
+        width: 172px;
+        height: 50px;
+        color: #fff;
+        font-size: 15px;
+        text-transform: uppercase;
+        color: #fff;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        border-radius: 3px;
+    }
+
+    .feature-img-post {
+        height: 196px;
+    }
+
+    .post-title {
+        font-size: 40px;
+        font-weight: 600;
+        text-align: center;
+        padding-bottom: 30px;
+    }
+
+    .strong-text {
+        font-weight: 700;
+    }
+
+    .margin-auto {
+        margin: auto;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+    .footer-section{
+        margin-top: 0px;
+    }
+
+</style>
+
+<div class="main-page-wrapper">
+
+<!--
+    <div class="theme-inner-banner">
+        <div class="bg">
+            <div class="opacity">
+                <div class="container">
+                    <h1 class="title">Tài liệu</h1>
+                </div>
+            </div> &lt;!&ndash; /.opacity &ndash;&gt;
+        </div> &lt;!&ndash; /.bg &ndash;&gt;
+    </div>
+-->
+
+    <div class="blog-grid blog-inner-page">
+        <div class="container">
+            <div class="blog-large-sidebar latest-news">
+                <div class="single-news">
+                    <div class="post">
+                        <h1 class="post-title">Mẫu KPI cho từng phòng ban và cá nhân</h1>
+
+                        <p>
+                            Hiện có rất nhiều biểu mẫu và công thức tính KPI cho cá nhân, phòng ban cho
+                            công ty – tùy theo lĩnh vực, mục tiêu, cũng như quy mô kinh doanh. Sau đây
+                            là ví dụ về một số mẫu KPI giúp bạn có cái nhìn sơ lược về thiết lập KPI
+                            cho phòng ban và nhân viên của mình.
+                        </p>
+
+                        <h2 class="strong-text">
+                            1. Mẫu KPI cho phòng ban
+                        </h2>
+
+                        <p>
+                            Khi xác lập KPI phòng ban, cần cân nhắc 2 yếu tố quan trọng:
+                        </p>
+                        <ul type="disc">
+                            <li>
+                                <em>Đặc tính chuyên môn của phòng ban:</em>
+                                chuyên về nhân sự, marketing, tài chính, hay chăm sóc khách hàng… Điều
+                                này sẽ quyết định nội dung các nhóm KPI chính của mỗi phòng ban.
+                            </li>
+                        </ul>
+                        <ul type="disc">
+                            <li>
+                                <em>Vai trò của phòng ban đối với mục tiêu chung:</em>
+                                trực tiếp thực hiện, chịu trách nhiệm cuối cùng, hay chỉ hỗ trợ / tư
+                                vấn góp ý. Điều này giúp xác định trọng số của mỗi nhóm KPI phòng ban.
+                            </li>
+                        </ul>
+
+                        <h3 class="strong-text">
+                            Tham khảo một số KPI mẫu cho phòng Nhân sự
+                        </h3>
+
+                        <ul type="disc">
+                            <li>
+                                Các nhóm chỉ số KPI chính:
+                            </li>
+                        </ul>
+                        <p>
+                            ◦ Tuyển dụng: chi phí và thời gian trung bình để tuyển dụng mỗi vị trí, số
+                            lượng CV nhận được trên mỗi kênh, tỉ lệ các cuộc phỏng vấn được thực hiện
+                            trên lượng CV, tỉ lệ nhân viên mới trên toàn bộ nhân sự…
+                        </p>
+                        <p>
+                            ◦ Đào tạo: chi phí đào tạo so với tổng tiền lương, tỉ lệ nhân viên được đào
+                            tạo trên tổng số nhân sự, số giờ đào tạo trên mỗi nhân viên, chỉ số hài
+                            lòng của nhân viên sau khi được đào tạo…
+                        </p>
+                        <p>
+                            ◦ Các chỉ số khác, như: hiệu quả làm việc, mức độ trung thành của nhân
+                            viên, lương thưởng, an toàn lao động...
+                        </p>
+                        <ul type="disc">
+                            <li>
+                                Trọng số của các nhóm KPI: thay đổi tùy theo mục tiêu chiến lược của
+                                công ty. Ví dụ, công ty đang cần mở rộng quy mô, thì nhóm chỉ số KPI về
+                                tuyển dụng sẽ có trọng số cao nhất.
+                            </li>
+                        </ul>
+                        <p align="center">
+                            <strong>
+                                <img
+                                        width="518"
+                                        height="267"
+                                        src="../../assests/img/mau-kpi/mau_kpi_1.jpg"
+                                        alt="mẫu kpi cho từng phòng ban và cá nhân"
+                                />
+                            </strong>
+                        </p>
+                        <p align="center">
+                            <em>Mẫu KPI cho phòng Nhân sự</em>
+                        </p>
+                        <p align="center">
+                            <em></em>
+                        </p>
+                        <p align="center">
+                            <em></em>
+                        </p>
+
+                        <h3 class="strong-text">
+                            Tham khảo một số KPI mẫu cho bộ phận IT
+                        </h3>
+
+                        <ul type="disc">
+                            <li>
+                                Các nhóm chỉ số KPI chính:
+                            </li>
+                        </ul>
+                        <p>
+                            ◦ Chỉ số dành cho công việc hỗ trợ: Tỉ lệ than phiền nội bộ, tỉ lệ số lần
+                            xử lý trong lần đầu tiên …
+                        </p>
+                        <p>
+                            ◦ Chỉ số dành cho việc vận hành hệ thống: tỉ lệ thời gian hệ thống down do
+                            sự cố, thời gian trung bình để xử lý sự cố, tỉ lệ sự cố lặp lại trên tổng
+                            số các sự cố…
+                        </p>
+                        <p>
+                            ◦ Chỉ số tài chính liên quan đến IT: Tỉ lệ chi phí tiết kiệm được nhờ ứng
+                            dụng IT, độ chính xác trong thông số chi phí về dịch vụ IT
+                        </p>
+                        <p>
+                            Lưu ý cân nhắc trong việc lựa chọn KPI để tránh trường hợp sử dụng không
+                            hiệu quả, ảnh hưởng đến tâm lý và năng suất nhân viên
+                        </p>
+
+                        <h2 class="strong-text">
+                            2. Mẫu KPI cho cá nhân
+                        </h2>
+
+                        <p>
+                            Tiêu chí xây dựng KPI cá nhân sẽ có sự khác biệt, tùy theo vị trí của cá
+                            nhân trong tổ chức (cấp quản lý, hay chỉ là nhân viên thông thường). Cụ
+                            thể:
+                        </p>
+                        <ul type="disc">
+                            <li>
+                                <em>KPI cấp trưởng phòng</em>
+                                thường từ 10-15 KPIs, và được phân chia từ KPI chiến lược của công ty
+                                đưa xuống. Sau đó, những KPI này có thể được chia tiếp xuống cho nhân
+                                viên cấp dưới.
+                            </li>
+                            <li>
+                                <em>KPI cấp nhân viên</em>
+                                thường chỉ từ 3-5 KPIs, và là KPI chuyên môn.
+                            </li>
+                        </ul>
+                        <p align="center">
+                            <img src="../../assests/img/mau-kpi/mau_kpi_2.jpg" alt="mẫu kpi cho từng phòng ban"/>
+                        </p>
+                        <p align="center">
+                            <em>
+                                KPI mẫu có thể áp dụng cho 1 số vị trí đặc thù như kế toán, nhân sự…
+                            </em>
+                        </p>
+                        <h3 class="strong-text">
+                            Tham khảo mẫu KPI cho vị trí Trưởng phòng Tài chính Kế toán
+                        </h3>
+                        <table class="margin-auto" border="1" cellspacing="0" cellpadding="0" width="679">
+                            <tbody class="text-center">
+                            <tr>
+                                <td width="45" valign="top">
+                                    <p align="center">
+                                        <strong></strong>
+                                    </p>
+                                    <p align="center">
+                                        <strong></strong>
+                                    </p>
+                                    <p align="center">
+                                        <strong>A</strong>
+                                    </p>
+                                </td>
+                                <td width="107" valign="top">
+                                    <p align="center">
+                                        <strong>Mục tiêu cá nhân</strong>
+                                    </p>
+                                    <p align="center">
+                                        <strong></strong>
+                                    </p>
+                                    <p align="center">
+                                        <strong>Gắn liền với KPI bộ phận</strong>
+                                    </p>
+                                </td>
+                                <td width="9" valign="top">
+                                    <p align="center">
+                                        <strong></strong>
+                                    </p>
+                                </td>
+                                <td width="174" colspan="5" valign="top">
+                                    <p align="center">
+                                        <strong></strong>
+                                    </p>
+                                    <p align="center">
+                                        <strong>Mục tiêu trong kỳ</strong>
+                                    </p>
+                                </td>
+                                <td width="64" valign="top">
+                                    <p align="center">
+                                        <strong></strong>
+                                    </p>
+                                    <p align="center">
+                                        <strong>Trọng số</strong>
+                                    </p>
+                                </td>
+                                <td width="72" valign="top">
+                                    <p align="center">
+                                        <strong></strong>
+                                    </p>
+                                    <p align="center">
+                                        <strong>Kết quả thực hiện</strong>
+                                    </p>
+                                </td>
+                                <td width="9" valign="top">
+                                </td>
+                                <td width="94" valign="top">
+                                    <p align="center">
+                                        <strong></strong>
+                                    </p>
+                                    <p align="center">
+                                        <strong>Tỉ lệ thực hiện</strong>
+                                    </p>
+                                </td>
+                                <td width="106" valign="top">
+                                    <p align="center">
+                                        <strong></strong>
+                                    </p>
+                                    <p align="center">
+                                        <strong>Kết quả thực hiện tổng hợp</strong>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="45" valign="top">
+                                    <p>
+                                        <strong></strong>
+                                    </p>
+                                </td>
+                                <td width="107" valign="top">
+                                    <p>
+                                        <strong></strong>
+                                    </p>
+                                </td>
+                                <td width="9" valign="top">
+                                    <p>
+                                        <strong></strong>
+                                    </p>
+                                </td>
+                                <td width="34" valign="top">
+                                    <p>
+                                        <strong></strong>
+                                    </p>
+                                </td>
+                                <td width="38" valign="top">
+                                    <p>
+                                        <strong>Tháng</strong>
+                                    </p>
+                                </td>
+                                <td width="38" valign="top">
+                                    <p>
+                                        <strong>Năm</strong>
+                                    </p>
+                                </td>
+                                <td width="30" valign="top">
+                                    <p>
+                                        <strong>ĐVT</strong>
+                                    </p>
+                                </td>
+                                <td width="34" valign="top">
+                                    <p>
+                                        <strong></strong>
+                                    </p>
+                                </td>
+                                <td width="64" valign="top">
+                                    <p>
+                                        <strong></strong>
+                                    </p>
+                                </td>
+                                <td width="72" valign="top">
+                                    <p>
+                                        <strong></strong>
+                                    </p>
+                                </td>
+                                <td width="9" valign="top">
+                                    <p>
+                                        <strong></strong>
+                                    </p>
+                                </td>
+                                <td width="94" valign="top">
+                                    <p align="center">
+                                        <strong>10 = 9 / 4</strong>
+                                    </p>
+                                </td>
+                                <td width="106" valign="top">
+                                    <p align="center">
+                                        <strong>11 = 10 x 3</strong>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="45" valign="top">
+                                    <p align="center">
+                                        1
+                                    </p>
+                                </td>
+                                <td width="107" valign="top">
+                                    <p>
+                                        Giảm chi phí tồn kho
+                                    </p>
+                                </td>
+                                <td width="9" valign="top">
+                                </td>
+                                <td width="34" valign="top">
+                                </td>
+                                <td width="38" valign="top">
+                                </td>
+                                <td width="38" valign="top">
+                                    <p>
+                                        60
+                                    </p>
+                                </td>
+                                <td width="30" valign="top">
+                                    <p>
+                                        tỉ
+                                    </p>
+                                </td>
+                                <td width="34" valign="top">
+                                </td>
+                                <td width="64" valign="top">
+                                    <p align="right">
+                                        10%
+                                    </p>
+                                </td>
+                                <td width="72" valign="top">
+                                    <p align="right">
+                                        45.0
+                                    </p>
+                                </td>
+                                <td width="9" valign="top">
+                                </td>
+                                <td width="94" valign="top">
+                                    <p align="right">
+                                        7.5%
+                                    </p>
+                                </td>
+                                <td width="106" valign="top">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="45" valign="top">
+                                    <p align="center">
+                                        2
+                                    </p>
+                                </td>
+                                <td width="107" valign="top">
+                                    <p>
+                                        Giảm chi phí mua hàng
+                                    </p>
+                                </td>
+                                <td width="9" valign="top">
+                                </td>
+                                <td width="34" valign="top">
+                                </td>
+                                <td width="38" valign="top">
+                                </td>
+                                <td width="38" valign="top">
+                                    <p>
+                                        97
+                                    </p>
+                                </td>
+                                <td width="30" valign="top">
+                                    <p>
+                                        %
+                                    </p>
+                                </td>
+                                <td width="34" valign="top">
+                                </td>
+                                <td width="64" valign="top">
+                                    <p align="right">
+                                        10%
+                                    </p>
+                                </td>
+                                <td width="72" valign="top">
+                                    <p align="right">
+                                        97.0
+                                    </p>
+                                </td>
+                                <td width="9" valign="top">
+                                </td>
+                                <td width="94" valign="top">
+                                    <p align="right">
+                                        10.0%
+                                    </p>
+                                </td>
+                                <td width="106" valign="top">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="45" valign="top">
+                                    <p align="center">
+                                        3
+                                    </p>
+                                </td>
+                                <td width="107" valign="top">
+                                    <p>
+                                        Nâng cao năng lực quản lý của phòng
+                                    </p>
+                                </td>
+                                <td width="9" valign="top">
+                                </td>
+                                <td width="34" valign="top">
+                                </td>
+                                <td width="38" valign="top">
+                                </td>
+                                <td width="38" valign="top">
+                                    <p>
+                                        1
+                                    </p>
+                                </td>
+                                <td width="30" valign="top">
+                                    <p>
+                                        người
+                                    </p>
+                                </td>
+                                <td width="34" valign="top">
+                                </td>
+                                <td width="64" valign="top">
+                                    <p align="right">
+                                        15%
+                                    </p>
+                                </td>
+                                <td width="72" valign="top">
+                                    <p align="right">
+                                        1.0
+                                    </p>
+                                </td>
+                                <td width="9" valign="top">
+                                </td>
+                                <td width="94" valign="top">
+                                    <p align="right">
+                                        15.0%
+                                    </p>
+                                </td>
+                                <td width="106" valign="top">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="45" valign="top">
+                                    <p align="center">
+                                        4
+                                    </p>
+                                </td>
+                                <td width="107" valign="top">
+                                    <p>
+                                        Xây dựng chuẩn năng lực của phòng
+                                    </p>
+                                </td>
+                                <td width="9" valign="top">
+                                </td>
+                                <td width="34" valign="top">
+                                </td>
+                                <td width="38" valign="top">
+                                </td>
+                                <td width="38" valign="top">
+                                    <p>
+                                        6
+                                    </p>
+                                </td>
+                                <td width="30" valign="top">
+                                    <p>
+                                        người
+                                    </p>
+                                </td>
+                                <td width="34" valign="top">
+                                </td>
+                                <td width="64" valign="top">
+                                    <p align="right">
+                                        10%
+                                    </p>
+                                </td>
+                                <td width="72" valign="top">
+                                    <p align="right">
+                                        6.0
+                                    </p>
+                                </td>
+                                <td width="9" valign="top">
+                                </td>
+                                <td width="94" valign="top">
+                                    <p align="right">
+                                        10.0%
+                                    </p>
+                                </td>
+                                <td width="106" valign="top">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="45" valign="top">
+                                    <p align="center">
+                                        5
+                                    </p>
+                                </td>
+                                <td width="107" valign="top">
+                                    <p>
+                                        Hoàn thành các báo cáo tài chính – chính xác và đúng hạn
+                                        (98%)
+                                    </p>
+                                </td>
+                                <td width="9" valign="top">
+                                </td>
+                                <td width="34" valign="top">
+                                </td>
+                                <td width="38" valign="top">
+                                </td>
+                                <td width="38" valign="top">
+                                    <p>
+                                        98
+                                    </p>
+                                </td>
+                                <td width="30" valign="top">
+                                    <p>
+                                        %
+                                    </p>
+                                </td>
+                                <td width="34" valign="top">
+                                </td>
+                                <td width="64" valign="top">
+                                    <p align="right">
+                                        30%
+                                    </p>
+                                </td>
+                                <td width="72" valign="top">
+                                    <p align="right">
+                                        98.0
+                                    </p>
+                                </td>
+                                <td width="9" valign="top">
+                                </td>
+                                <td width="94" valign="top">
+                                    <p align="right">
+                                        30.0%
+                                    </p>
+                                </td>
+                                <td width="106" valign="top">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="45" valign="top">
+                                    <p align="center">
+                                        6
+                                    </p>
+                                </td>
+                                <td width="107" valign="top">
+                                    <p>
+                                        Chi tiêu dòng tiền
+                                    </p>
+                                </td>
+                                <td width="9" valign="top">
+                                </td>
+                                <td width="34" valign="top">
+                                </td>
+                                <td width="38" valign="top">
+                                    <p>
+                                        99.0
+                                    </p>
+                                </td>
+                                <td width="38" valign="top">
+                                </td>
+                                <td width="30" valign="top">
+                                    <p>
+                                        %
+                                    </p>
+                                </td>
+                                <td width="34" valign="top">
+                                </td>
+                                <td width="64" valign="top">
+                                    <p align="right">
+                                        5%
+                                    </p>
+                                </td>
+                                <td width="72" valign="top">
+                                    <p align="right">
+                                        97.0
+                                    </p>
+                                </td>
+                                <td width="9" valign="top">
+                                </td>
+                                <td width="94" valign="top">
+                                    <p align="right">
+                                        4.9%
+                                    </p>
+                                </td>
+                                <td width="106" valign="top">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="45" valign="top">
+                                    <p align="center">
+                                        7
+                                    </p>
+                                </td>
+                                <td width="107" valign="top">
+                                    <p>
+                                        Độ chính xác trong dự báo ngân sách
+                                    </p>
+                                </td>
+                                <td width="9" valign="top">
+                                </td>
+                                <td width="34" valign="top">
+                                </td>
+                                <td width="38" valign="top">
+                                </td>
+                                <td width="38" valign="top">
+                                    <p>
+                                        95
+                                    </p>
+                                </td>
+                                <td width="30" valign="top">
+                                    <p>
+                                        %
+                                    </p>
+                                </td>
+                                <td width="34" valign="top">
+                                </td>
+                                <td width="64" valign="top">
+                                    <p align="right">
+                                        10%
+                                    </p>
+                                </td>
+                                <td width="72" valign="top">
+                                    <p align="right">
+                                        93.0
+                                    </p>
+                                </td>
+                                <td width="9" valign="top">
+                                </td>
+                                <td width="94" valign="top">
+                                    <p align="right">
+                                        9.8%
+                                    </p>
+                                </td>
+                                <td width="106" valign="top">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="45" valign="top">
+                                    <p align="center">
+                                        8
+                                    </p>
+                                </td>
+                                <td width="107" valign="top">
+                                    <p>
+                                        Mục tiêu đào tạo nhân sự
+                                    </p>
+                                </td>
+                                <td width="9" valign="top">
+                                </td>
+                                <td width="34" valign="top">
+                                </td>
+                                <td width="38" valign="top">
+                                </td>
+                                <td width="38" valign="top">
+                                    <p>
+                                        10
+                                    </p>
+                                </td>
+                                <td width="30" valign="top">
+                                    <p>
+                                        ngày
+                                    </p>
+                                </td>
+                                <td width="34" valign="top">
+                                </td>
+                                <td width="64" valign="top">
+                                    <p align="right">
+                                        10%
+                                    </p>
+                                </td>
+                                <td width="72" valign="top">
+                                    <p align="right">
+                                        7.0
+                                    </p>
+                                </td>
+                                <td width="9" valign="top">
+                                </td>
+                                <td width="94" valign="top">
+                                    <p align="right">
+                                        7.0%
+                                    </p>
+                                </td>
+                                <td width="106" valign="top">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="152" colspan="2" valign="top">
+                                    <p>
+                                        <strong>Kết quả mục tiêu cá nhân</strong>
+                                    </p>
+                                    <p>
+                                        <strong></strong>
+                                    </p>
+                                </td>
+                                <td width="9" valign="top">
+                                    <p>
+                                        <strong></strong>
+                                    </p>
+                                </td>
+                                <td width="34" valign="top">
+                                    <p>
+                                        <strong></strong>
+                                    </p>
+                                    <p>
+                                        <strong>60%</strong>
+                                    </p>
+                                </td>
+                                <td width="38" valign="top">
+                                    <p>
+                                        <strong></strong>
+                                    </p>
+                                </td>
+                                <td width="38" valign="top">
+                                    <p>
+                                        <strong></strong>
+                                    </p>
+                                </td>
+                                <td width="30" valign="top">
+                                    <p>
+                                        <strong></strong>
+                                    </p>
+                                </td>
+                                <td width="34" valign="top">
+                                    <p>
+                                        <strong></strong>
+                                    </p>
+                                </td>
+                                <td width="64" valign="top">
+                                    <p align="right">
+                                        <strong></strong>
+                                    </p>
+                                    <p align="right">
+                                        <strong>100%</strong>
+                                    </p>
+                                </td>
+                                <td width="72" valign="top">
+                                    <p>
+                                        <strong></strong>
+                                    </p>
+                                </td>
+                                <td width="9" valign="top">
+                                    <p>
+                                        <strong></strong>
+                                    </p>
+                                </td>
+                                <td width="94" valign="top">
+                                    <p align="right">
+                                        <strong></strong>
+                                    </p>
+                                    <p align="right">
+                                        <strong>94.2%</strong>
+                                    </p>
+                                </td>
+                                <td width="106" valign="top">
+                                    <p align="right">
+                                        <strong></strong>
+                                    </p>
+                                    <p align="right">
+                                        <strong>56.5%</strong>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="45" rowspan="2" valign="top">
+                                    <p align="center">
+                                        <strong></strong>
+                                    </p>
+                                    <p align="center">
+                                        <strong>B</strong>
+                                    </p>
+                                </td>
+                                <td width="107" rowspan="2" valign="top">
+                                    <p>
+                                        <strong></strong>
+                                    </p>
+                                    <p>
+                                        <strong>Công việc thường xuyên và thái độ</strong>
+                                    </p>
+                                </td>
+                                <td width="9" valign="top">
+                                    <p align="center">
+                                        <strong></strong>
+                                    </p>
+                                </td>
+                                <td width="174" colspan="5" valign="top">
+                                    <p align="center">
+                                        <strong>Tần suất đánh giá</strong>
+                                    </p>
+                                </td>
+                                <td width="64" valign="top">
+                                    <p align="center">
+                                        <strong>Trọng số</strong>
+                                    </p>
+                                </td>
+                                <td width="72" valign="top">
+                                    <p align="center">
+                                        <strong>Điểm đánh giá (trên 5)</strong>
+                                    </p>
+                                </td>
+                                <td width="9" valign="top">
+                                    <p align="center">
+                                        <strong></strong>
+                                    </p>
+                                </td>
+                                <td width="94" valign="top">
+                                    <p align="center">
+                                        <strong>Tỉ lệ thực hiện</strong>
+                                    </p>
+                                </td>
+                                <td width="106" valign="top">
+                                    <p align="center">
+                                        <strong>Kết quả thực hiện tổng hợp</strong>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="9" valign="top">
+                                    <p align="center">
+                                        <strong></strong>
+                                    </p>
+                                </td>
+                                <td width="34" valign="top">
+                                    <p align="center">
+                                        <strong>Ngày</strong>
+                                    </p>
+                                </td>
+                                <td width="38" valign="top">
+                                    <p align="center">
+                                        <strong>Tuần</strong>
+                                    </p>
+                                </td>
+                                <td width="38" valign="top">
+                                    <p align="center">
+                                        <strong>Tháng</strong>
+                                    </p>
+                                </td>
+                                <td width="30" valign="top">
+                                    <p align="center">
+                                        <strong>Quý</strong>
+                                    </p>
+                                </td>
+                                <td width="34" valign="top">
+                                    <p align="center">
+                                        <strong>Năm</strong>
+                                    </p>
+                                </td>
+                                <td width="64" valign="top">
+                                    <p align="center">
+                                        <strong></strong>
+                                    </p>
+                                </td>
+                                <td width="72" valign="top">
+                                    <p align="center">
+                                        <strong></strong>
+                                    </p>
+                                </td>
+                                <td width="9" valign="top">
+                                    <p align="center">
+                                        <strong></strong>
+                                    </p>
+                                </td>
+                                <td width="94" valign="top">
+                                    <p align="center">
+                                        <strong>10 = 9 / 4</strong>
+                                    </p>
+                                </td>
+                                <td width="106" valign="top">
+                                    <p align="center">
+                                        <strong>11 = 10 x 3</strong>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="45" valign="top">
+                                    <p align="center">
+                                        1
+                                    </p>
+                                </td>
+                                <td width="107" valign="top">
+                                    <p>
+                                        Kiểm soát số liệu trên hệ thống ERP kịp thời, chính xác
+                                    </p>
+                                </td>
+                                <td width="9" valign="top">
+                                </td>
+                                <td width="34" valign="top">
+                                </td>
+                                <td width="38" valign="top">
+                                </td>
+                                <td width="38" valign="top">
+                                    <p align="center">
+                                        x
+                                    </p>
+                                </td>
+                                <td width="30" valign="top">
+                                </td>
+                                <td width="34" valign="top">
+                                </td>
+                                <td width="64" valign="top">
+                                    <p align="right">
+                                        40%
+                                    </p>
+                                </td>
+                                <td width="72" valign="top">
+                                    <p align="right">
+                                        5
+                                    </p>
+                                </td>
+                                <td width="9" valign="top">
+                                </td>
+                                <td width="94" valign="top">
+                                    <p align="right">
+                                        40.0%
+                                    </p>
+                                </td>
+                                <td width="106" valign="top">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="45" valign="top">
+                                    <p align="center">
+                                        2
+                                    </p>
+                                </td>
+                                <td width="107" valign="top">
+                                    <p>
+                                        Hoạch định chiến lược về tài chính, cân đối dòng tiền
+                                    </p>
+                                </td>
+                                <td width="9" valign="top">
+                                </td>
+                                <td width="34" valign="top">
+                                </td>
+                                <td width="38" valign="top">
+                                </td>
+                                <td width="38" valign="top">
+                                    <p align="center">
+                                        x
+                                    </p>
+                                </td>
+                                <td width="30" valign="top">
+                                </td>
+                                <td width="34" valign="top">
+                                </td>
+                                <td width="64" valign="top">
+                                    <p align="right">
+                                        30%
+                                    </p>
+                                </td>
+                                <td width="72" valign="top">
+                                    <p align="right">
+                                        4
+                                    </p>
+                                </td>
+                                <td width="9" valign="top">
+                                </td>
+                                <td width="94" valign="top">
+                                    <p align="right">
+                                        24.0%
+                                    </p>
+                                </td>
+                                <td width="106" valign="top">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="45" valign="top">
+                                    <p align="center">
+                                        3
+                                    </p>
+                                </td>
+                                <td width="107" valign="top">
+                                    <p>
+                                        Tinh thần chia sẻ, hỗ trợ đồng nghiệp
+                                    </p>
+                                </td>
+                                <td width="9" valign="top">
+                                </td>
+                                <td width="34" valign="top">
+                                </td>
+                                <td width="38" valign="top">
+                                </td>
+                                <td width="38" valign="top">
+                                    <p align="center">
+                                        x
+                                    </p>
+                                </td>
+                                <td width="30" valign="top">
+                                </td>
+                                <td width="34" valign="top">
+                                </td>
+                                <td width="64" valign="top">
+                                    <p align="right">
+                                        30%
+                                    </p>
+                                </td>
+                                <td width="72" valign="top">
+                                    <p align="right">
+                                        1
+                                    </p>
+                                </td>
+                                <td width="9" valign="top">
+                                </td>
+                                <td width="94" valign="top">
+                                    <p align="right">
+                                        6.0%
+                                    </p>
+                                </td>
+                                <td width="106" valign="top">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="152" colspan="2" valign="top">
+                                    <p align="center">
+                                        <strong></strong>
+                                    </p>
+                                    <p>
+                                        <strong>Kết quả công việc thường xuyên</strong>
+                                    </p>
+                                    <p>
+                                        <strong></strong>
+                                    </p>
+                                </td>
+                                <td width="9" valign="top">
+                                    <p align="center">
+                                        <strong></strong>
+                                    </p>
+                                </td>
+                                <td width="34" valign="top">
+                                    <p align="center">
+                                        <strong></strong>
+                                    </p>
+                                    <p align="center">
+                                        <strong>30%</strong>
+                                    </p>
+                                </td>
+                                <td width="38" valign="top">
+                                    <p align="center">
+                                        <strong></strong>
+                                    </p>
+                                </td>
+                                <td width="38" valign="top">
+                                    <p align="center">
+                                        <strong></strong>
+                                    </p>
+                                </td>
+                                <td width="30" valign="top">
+                                    <p align="center">
+                                        <strong></strong>
+                                    </p>
+                                </td>
+                                <td width="34" valign="top">
+                                    <p align="center">
+                                        <strong></strong>
+                                    </p>
+                                </td>
+                                <td width="64" valign="top">
+                                    <p align="right">
+                                        <strong></strong>
+                                    </p>
+                                    <p align="right">
+                                        <strong>100%</strong>
+                                    </p>
+                                </td>
+                                <td width="72" valign="top">
+                                    <p align="right">
+                                        <strong></strong>
+                                    </p>
+                                </td>
+                                <td width="9" valign="top">
+                                    <p align="center">
+                                        <strong></strong>
+                                    </p>
+                                </td>
+                                <td width="94" valign="top">
+                                    <p align="right">
+                                        <strong></strong>
+                                    </p>
+                                    <p align="right">
+                                        <strong>70.0%</strong>
+                                    </p>
+                                </td>
+                                <td width="106" valign="top">
+                                    <p align="right">
+                                        <strong></strong>
+                                    </p>
+                                    <p align="right">
+                                        <strong>21.0%</strong>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="45" rowspan="2" valign="top">
+                                    <p align="center">
+                                        <strong></strong>
+                                    </p>
+                                    <p align="center">
+                                        <strong>C</strong>
+                                    </p>
+                                </td>
+                                <td width="107" rowspan="2" valign="top">
+                                    <p>
+                                        <strong></strong>
+                                    </p>
+                                    <p>
+                                        <strong>Công việc đột xuất</strong>
+                                    </p>
+                                </td>
+                                <td width="9" valign="top">
+                                    <p align="center">
+                                        <strong></strong>
+                                    </p>
+                                </td>
+                                <td width="174" colspan="5" valign="top">
+                                    <p align="center">
+                                        <strong>Tần suất đánh giá</strong>
+                                    </p>
+                                </td>
+                                <td width="64" valign="top">
+                                    <p align="center">
+                                        <strong>Trọng số</strong>
+                                    </p>
+                                </td>
+                                <td width="72" valign="top">
+                                    <p align="center">
+                                        <strong>Điểm đánh giá (trên 5)</strong>
+                                    </p>
+                                </td>
+                                <td width="9" valign="top">
+                                    <p align="center">
+                                        <strong></strong>
+                                    </p>
+                                </td>
+                                <td width="94" valign="top">
+                                    <p align="center">
+                                        <strong>Tỉ lệ thực hiện</strong>
+                                    </p>
+                                </td>
+                                <td width="106" valign="top">
+                                    <p align="center">
+                                        <strong>Kết quả thực hiện tổng hợp</strong>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="9" valign="top">
+                                    <p align="center">
+                                        <strong></strong>
+                                    </p>
+                                </td>
+                                <td width="34" valign="top">
+                                    <p align="center">
+                                        <strong>Ngày</strong>
+                                    </p>
+                                </td>
+                                <td width="38" valign="top">
+                                    <p align="center">
+                                        <strong>Tuần</strong>
+                                    </p>
+                                </td>
+                                <td width="38" valign="top">
+                                    <p align="center">
+                                        <strong>Tháng</strong>
+                                    </p>
+                                </td>
+                                <td width="30" valign="top">
+                                    <p align="center">
+                                        <strong>Quý</strong>
+                                    </p>
+                                </td>
+                                <td width="34" valign="top">
+                                    <p align="center">
+                                        <strong>Năm</strong>
+                                    </p>
+                                </td>
+                                <td width="64" valign="top">
+                                    <p align="center">
+                                        <strong></strong>
+                                    </p>
+                                </td>
+                                <td width="72" valign="top">
+                                    <p align="center">
+                                        <strong></strong>
+                                    </p>
+                                </td>
+                                <td width="9" valign="top">
+                                    <p align="center">
+                                        <strong></strong>
+                                    </p>
+                                </td>
+                                <td width="94" valign="top">
+                                    <p align="center">
+                                        <strong>10 = 9 / 4</strong>
+                                    </p>
+                                </td>
+                                <td width="106" valign="top">
+                                    <p align="center">
+                                        <strong>11 = 10 x 3</strong>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="45" valign="top">
+                                    <p align="center">
+                                        1
+                                    </p>
+                                </td>
+                                <td width="107" valign="top">
+                                    <p>
+                                        Xây dựng các quy định liên quan đến phòng ban
+                                    </p>
+                                </td>
+                                <td width="9" valign="top">
+                                </td>
+                                <td width="34" valign="top">
+                                </td>
+                                <td width="38" valign="top">
+                                </td>
+                                <td width="38" valign="top">
+                                </td>
+                                <td width="30" valign="top">
+                                    <p align="center">
+                                        x
+                                    </p>
+                                </td>
+                                <td width="34" valign="top">
+                                </td>
+                                <td width="64" valign="top">
+                                    <p align="right">
+                                        100%
+                                    </p>
+                                </td>
+                                <td width="72" valign="top">
+                                    <p align="right">
+                                        2
+                                    </p>
+                                </td>
+                                <td width="9" valign="top">
+                                </td>
+                                <td width="94" valign="top">
+                                    <p align="right">
+                                        40.0%
+                                    </p>
+                                </td>
+                                <td width="106" valign="top">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="152" colspan="2" valign="top">
+                                    <p align="center">
+                                        <strong></strong>
+                                    </p>
+                                    <p align="center">
+                                        <strong>Kết quả công việc đột xuất</strong>
+                                    </p>
+                                    <p align="center">
+                                        <strong></strong>
+                                    </p>
+                                </td>
+                                <td width="9" valign="top">
+                                    <p align="center">
+                                        <strong></strong>
+                                    </p>
+                                </td>
+                                <td width="34" valign="top">
+                                    <p align="right">
+                                        <strong></strong>
+                                    </p>
+                                    <p align="right">
+                                        <strong>10%</strong>
+                                    </p>
+                                </td>
+                                <td width="38" valign="top">
+                                    <p align="right">
+                                        <strong></strong>
+                                    </p>
+                                </td>
+                                <td width="38" valign="top">
+                                    <p align="right">
+                                        <strong></strong>
+                                    </p>
+                                </td>
+                                <td width="30" valign="top">
+                                    <p align="right">
+                                        <strong></strong>
+                                    </p>
+                                </td>
+                                <td width="34" valign="top">
+                                    <p align="right">
+                                        <strong></strong>
+                                    </p>
+                                </td>
+                                <td width="64" valign="top">
+                                    <p align="right">
+                                        <strong></strong>
+                                    </p>
+                                    <p align="right">
+                                        <strong>100%</strong>
+                                    </p>
+                                </td>
+                                <td width="72" valign="top">
+                                    <p align="right">
+                                        <strong></strong>
+                                    </p>
+                                </td>
+                                <td width="9" valign="top">
+                                    <p align="right">
+                                        <strong></strong>
+                                    </p>
+                                </td>
+                                <td width="94" valign="top">
+                                    <p align="right">
+                                        <strong></strong>
+                                    </p>
+                                    <p align="right">
+                                        <strong>40%</strong>
+                                    </p>
+                                </td>
+                                <td width="106" valign="top">
+                                    <p align="right">
+                                        <strong></strong>
+                                    </p>
+                                    <p align="right">
+                                        <strong>4.0%</strong>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="573" colspan="12" valign="top">
+                                    <p align="center">
+                                        <strong></strong>
+                                    </p>
+                                    <p align="center">
+                                        <strong>Tổng điểm đánh giá thực hiện công việc</strong>
+                                    </p>
+                                    <p align="center">
+                                        <strong></strong>
+                                    </p>
+                                </td>
+                                <td width="106" valign="top">
+                                    <p align="right">
+                                        <strong></strong>
+                                    </p>
+                                    <p align="right">
+                                        <strong>81.5%</strong>
+                                    </p>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <p>
+                            <strong></strong>
+                        </p>
+                        <h3 class="strong-text">
+                            Kết luận:
+                        </h3>
+                        <p>
+                            Nhìn chung, KPI của từng vị trí, phòng ban sẽ khác nhau, và ở mỗi công ty
+                            sẽ khác nhau – tùy theo lĩnh vực, mục tiêu, cũng như quy mô kinh doanh.
+                            Nhưng dù sử dụng mẫu KPI nào, doanh nghiệp cũng cần lưu ý:
+                        </p>
+
+                        <ul type="disc">
+                            <li>
+                                Các biểu mẫu KPI có sẵn chỉ mang tính tham khảo. Khi áp dụng, doanh
+                                nghiệp cần thiết lập chỉ số KPI dựa trên những mục tiêu cụ thể.
+                            </li>
+                            <li>
+                                Mọi KPI cần được xây dựng thống nhất, có sự liên kết, hướng đến mục tiêu
+                                chung của doanh nghiệp. Do đó, việc phân chia KPI cần thực hiện từ trên
+                                xuống thông qua các cấp độ:    <em>công ty → phòng ban → cấp quản lý → nhân viên.</em>
+                            </li>
+                            <li>
+                                KPI cần được xác định cùng với chỉ tiêu cụ thể của từng giai đoạn, cũng
+                                như kế hoạch hành động tương ứng.
+                            </li>
+                        </ul>
+                        <p>
+                            <strong>
+                                Cloudjet KPI hiện là giải pháp chiến lược của Cloudjet Solutions giúp
+                                các doanh nghiệp xây dựng bộ KPI hoàn chỉnh cho cá nhân và phòng ban,
+                                đồng thời cung cấp hệ thống đo lường giúp việc quản lý KPI đơn giản và
+                                hiệu quả.
+                            </strong>
+                        </p>
+                        <p>
+                            <strong>CLOUDJET SOLUTIONS CORP.</strong>
+                        </p>
+                        <p>
+                            Website: www.cloudjetkpi.com
+                        </p>
+                        <p>
+                            ĐT: (028) 66 808 662 hoặc (028) 665 99 998
+                        </p>
+                        <p>
+                            Email:
+                            <a href="mailto:hello@cloudjetsolutions.com">
+                                hello@cloudjetsolutions.com
+                            </a>
+                        </p>
+
+
+                    </div> <!-- /.post -->
+                </div> <!-- /.single-news -->
+            </div> <!-- /.blog-large-sidebar -->
+        </div> <!-- /.container -->
+    </div> <!-- /.blog-grid -->
+</div>
+
+<script>
+    $(document).ready(function(){
+        $('#library-active').addClass('active');
+    })
+</script>

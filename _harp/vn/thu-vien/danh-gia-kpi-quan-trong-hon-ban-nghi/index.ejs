@@ -1,0 +1,463 @@
+<style>
+    /*doccument style*/
+    .main-page-wrapper {
+        overflow-x:hidden;
+        background-color: #ffffff;
+    }
+
+    .theme-inner-banner {
+        border-bottom: 1px solid #f2f2f2;
+        margin-bottom: 100px;
+    }
+
+    .theme-inner-banner .bg {
+        background: url(../vn/assests/img/blog-header.jpg) no-repeat center;
+        background-size: cover;
+    }
+
+    .theme-inner-banner .bg .opacity {
+        background: rgba(251,253,255,0.8);
+        text-align: center;
+        padding: 75px 0 85px 0;
+    }
+
+    .theme-inner-banner .bg .opacity h2 {
+        font-weight: 600;
+        font-size: 40px;
+    }
+
+    @media (max-width: 768px) {
+        .theme-inner-banner .bg .opacity {
+            background: rgba(251, 253, 255, 0.8);
+            text-align: center;
+            padding: 0px 0 0px 0;
+        }
+
+        .theme-inner-banner {
+            border-bottom: 1px solid #f2f2f2;
+            margin-bottom: 10px;
+        }
+    }
+
+    .page-pagination li:last-child a:hover {color: #fff;}
+
+    .blog-list .latest-news .single-news .post h4 a {
+        font-size: 28px;
+    }
+
+    .blog-grid {
+        width: 100%;
+    }
+
+    .blog-large-sidebar {
+        width: 100%;
+        margin-top: 71px;
+    }
+
+    @media (max-width: 991px) {
+        .blog-large-sidebar {
+            padding: 0 0 50px 0;
+        }
+    }
+
+    /*----------------------------- Latest News ----------------------*/
+    .latest-news .theme-title {margin: 100px 0 55px 0;}
+    .latest-news .single-news img {
+        border-radius: 5px 5px 0 0;
+        width:100%;
+    }
+    .latest-news .single-news  {margin-bottom: 65px;}
+    .latest-news .single-news .post {
+        border: 1px solid #eeeeee;
+        border-top: none;
+        border-radius: 0 0 5px 5px;
+        padding: 20px 30px 28px 30px;
+    }
+    .latest-news .single-news .post span {
+        display: block;
+        margin-bottom: 8px;
+    }
+    .latest-news .single-news .post h4 a {
+        font-weight: 700;
+        line-height: 30px;
+        color: #282828;
+        display: block;
+        margin: 0 0 8px 0;
+    }
+
+    /*------------------------------------ Transition --------------------------------*/
+    .tran3s,.hesperiden.tparrows,.panel-heading:before,.service-style-one .single-service div span,.service-style-one .single-service p,
+    .service-style-one .single-service i,.service-style-one .single-service:before,.owl-theme .owl-nav [class*=owl-],.theme-button,
+    .bootstrap-select.btn-group .dropdown-menu li a,.contact-style-two .opacity .wrapper .form-wrapper button i,.mixitUp-menu ul li:before,
+    .details-page-wrapper .details-page-sidebar .sidebar-list li a:before,.details-page-wrapper .details-page-sidebar .carousel-indicators li,
+    .project-details .project-info .text ul li:before,.nav-tabs > li > a  {
+        -webkit-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+    }
+
+    /*---------------------------- Blog Details -------------------------*/
+    .blog-details-page .single-news>img {border-radius: 5px 5px 0 0;}
+    .blog-details-page .single-news .post {
+        border: 1px solid #eeeeee;
+        border-top: none;
+        border-radius: 0 0 5px 5px;
+        padding: 20px 30px 0 30px;
+        margin-bottom: 70px;
+    }
+    .blog-details-page .single-news .post>span {
+        display: block;
+        margin-bottom: 8px;
+    }
+    .blog-details-page .single-news .post h4 {
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 32px;
+        color: #282828;
+        display: block;
+        margin: 0 0 15px 0;
+    }
+    .blog-details-page .single-news .post h5 {margin:40px 0 20px 0;}
+    .blog-details-page .single-news .post .mark-text {
+        background: url(../images/home/shape3.png) no-repeat center center;
+        background-color: #f3f3f3;
+        margin: 20px 0 28px 0;
+        padding: 28px 10px 40px 10px;
+        position: relative;
+        text-align: center;
+        border-radius: 3px;
+    }
+    .blog-details-page .single-news .post .mark-text p {
+        font-size: 36px;
+        font-weight: 300;
+        color: #212121;
+        line-height: 46px;
+    }
+    .blog-details-page .single-news .post .mark-text span {
+        font-style: italic;
+        position: absolute;
+        right: 50px;
+        bottom: 28px;
+    }
+    .blog-details-page .single-news .post .share-option {
+        margin: 40px -30px 0 -30px;
+        border-top: 1px solid #eeeeee;
+    }
+    .blog-details-page .single-news .post .share-option ul li {display: inline-block;}
+    .blog-details-page .single-news .post .share-option ul.float-left {padding-left: 20px; line-height: 55px;}
+    .blog-details-page .single-news .post .share-option ul.float-left li a {
+        line-height: 30px;
+        border-radius: 3px;
+        font-size: 14px;
+        color: #7a7a7a;
+        background: #f3f3f3;
+        margin-right: 8px;
+        padding: 0 20px;
+    }
+    .blog-details-page .single-news .post .share-option ul.float-left li a:hover,
+    .blog-details-page .single-news .post .share-option ul.float-right li a:hover {color: #fff;}
+    .blog-details-page .single-news .post .share-option ul.float-right li a {
+        width: 54px;
+        text-align: center;
+        border-left: 1px solid #eeeeee;
+        line-height: 55px;
+        color: #cdd2da;
+        margin-left: -4px;
+    }
+    .blog-details-page .single-news .post .share-option ul.float-right li:first-child {
+        color: #25292f;
+        line-height: 55px;
+        margin-right: 15px;
+        font-weight: 600;
+    }
+    .blog-details-page h2 {
+        font-size: 36px;
+        font-weight: 700;
+    }
+    .blog-details-page .comment-section h2 {margin-bottom: 38px;}
+    .blog-details-page .comment-section .single-comment img {
+        width: 80px;
+        height: 80px;
+    }
+    .blog-details-page .comment-section .single-comment .comment {
+        width: calc(100% - 80px);
+        padding-left: 20px;
+        position: relative;
+    }
+    .blog-details-page .comment-section .single-comment .comment h6 {
+        font-weight: 500;
+    }
+    .blog-details-page .comment-section .single-comment .comment span { font-size: 14px;}
+    .blog-details-page .comment-section .single-comment .comment p {
+        margin-top: 10px;
+    }
+    .blog-details-page .comment-section .single-comment {
+        border-top: 1px solid #ebebeb;
+        padding: 28px 0 25px;
+    }
+    .blog-details-page .comment-section .single-comment:last-child {border-bottom: 1px solid #ebebeb;}
+    .blog-details-page .comment-section .single-comment.reply-comment {margin-left: 110px;}
+    .blog-details-page .comment-section .single-comment button {
+        width: 60px;
+        height: 30px;
+        background: #f4f4f4;
+        font-size: 13px;
+        color: #b1b1b1;
+        border-radius: 3px;
+        font-weight: 600;
+        position: absolute;
+        top:0;
+        right: 0;
+        text-transform: uppercase;
+    }
+    .blog-details-page .comment-section .single-comment button:hover {color:#fff;}
+    .blog-details-page .comment-section {padding-bottom: 60px;}
+    .blog-details-page .leave-reply-area  p {
+        font-size: 18px;
+        margin: 8px 0 35px 0;
+    }
+    .blog-details-page .leave-reply-area input,
+    .blog-details-page .leave-reply-area textarea {
+        background: #f7fafa;
+        border: 1px solid #f3f3f3;
+        margin-bottom: 20px;
+        padding: 0 20px;
+        width: 100%;
+        max-width: 100%;
+    }
+    .blog-details-page .leave-reply-area input {
+        height: 60px;
+    }
+    .blog-details-page .leave-reply-area textarea {
+        height: 230px;
+        padding: 20px;
+        max-height: 230px;
+        resize:none;
+    }
+    .blog-details-page .leave-reply-area button {
+        width: 172px;
+        height: 50px;
+        color: #fff;
+        font-size: 15px;
+        text-transform: uppercase;
+        color: #fff;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        border-radius: 3px;
+    }
+
+    .feature-img-post {
+        height: 196px;
+    }
+
+    .post-title {
+        font-size: 40px;
+        font-weight: 600;
+        text-align: center;
+        padding-bottom: 30px;
+    }
+
+    .strong-text {
+        font-weight: 700;
+    }
+</style>
+
+<div class="main-page-wrapper">
+
+<!--    <div class="theme-inner-banner">
+        <div class="bg">
+            <div class="opacity">
+                <div class="container">
+                    <h2>Tài liệu</h2>
+                </div>
+            </div> &lt;!&ndash; /.opacity &ndash;&gt;
+        </div> &lt;!&ndash; /.bg &ndash;&gt;
+    </div>-->
+
+    <div class="blog-grid blog-inner-page">
+        <div class="container">
+            <div class="blog-large-sidebar latest-news">
+                <div class="single-news">
+                    <div class="post">
+                        <h1 class="post-title">Đánh giá KPI quan trọng hơn bạn nghĩ</h1>
+
+                        <p>
+                            Đánh giá KPI (Key Performance Indicator) hiện đang là phương pháp phổ
+                            biến được nhiều doanh nghiệp áp dụng trong quản trị nhân sự. Tuy nhiên,
+                            trong quá trình thực hiện, không ít công ty đã “gãy gánh giữa đường”
+                            chỉ vì cách làm hời hợt, chiếu lệ.
+                        </p>
+                        <p>
+                            Điều này thực sự đáng tiếc, bởi lẽ KPI có thể đem lại rất nhiều lợi ích
+                            cho doanh nghiệp nếu được sử dụng đúng. Cụ thể:
+                        </p>
+
+                        <ul type="disc">
+                            <li>
+                                KPI giúp khích lệ tinh thần làm việc của nhân viên.
+                            </li>
+                            <li>
+                                KPI đóng góp và ảnh hưởng trực tiếp đến các mục tiêu kinh doanh.
+                            </li>
+                            <li>
+                                KPI giúp thúc đẩy sự phát triển cá nhân của mỗi nhân viên.
+                            </li>
+                            <li>
+                                KPI là cách thiết yếu để quản lý hiệu suất công việc.
+                            </li>
+                        </ul>
+
+                        <h2 class="strong-text">1. Đánh giá KPI đúng cách giúp khích lệ tinh thần làm việc của nhân
+                            viên.
+                        </h2>
+                        <p>
+                            Đây là một trong những giá trị quan trọng nhất của KPI, nhưng lại ít
+                            được nhắc đến.
+                        </p>
+                        <p>
+                            Việc theo dõi và đánh giá KPI giúp ghi nhận sự đóng góp của nhân viên
+                            đối với doanh nghiệp, đồng thời nhắc nhở họ về những trách nhiệm đã cam
+                            kết. Nhờ vậy, nhân viên sẽ không ngừng thúc giục bản thân tiến bộ để
+                            hoàn thành công việc tốt hơn.
+                        </p>
+                        <p>
+                            Ngoài ra, khi đạt được một chỉ tiêu KPI đã đề ra, nhân viên sẽ hạnh
+                            phúc hơn với cảm giác “sở hữu thành tựu” - bằng chứng rõ ràng về sự
+                            đóng góp của họ đối với tập thể. Từ đó, nhân viên sẽ càng gắn bó với
+                            doanh nghiệp hơn, khao khát cống hiến nhiều hơn.
+                        </p>
+                        <p align="center">
+                            <img src="../../assests/img/danh-gia-kpi/danh-gia-kpi-1.jpg" alt="Đánh giá KPI quan trọng hơn bạn nghĩ"/>
+                        </p>
+                        <p align="center">
+                            <em>
+                                Đánh giá KPI đúng cách giúp khích lệ tinh thần làm việc của nhân
+                                viên.
+                            </em>
+                        </p>
+                        <h2 class="strong-text">
+                            2. Các chỉ số KPI ảnh hưởng trực tiếp đến mục tiêu kinh doanh.
+                        </h2>
+                        <p>
+                            <strong></strong>
+                        </p>
+                        <p>
+                            Các chỉ số KPI được thiết lập dựa trên những mục tiêu chiến lược của
+                            doanh nghiệp. Do đó, khi mỗi cá nhân hiểu rõ và có trách nhiệm với KPI
+                            của mình, thì đồng thời họ cũng hướng tới thực thi mục tiêu kinh doanh
+                            chung của công ty.
+                        </p>
+                        <p>
+                            Bên cạnh đó, KPI đảm bảo việc đánh giá hiệu quả công việc không cảm
+                            tính, chiếu lệ. Nó đảm bảo mọi công việc dù lớn nhỏ đều được thực hiện
+                            có mục đích, đúng định hướng.
+                        </p>
+                        <p align="center">
+                            <img src="../../assests/img/danh-gia-kpi/danh-gia-kpi-2.jpg" alt="KPI quan trọng hơn bạn nghĩ"/>
+                        </p>
+                        <p align="center">
+                            <em>Các chỉ số KPI ảnh hưởng trực tiếp đến mục tiêu kinh doanh</em>
+                        </p>
+                        <h2 class="strong-text">3. Đánh giá KPI giúp thúc đẩy sự phát triển cá nhân.</h2>
+                        <p>
+                            Không phải mọi dự án hay chiến dịch đều đạt được kết quả như mong muốn.
+                            Tuy nhiên, bằng cách giám sát hiệu suất căn cứ trên các chỉ số KPI,
+                            doanh nghiệp sẽ tạo ra một môi trường không ngừng học hỏi và cải tiến.
+                        </p>
+                        <p>
+                            Nhờ đánh giá KPI, các phòng ban có thể dễ dàng theo dõi tiến độ thực
+                            hiện công việc tại mọi thời điểm, mà không cần chờ đến cuối quý hoặc
+                            kết thúc dự án.
+                        </p>
+                        <p>
+                            Theo dõi thường xuyên KPI, đặc biệt là trên hệ thống đo lường KPI theo
+                            thời gian thực (realtime KPI dashboard), sẽ giúp trả lời những câu hỏi
+                            như: cần làm những việc gì, tại sao nên làm những việc đó, làm như thế
+                            nào, khi nào.v.v...
+                        </p>
+                        <p>
+                            Nhờ vậy, cá nhân/tổ chức có thể liên tục nhìn nhận lại từng hoạt động
+                            công việc là hiệu quả hay chưa, cần cải tiến những gì.
+                        </p>
+                        <p>
+                            Bản thân nhân viên khi tự giám sát hiệu suất công việc của chính mình,
+                            và có các giải pháp tức thời, thì cũng dễ dàng đạt được mục tiêu hơn,
+                            biết cách để thay đổi có lợi hơn trong tương lai.
+                        </p>
+                        <p>
+                            Tóm lại, việc đánh giá KPI và cải tiến liên tục không những giúp mỗi cá
+                            nhân làm việc linh hoạt hơn, mà còn giúp họ đạt được nhiều thành tựu
+                            hơn. Điều này đặc biệt cần thiết cho sự phát triển cá nhân và thỏa mãn
+                            trong công việc.
+                        </p>
+                        <p align="center">
+                            <img src="../../assests/img/danh-gia-kpi/danh-gia-kpi-3.jpg" alt="Đánh giá KPI thực sự quan trọng"/>
+                        </p>
+                        <p align="center">
+                            <em>Đánh giá KPI giúp thúc đẩy sự phát triển cá nhân.</em>
+                        </p>
+                        <h2 class="strong-text">
+                            4. Đánh giá KPI có vai trò quyết định đối với quản trị hiệu suất.
+                        </h2>
+                        <p>
+                            Đây là lợi ích lớn nhất của việc đánh giá KPI, là sự tổng hợp của tất
+                            cả các lợi ích nói trên: những gì đo lường được thì cũng sẽ quản lý
+                            được. Kể cả tinh thần, văn hóa, hay năng lực của nhân viên.
+                        </p>
+                        <p>
+                            KPI giúp minh bạch và đơn giản hóa việc quản lý hiệu suất, bằng cách
+                            cho phép mọi người nhìn thấy không chỉ những gì họ đang làm, mà cả
+                            những gì đồng nghiệp/mọi người xung quanh khác làm. Nhờ vậy, tất cả mọi
+                            người đều đảm bảo làm việc theo cùng một định hướng, mục tiêu.
+                        </p>
+                        <p align="center">
+                            <img src="../../assests/img/danh-gia-kpi/danh-gia-kpi-4.jpg" alt="Đánh giá KPI rất quan trọng"/>
+                        </p>
+                        <p align="center">
+                            <em>Đánh giá KPI có vai trò quyết định đối với quản trị hiệu suất</em>
+                        </p>
+                        <p>
+                            <strong>Kết luận:</strong>
+                            Vì những lí do trên, việc áp dụng KPI vào doanh nghiệp không đơn giản
+                            chỉ là áp đặt chỉ số dành cho nhân viên, mà cần thiết hiểu được ý nghĩa
+                            của việc đánh giá KPI ảnh hưởng đến nhân viên và doanh nghiệp như thế
+                            nào, để từ đó có thể áp dụng và thực hiện có hiệu quả.
+                        </p>
+                        <p>
+                            <strong>
+                                Cloudjet KPI hiện là giải pháp chiến lược của Cloudjet Solutions
+                                giúp các doanh nghiệp xây dựng bộ KPI hoàn chỉnh cho cá nhân và
+                                phòng ban để từ đó đánh giá KPI chính xác, đồng thời cung cấp hệ
+                                thống đo lường giúp việc quản lý KPI đơn giản và hiệu quả.
+                            </strong>
+                        </p>
+                        <p>
+                            <strong></strong>
+                        </p>
+                        <p>
+                            <strong>CLOUDJET SOLUTIONS CORP.</strong>
+                        </p>
+                        <p>
+                            Website: www.cloudjetkpi.com
+                        </p>
+                        <p>
+                            ĐT: (028) 66 808 662 hoặc (028) 665 99 998
+                        </p>
+                        <p>
+                            Email:
+                            <a href="mailto:hello@cloudjetsolutions.com">
+                                hello@cloudjetsolutions.com
+                            </a>
+                        </p>
+                    </div> <!-- /.post -->
+                </div> <!-- /.single-news -->
+            </div> <!-- /.blog-large-sidebar -->
+        </div> <!-- /.container -->
+    </div> <!-- /.blog-grid -->
+</div>
+
+<script>
+    $(document).ready(function(){
+        $('#library-active').addClass('active');
+    })
+</script>

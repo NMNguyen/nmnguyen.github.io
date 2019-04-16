@@ -1,0 +1,457 @@
+<style>
+    #customer-partner{
+        margin-top: 190px;
+    }
+    .side-menu-push{
+        background-color: #ffffff;
+    }
+    .thumbnail {
+        padding: 0;
+        border: 1px solid rgba(47, 128, 237, 0.2);
+        border-radius: 0;
+    }
+    .story-two .thumbnail{
+        border: none;
+    }
+    #success-story{
+        background: url("../../assests/img/customer/other/Background_Customer 2.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 891px;
+        position: relative;
+        background-size: 100% 100%;
+        padding: 120px 0;
+    }
+    .story-one{
+        padding: 160px 0;
+    }
+    .story-one .logo-customer img{
+        object-fit: none;
+        width: 134px;
+        height: 100px;
+    }
+    .title{
+        margin-bottom: 60px;
+    }
+    .title .content__title{
+        font-weight: bold;
+        font-size: 28px;
+        line-height: normal;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #005BAA;
+    }
+    .title .content__box_undershift{
+        background: #00B0D0;
+        width: 48px;
+        height: 8px;
+        margin-bottom: 11px;
+    }
+    .list-partner{
+        margin-bottom: 70px;
+    }
+    #success-story .title{
+        margin-bottom: 0;
+    }
+    @media(max-width: 992px){
+        .title{
+            margin: 0 auto 36px auto;
+            text-align: center;
+            padding-top: 60px;
+            margin-bottom: 30px;
+        }
+        .content__box_undershift {
+            margin: auto;
+        }
+        #success-story{
+            position: relative;
+            background: none;
+            padding: 60px 0 120px 0;
+        }
+        #success-story .title{
+            position: absolute;
+            top: 118px;
+            left: 0;
+            right: 0;
+            z-index: 1;
+        }
+        #success-story .content__box_undershift{
+            background: #ffffff;
+        }
+        #success-story .content__title{
+            color: #ffffff;
+        }
+        .actor{
+            margin-top: 33px;
+            margin-bottom: 60px;
+        }
+        .view-xs{
+            display: block;
+        }
+        .view-md{
+            display: none;
+        }
+        .story-one{
+            padding: 115px 0;
+            background: linear-gradient(78.86deg, #0099FF 3.75%, #6DCFF6 107.74%);
+        }
+        .story-content{
+            padding-top: 60px;
+        }
+        #customer-partner{
+            margin-top: 70px;
+        }
+        .list-partner{
+            margin-bottom: 0;
+        }
+        .no-padding-horizontal-xs{
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+    @media(min-width: 992px){
+        .view-xs{
+            display: none;
+        }
+        .view-md{
+            display: block;
+        }
+    }
+    .title-story{
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 33px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        margin-bottom: 30px;
+    }
+    .content-story{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 30px;
+        text-align: justify;
+        color: #FFFFFF;
+        margin-bottom: 30px;
+    }
+    .logo-customer{
+        margin-bottom: 30px;
+    }
+    .actor .name{
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 28px;
+        text-transform: uppercase;
+        color: #005BAA;
+    }
+    .actor .postion{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 25px;
+        color: #FFFFFF;
+    }
+    .no-padding-left{
+        padding-left: 0;
+    }
+    .no-padding-right{
+        padding-right: 0;
+    }
+    .actor .detail{
+        max-width: 117px;
+    }
+    .full-width{
+        width: 100%;
+    }
+    .actor .content{
+        height: 90px;
+        line-height: 90px;
+    }
+    .story-two .title-story{
+        color: #005BAA;
+    }
+    .story-two .content-story{
+        color: #041A30;
+        opacity: 0.7;
+    }
+    .story-two .actor .postion{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 25px;
+
+        color: #041A30;
+
+        /* dark_blue */
+        opacity: 0.7;
+    }
+    .actor .avatar img{
+        border-radius: 50%;
+    }
+    .link .view-detail{
+        font-weight: bold;
+        font-size: 18px;
+        line-height: normal;
+        text-align: right;
+        text-decoration-line: underline;
+        margin-top: 30px;
+        color: #005BAA;
+    }
+    .border-radius-image-detail{
+        border-radius: 4px;
+    }
+    .footer-section{
+        margin-top: 0;
+    }
+    .image-detail-cover{
+        max-height: 500px;
+        object-fit: cover;
+    }
+    .hide{
+        display:none;
+    }
+    .no-margin-bottom{
+        margin-bottom: 0;
+    }
+</style>
+<script>
+    $(document).ready(function(){
+        $('#customer-active').addClass('active');
+    })
+</script>
+<div id="main-customer">
+    <div class="container">
+        <div id="customer-partner">
+            <div class="project">
+                <div class="title">
+                    <div class="content__box_undershift"></div>
+                    <div class="content__title">DỰ ÁN TIÊU BIỂU</div>
+                </div>
+                <div class="list-partner">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-4 col-xs-4">
+                            <div class="thumbnail">
+                                <a href="javascript:void(0)">
+                                    <img src="../../assests/img/customer/partner/bitis.jpg" alt="Lights" style="width:100%">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-4 col-xs-4">
+                            <div class="thumbnail">
+                                <a href="javascript:void(0)">
+                                    <img src="../../assests/img/customer/partner/evnhcm.jpg" alt="Lights" style="width:100%">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-4 col-xs-4">
+                            <div class="thumbnail">
+                                <a href="javascript:void(0)">
+                                    <img src="../../assests/img/customer/partner/genco3.jpg" alt="Lights" style="width:100%">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-4 col-xs-4">
+                            <div class="thumbnail">
+                                <a href="javascript:void(0)">
+                                    <img src="../../assests/img/customer/partner/dathoa.jpg" alt="Lights" style="width:100%">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-4 col-xs-4">
+                            <div class="thumbnail">
+                                <a href="javascript:void(0)">
+                                    <img src="../../assests/img/customer/partner/dxg.jpg" alt="Lights" style="width:100%">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-4 col-xs-4">
+                            <div class="thumbnail">
+                                <a href="javascript:void(0)">
+                                    <img src="../../assests/img/customer/partner/mobifone.jpg" alt="Lights" style="width:100%">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-4 col-xs-4">
+                            <div class="thumbnail">
+                                <a href="javascript:void(0)">
+                                    <img src="../../assests/img/customer/partner/handspan.jpg" alt="Lights" style="width:100%">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-4 col-xs-4">
+                            <div class="thumbnail">
+                                <a href="javascript:void(0)">
+                                    <img src="../../assests/img/customer/partner/caominh.jpg" alt="Lights" style="width:100%">
+                                </a>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="partner">
+                <div class="title">
+                    <div class="content__box_undershift"></div>
+                    <div class="content__title">ĐỐI TÁC ĐÀO TẠO VÀ HUẤN LUYỆN</div>
+                </div>
+                <div class="list-partner no-margin-bottom">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-4 col-xs-4">
+                            <div class="thumbnail">
+                                <a href="javascript:void(0)">
+                                    <img src="../../assests/img/customer/partner/pv%20trans.jpg" alt="Lights" style="width:100%">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-4 col-xs-4">
+                            <div class="thumbnail">
+                                <a href="javascript:void(0)">
+                                    <img src="../../assests/img/customer/partner/framas.jpg" alt="Lights" style="width:100%">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-4 col-xs-4">
+                            <div class="thumbnail">
+                                <a href="javascript:void(0)">
+                                    <img src="../../assests/img/customer/partner/idp.jpg" alt="Lights" style="width:100%">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-4 col-xs-4">
+                            <div class="thumbnail">
+                                <a href="javascript:void(0)">
+                                    <img src="../../assests/img/customer/partner/sado.jpg" alt="Lights" style="width:100%">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-4 col-xs-4">
+                            <div class="thumbnail">
+                                <a href="javascript:void(0)">
+                                    <img src="../../assests/img/customer/partner/cih.jpg" alt="Lights" style="width:100%">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-4 col-xs-4">
+                            <div class="thumbnail">
+                                <a href="javascript:void(0)">
+                                    <img src="../../assests/img/customer/partner/yakult.jpg" alt="Lights" style="width:100%">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-4 col-xs-4">
+                            <div class="thumbnail">
+                                <a href="javascript:void(0)">
+                                    <img src="../../assests/img/customer/partner/yduoc.jpg" alt="Lights" style="width:100%">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-4 col-xs-4">
+                            <div class="thumbnail">
+                                <a href="javascript:void(0)">
+                                    <img src="../../assests/img/customer/partner/golden_gate.jpg" alt="Lights" style="width:100%">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="success-story">
+        <div class="title container">
+            <div class="content__box_undershift"></div>
+            <div class="content__title">CÂU CHUYỆN THÀNH CÔNG</div>
+        </div>
+        <div class="story-one">
+            <div class="story-content container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="logo-customer">
+                            <img src="../../assests/img/customer/partner/evnhcm.png" alt="">
+                        </div>
+                        <div class="title-story">Dự án KPI cho Tổng Công ty Điện lực Thành phố Hồ Chí Minh - EVN HCMC</div>
+                        <div class="content-story">
+                            <p>“Trong khi trước đây các nhân viên rất mơ hồ về lý do được thưởng, hay bị phạt thì sau khi triển khai KPI, tất cả nhân viên đều nắm rất rõ mục tiêu công việc và những yêu cầu từ phía công ty. Bây giờ, cứ đến ngày đánh giá là tất cả CBCNV đều chủ động vào đánh giá mà không cần nhắc nhở nữa.”</p>
+                        </div>
+                        <div class="actor">
+                            <div class="row">
+                                <div class="col-md-3 col-sm-4 col-xs-4 no-padding-right detail">
+                                    <div class="avatar">
+                                        <img src="../../assests/img/customer/other/avatar.png" class="img-responsive" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-9 col-sm-8 col-xs-8 no-padding-left">
+                                    <div class="content">
+                                        <div class="name">Ông Trần Thanh Liêm</div>
+                                        <div class="postion">Phó Trưởng ban Tổ chức nhân sự,<br/>
+                                            Tổng Công ty Điện lực Thành phố HCM</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+<!--                        <div class="link view-md">-->
+<!--                            <a href="" class="pull-right view-detail">Xem chi tiết >></a>-->
+<!--                        </div>-->
+                    </div>
+                    <div class="col-md-6 col-xs-12 col-sm-12">
+                        <img src="../../assests/img/customer/other/image%203.png" class="img-responsive full-width border-radius-image-detail" alt="">
+                    </div>
+<!--                    <div class="col-xs-12 view-xs">-->
+<!--                        <div class="link">-->
+<!--                            <a href="" class="pull-right view-detail">Xem chi tiết >></a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+                </div>
+            </div>
+        </div>
+        <div class="story-two">
+            <div class="story-content container">
+                <div class="row">
+                    <div class="col-md-6 col-xs-12 col-sm-12 view-md">
+                        <img src="../../assests/img/customer/other/img2_casestudy2.png" class="img-responsive full-width border-radius-image-detail image-detail-cover" alt="">
+                    </div>
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="logo-customer">
+                            <img src="../../assests/img/customer/partner/ninhbinh.png" alt="">
+                        </div>
+                        <div class="title-story">KHI KPI THỔI LUỒNG GIÓ MỚI VÀO BỘ MÁY NHÂN SỰ</div>
+                        <div class="content-story">
+                            <p>“Sau khi ứng dụng KPI, các nhân viên đã tuân thủ quy định tốt hơn. Tinh thần làm việc và trách nhiệm cũng có sự tiến triển rõ rệt.”</p>
+                        </div>
+                        <div class="actor">
+                            <div class="row">
+                                <div class="col-md-3 col-sm-4 col-xs-4 no-padding-right detail">
+                                    <div class="avatar">
+                                        <img src="../../assests/img/customer/other/avatar.png" class="img-responsive" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-9 col-sm-8 col-xs-8 no-padding-left">
+                                    <div class="content">
+                                        <div class="name">Ông Đường Xuân Hồng</div>
+                                        <div class="postion">Phó Tổng Giám Đốc, Công ty Cổ phần Nhiệt Điện Ninh Bình</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 view-xs thumbnail">
+                    <img src="../../assests/img/customer/other/img2_casestudy2.png" class="img-responsive full-width border-radius-image-detail" alt="">
+                </div>
+<!--                <div class="col-xs-12">-->
+<!--                    <div class="link">-->
+<!--                        <a href="" class="pull-right view-detail">Xem chi tiết >></a>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+
+            </div>
+        </div>
+    </div>
+</div>

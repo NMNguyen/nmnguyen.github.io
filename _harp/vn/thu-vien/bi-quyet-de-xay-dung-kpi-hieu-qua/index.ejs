@@ -1,0 +1,616 @@
+<style>
+    /*doccument style*/
+    .main-page-wrapper {
+        overflow-x:hidden;
+        background-color: #ffffff;
+    }
+
+    .theme-inner-banner {
+        border-bottom: 1px solid #f2f2f2;
+        margin-bottom: 100px;
+    }
+
+    .theme-inner-banner .bg {
+        background: url(../vn/assests/img/blog-header.jpg) no-repeat center;
+        background-size: cover;
+    }
+
+    .theme-inner-banner .bg .opacity {
+        background: rgba(251,253,255,0.8);
+        text-align: center;
+        padding: 75px 0 85px 0;
+    }
+
+    .theme-inner-banner .bg .opacity h2 {
+        font-weight: 600;
+        font-size: 40px;
+    }
+
+    @media (max-width: 768px) {
+        .theme-inner-banner .bg .opacity {
+            background: rgba(251, 253, 255, 0.8);
+            text-align: center;
+            padding: 0px 0 0px 0;
+        }
+
+        .theme-inner-banner {
+            border-bottom: 1px solid #f2f2f2;
+            margin-bottom: 10px;
+        }
+    }
+
+    .page-pagination li:last-child a:hover {color: #fff;}
+
+    .blog-list .latest-news .single-news .post h4 a {
+        font-size: 28px;
+    }
+
+    .blog-grid {
+        width: 100%;
+    }
+
+    .blog-large-sidebar {
+        width: 100%;
+        margin-top: 71px;
+    }
+
+    @media (max-width: 991px) {
+        .blog-large-sidebar {
+            padding: 0 0 50px 0;
+        }
+    }
+
+    /*----------------------------- Latest News ----------------------*/
+    .latest-news .theme-title {margin: 100px 0 55px 0;}
+    .latest-news .single-news img {border-radius: 5px 5px 0 0;}
+    .latest-news .single-news  {margin-bottom: 65px;}
+    .latest-news .single-news .post {
+        border: 1px solid #eeeeee;
+        border-top: none;
+        border-radius: 0 0 5px 5px;
+        padding: 20px 30px 28px 30px;
+    }
+    .latest-news .single-news .post span {
+        display: block;
+        margin-bottom: 8px;
+    }
+    .latest-news .single-news .post h4 a {
+        font-weight: 700;
+        line-height: 30px;
+        color: #282828;
+        display: block;
+        margin: 0 0 8px 0;
+    }
+
+    /*------------------------------------ Transition --------------------------------*/
+    .tran3s,.hesperiden.tparrows,.panel-heading:before,.service-style-one .single-service div span,.service-style-one .single-service p,
+    .service-style-one .single-service i,.service-style-one .single-service:before,.owl-theme .owl-nav [class*=owl-],.theme-button,
+    .bootstrap-select.btn-group .dropdown-menu li a,.contact-style-two .opacity .wrapper .form-wrapper button i,.mixitUp-menu ul li:before,
+    .details-page-wrapper .details-page-sidebar .sidebar-list li a:before,.details-page-wrapper .details-page-sidebar .carousel-indicators li,
+    .project-details .project-info .text ul li:before,.nav-tabs > li > a  {
+        -webkit-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+    }
+
+    /*---------------------------- Blog Details -------------------------*/
+    .blog-details-page .single-news>img {border-radius: 5px 5px 0 0;}
+    .blog-details-page .single-news .post {
+        border: 1px solid #eeeeee;
+        border-top: none;
+        border-radius: 0 0 5px 5px;
+        padding: 20px 30px 0 30px;
+        margin-bottom: 70px;
+    }
+    .blog-details-page .single-news .post>span {
+        display: block;
+        margin-bottom: 8px;
+    }
+    .blog-details-page .single-news .post h4 {
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 32px;
+        color: #282828;
+        display: block;
+        margin: 0 0 15px 0;
+    }
+    .blog-details-page .single-news .post h5 {margin:40px 0 20px 0;}
+    .blog-details-page .single-news .post .mark-text {
+        background: url(../images/home/shape3.png) no-repeat center center;
+        background-color: #f3f3f3;
+        margin: 20px 0 28px 0;
+        padding: 28px 10px 40px 10px;
+        position: relative;
+        text-align: center;
+        border-radius: 3px;
+    }
+    .blog-details-page .single-news .post .mark-text p {
+        font-size: 36px;
+        font-weight: 300;
+        color: #212121;
+        line-height: 46px;
+    }
+    .blog-details-page .single-news .post .mark-text span {
+        font-style: italic;
+        position: absolute;
+        right: 50px;
+        bottom: 28px;
+    }
+    .blog-details-page .single-news .post .share-option {
+        margin: 40px -30px 0 -30px;
+        border-top: 1px solid #eeeeee;
+    }
+    .blog-details-page .single-news .post .share-option ul li {display: inline-block;}
+    .blog-details-page .single-news .post .share-option ul.float-left {padding-left: 20px; line-height: 55px;}
+    .blog-details-page .single-news .post .share-option ul.float-left li a {
+        line-height: 30px;
+        border-radius: 3px;
+        font-size: 14px;
+        color: #7a7a7a;
+        background: #f3f3f3;
+        margin-right: 8px;
+        padding: 0 20px;
+    }
+    .blog-details-page .single-news .post .share-option ul.float-left li a:hover,
+    .blog-details-page .single-news .post .share-option ul.float-right li a:hover {color: #fff;}
+    .blog-details-page .single-news .post .share-option ul.float-right li a {
+        width: 54px;
+        text-align: center;
+        border-left: 1px solid #eeeeee;
+        line-height: 55px;
+        color: #cdd2da;
+        margin-left: -4px;
+    }
+    .blog-details-page .single-news .post .share-option ul.float-right li:first-child {
+        color: #25292f;
+        line-height: 55px;
+        margin-right: 15px;
+        font-weight: 600;
+    }
+    .blog-details-page h2 {
+        font-size: 36px;
+        font-weight: 700;
+    }
+    .blog-details-page .comment-section h2 {margin-bottom: 38px;}
+    .blog-details-page .comment-section .single-comment img {
+        width: 80px;
+        height: 80px;
+    }
+    .blog-details-page .comment-section .single-comment .comment {
+        width: calc(100% - 80px);
+        padding-left: 20px;
+        position: relative;
+    }
+    .blog-details-page .comment-section .single-comment .comment h6 {
+        font-weight: 500;
+    }
+    .blog-details-page .comment-section .single-comment .comment span { font-size: 14px;}
+    .blog-details-page .comment-section .single-comment .comment p {
+        margin-top: 10px;
+    }
+    .blog-details-page .comment-section .single-comment {
+        border-top: 1px solid #ebebeb;
+        padding: 28px 0 25px;
+    }
+    .blog-details-page .comment-section .single-comment:last-child {border-bottom: 1px solid #ebebeb;}
+    .blog-details-page .comment-section .single-comment.reply-comment {margin-left: 110px;}
+    .blog-details-page .comment-section .single-comment button {
+        width: 60px;
+        height: 30px;
+        background: #f4f4f4;
+        font-size: 13px;
+        color: #b1b1b1;
+        border-radius: 3px;
+        font-weight: 600;
+        position: absolute;
+        top:0;
+        right: 0;
+        text-transform: uppercase;
+    }
+    .blog-details-page .comment-section .single-comment button:hover {color:#fff;}
+    .blog-details-page .comment-section {padding-bottom: 60px;}
+    .blog-details-page .leave-reply-area  p {
+        font-size: 18px;
+        margin: 8px 0 35px 0;
+    }
+    .blog-details-page .leave-reply-area input,
+    .blog-details-page .leave-reply-area textarea {
+        background: #f7fafa;
+        border: 1px solid #f3f3f3;
+        margin-bottom: 20px;
+        padding: 0 20px;
+        width: 100%;
+        max-width: 100%;
+    }
+    .blog-details-page .leave-reply-area input {
+        height: 60px;
+    }
+    .blog-details-page .leave-reply-area textarea {
+        height: 230px;
+        padding: 20px;
+        max-height: 230px;
+        resize:none;
+    }
+    .blog-details-page .leave-reply-area button {
+        width: 172px;
+        height: 50px;
+        color: #fff;
+        font-size: 15px;
+        text-transform: uppercase;
+        color: #fff;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        border-radius: 3px;
+    }
+
+    .feature-img-post {
+        height: 196px;
+    }
+
+    .post-title {
+        font-size: 40px;
+        font-weight: 600;
+        text-align: center;
+        padding-bottom: 30px;
+    }
+
+    .strong-text {
+        font-weight: 700;
+    }
+</style>
+
+<div class="main-page-wrapper">
+
+<!--    <div class="theme-inner-banner">
+        <div class="bg">
+            <div class="opacity">
+                <div class="container">
+                    <h2>Tài liệu</h2>
+                </div>
+            </div> &lt;!&ndash; /.opacity &ndash;&gt;
+        </div> &lt;!&ndash; /.bg &ndash;&gt;
+    </div>-->
+
+    <div class="blog-grid blog-inner-page">
+        <div class="container">
+            <div class="blog-large-sidebar latest-news">
+                <div class="single-news">
+                    <div class="post">
+                        <h1 class="post-title">Bí quyết để xây dựng KPI hiệu quả</h1>
+
+
+                        <p>
+                            Cũng giống như bánh lái đối với con tàu, một bộ KPI tốt sẽ giúp doanh
+                            nghiệp gặt hái nhiều thành tựu. Ngược lại, nó cũng có thể gây ra những hậu
+                            quả nghiêm trọng. Bởi vậy, <em>xây dựng KPI như thế nào cho hiệu quả</em>
+                            là câu hỏi hóc búa của không ít doanh nghiệp.
+                        </p>
+                        <p>
+                            <strong>
+                                Muốn giải quyết bài toán ấy, trước tiên ta cần xác định <em>như thế nào là một bộ KPI
+                                    tốt</em>.
+                            </strong>
+                        </p>
+                        <p>
+                            KPI (Key Performance Indicator) có thể hiểu một cách đơn giản là <em>chỉ số đánh giá hiệu
+                                suất công việc</em> của cá nhân/phòng ban trong
+                            doanh nghiệp. Thông qua đó, đánh giá được toàn doanh nghiệp hoạt động có
+                            đúng định hướng vạch ra, và có hiệu quả hay không.
+                        </p>
+                        <p align="center">
+                            <img src="../../assests/img/xay-dung-kpi/xay-dung-kpi-1.png" alt="cách xây dựng kpi hiệu quả"/>
+                        </p>
+                        <p align="center">
+                            <em>
+                                KPI giúp xác định doanh nghiệp, phòng ban có làm đúng định hướng và
+                                hiệu quả hay không
+                            </em>
+                        </p>
+                        <p>
+                            Như vậy, một bộ KPI tốt cần:
+                        </p>
+                        <ul type="disc">
+                            <li>
+                                Xây dựng KPI với các chỉ số gắn liền những mục tiêu kinh doanh cụ thể.
+                            </li>
+                            <li>
+                                Linh hoạt, có thể tùy chỉnh theo thực tế kinh doanh cũng như mỗi cá
+                                nhân/phòng ban.
+                            </li>
+                            <li>
+                                Giúp mỗi cá nhân hiểu rõ vai trò của mình trong tổ chức. Từ đó tạo động
+                                lực thúc đẩy từng cá nhân không ngừng học hỏi, phát triển, và đóng góp.
+                            </li>
+                        </ul>
+                        <p>
+                            <strong>
+                                Sau đây là 3 bí quyết doanh nghiệp có thể áp dụng để xây dựng KPI hiệu
+                                quả:
+                            </strong>
+                        </p>
+                        <p>
+                            <strong></strong>
+                        </p>
+                        <h2 class="strong-text">1. Xác định rõ mục tiêu cho từng vị trí công việc.</h2>
+                        <p>
+                            Nếu nhân viên không hiểu đúng vai trò của mình trong tổ chức, họ dễ rơi vào
+                            tình trạng “mất lửa”:
+                        </p>
+                        <p>
+                            · Chỉ làm đúng theo mô tả công việc, hoặc thụ động chờ đợi cấp trên giao
+                            việc cho.
+                        </p>
+                        <p>
+                            · Không có sự cải tiến trong công việc, không phát triển bản thân, nên sự
+                            đóng góp cho doanh nghiệp cũng suy giảm dần.
+                        </p>
+                        <p>
+                            Bởi vậy, doanh nghiệp cần xác định rõ mục tiêu cụ thể của từng vị trí công
+                            việc, và vai trò đóng góp của từng vị trí đối với những mục tiêu chiến lược
+                            chung của toàn công ty.
+                        </p>
+                        <p align="center">
+                            <img src="../../assests/img/xay-dung-kpi/xay-dung-kpi-2.jpg" alt="bí quyết xây dựng kpi"/>
+                        </p>
+                        <p align="center">
+                            <em>Từng vị trí công việc cần có KPI riêng</em>
+                        </p>
+                        <p>
+                            Ngoài ra, công ty có quy mô càng lớn, càng nhiều lớp quản lý, thì việc phân
+                            chia và truyền đạt đúng mục tiêu đến từng nhân viên càng khó khăn. Cho nên,
+                            sau khi xây dựng KPI, doanh nghiệp cần có quy trình triển khai chuyên
+                            nghiệp và đồng bộ.
+                        </p>
+                        <p>
+                            <em>
+                                Một câu hỏi đơn giản có thể giúp các cấp quản lý đánh giá xem nhân viên
+                                có thực sự hiểu rõ mục tiêu công việc của họ hay không: “tại sao
+                                anh/chị đang làm công việc này.”
+                            </em>
+                        </p>
+                        <p>
+                            <em>
+                                Ví dụ, nhân viên bảo vệ dù hết giờ làm, nhưng vẫn dành thêm 15 phút để
+                                đi tắt hết các thiết bị điện không cần thiết trong văn phòng. Bởi vì họ
+                                hiểu rằng, công ty đang có mục tiêu “Tiết kiệm 3% chi phí mỗi quý”.
+                            </em>
+                        </p>
+                        <p>
+                            <em>
+                                Hoặc, nhân viên kế toán lên kế hoạch nhắc nợ khách hàng sau khi hợp
+                                đồng kết thúc 3 ngày, để đảm bảo mục tiêu “Số ngày thu hồi công nợ trễ
+                                không quá 15 ngày”.
+                            </em>
+                        </p>
+                        <p>
+                            <strong></strong>
+                        </p>
+                        <h2 class="strong-text">2. Giới hạn bộ tiêu chí đánh giá KPI chỉ từ 3-5 mục.</h2>
+                        <p>
+                            KPI không dùng để quản lý chi tiết mọi công việc của nhân viên, mà là để
+                            đánh giá hiệu suất làm việc. Như vậy, khi xây dựng KPI, việc giới hạn bộ
+                            tiêu chí đánh giá chỉ từ 3-5 mục sẽ giúp nhân viên nắm rõ trọng tâm/mục
+                            tiêu công việc, cũng như những đóng góp mà tổ chức mong mỏi từ mình nhất.
+                        </p>
+                        <p align="center">
+                            <img src="../../assests/img/xay-dung-kpi/xay-dung-kpi-3.jpg" alt="bí quyết xây dựng kpi hiệu quả"/>
+                        </p>
+                        <p align="center">
+                            <em>
+                                KPI dùng để quản lý hiệu suất công việc, không phải để quản lý chi tiết
+                                công việc
+                            </em>
+                        </p>
+                        <p>
+                            Đặc biệt, khi xây dựng KPI, cần lưu ý đến những nhóm chỉ số thể hiện HIỆU
+                            SUẤT như:
+                        </p>
+                        <ul type="disc">
+                            <li>
+                                Chất lượng: đánh giá chất lượng của sản phẩm đầu ra, tập trung chính
+                                vào tỉ lệ lỗi, chỉnh sửa, hoặc phải làm lại.
+                            </li>
+                            <li>
+                                Tiến độ: đánh giá về mức độ hoàn thành đúng hạn các hạng mục theo kế
+                                hoạch/yêu cầu đề ra.
+                            </li>
+                            <li>
+                                Năng suất: đánh giá về số lượng sản phẩm đầu ra của mỗi công việc/quy
+                                trình/quá trình.
+                            </li>
+                            <li>
+                                Hiệu quả: chi phí để hoàn thành công việc (thời gian và tiền bạc).
+                            </li>
+                        </ul>
+                        <p>
+                            <strong></strong>
+                        </p>
+                        <h2 class="strong-text">3. Xây dựng KPI S-M-A-R-T.</h2>
+                        <p>
+                            Là công cụ để đo lường hiệu suất, nên khi xây dựng KPI, nhà quản lý cũng
+                            cần hướng đến các tiêu chí S-M-A-R-T:
+                        </p>
+                        <ul type="disc">
+                            <li>
+                                <strong>S – Specific: Cụ thể.</strong>
+                            </li>
+                        </ul>
+                        <p>
+                            Thỏa mãn 2 câu hỏi: “Đối tượng của mục tiêu là gì/cho phạm vi nào?” và “Kết
+                            quả mong muốn đạt được ở mức nào?”
+                        </p>
+                        <p>
+                            Ví dụ:
+                        </p>
+                        <p>
+                            - “Giảm tỉ lệ sản phẩm lỗi trong công đoạn sơn xuống dưới 1%” → mục tiêu
+                            không cụ thể.
+                        </p>
+                        <p>
+                            - “Giảm tỉ lệ sản phẩm lỗi trong công đoạn sơn cho từng đơn hàng xuống dưới
+                            1%”, <em>hoặc</em> “Giảm tỉ lệ lỗi trong công đoạn sơn tính trung bình của
+                            cả năm xuống dưới 1%” → mục tiêu cụ thể.
+                        </p>
+                        <p align="center">
+                            <img src="../../assests/img/xay-dung-kpi/xay-dung-kpi-4.jpg" alt="xây dựng kpi"/>
+                        </p>
+                        <p align="center">
+                            <em>KPI cần cụ thể và đo lường được</em>
+                        </p>
+                        <ul type="disc">
+                            <li>
+                                <strong>M – Measurable: Có thể đo lường được.</strong>
+                            </li>
+                        </ul>
+                        <p>
+                            Cần trả lời cho các câu hỏi: “Có những cách nào để đánh giá mức độ đạt được
+                            mục tiêu?” và “Các số liệu và hệ thống cập nhật, lưu trữ, xử lý số liệu có
+                            sẵn sàng cho việc đánh giá mức độ đạt được mục tiêu?”
+                        </p>
+                        <p>
+                            Ví dụ:
+                        </p>
+                        <p>
+                            - “Nâng cao chỉ số thỏa mãn khách hàng – CSI – theo kết quả khảo sát thỏa
+                            mãn khách hàng hằng năm cho năm 20XX lên trên 80%” → có thể đo lường được.
+                        </p>
+                        <p>
+                            - “Nâng cao chất lượng sản phẩm” → mục tiêu vừa thiếu cụ thể, vừa không đo
+                            lường được.
+                        </p>
+                        <p>
+                            - “Nâng cao mức độ thỏa mãn khách hàng lên trên 80% trong năm 2018” → không
+                            biết đo lường bằng cách nào.
+                        </p>
+                        <ul type="disc">
+                            <li>
+                                <strong>A – Agreed: Thống nhất.</strong>
+                            </li>
+                        </ul>
+                        <p>
+                            KPI của mỗi vị trí công việc cần có sự liên quan và thống nhất theo chiều
+                            dọc (cấp trên, cấp dưới) và chiều ngang (đồng cấp). Đó thường là kết quả
+                            của quá trình thiết lập theo phương pháp ma trận – matrix approach.
+                        </p>
+                        <p align="center">
+                            <img src="../../assests/img/xay-dung-kpi/xay-dung-kpi-5.jpg" alt="xây dựng kpi hiệu quả"/>
+                        </p>
+                        <p align="center">
+                            <em>KPI cần được thống nhất giữa cấp quản lý và nhân viên</em>
+                        </p>
+                        <p>
+                            Ví dụ:
+                        </p>
+                        <p>
+                            KPI của công ty là “Nâng cao chỉ số thỏa mãn khách hàng – CSI – theo kết
+                            quả khảo sát thảo mãn khách hàng hàng năm cho năm 2018 lên trên 80%”.
+                        </p>
+                        <p>
+                            KPI của phòng kinh doanh là “Đạt được tỉ lệ các khách hàng cũ có đơn hàng
+                            lặp lại là 80%”.
+                        </p>
+                        <p>
+                            Vậy thì trung tâm chăm sóc khách hàng sẽ được coi là đã xây dựng KPI thống
+                            nhất khi đảm bảo việc hỗ trợ mục tiêu của công ty về CSI, cũng như hỗ trợ
+                            phòng kinh doanh về đơn hàng lặp lại.
+                        </p>
+                        <ul type="disc">
+                            <li>
+                                <strong>R – Realistic: Thực tế.</strong>
+                            </li>
+                        </ul>
+                        <p>
+                            Tính thực tế của mục tiêu phụ thuộc vào 2 cơ sở:
+                        </p>
+                        <p>
+                            - Tính đầy đủ, đáng tin cậy của kết quả phân tích số liệu về thực trạng
+                            hiện tại.
+                        </p>
+                        <p>
+                            - Sự thỏa đáng, khả thi của kế hoạch thực hiện.
+                        </p>
+                        <p>
+                            Ví dụ:
+                        </p>
+                        <p>
+                            “Tăng hiệu suất sử dụng các thiết bị của toàn công ty trong năm 2017 thêm
+                            10%” → mục tiêu này chỉ thực thế nếu:
+                        </p>
+                        <p>
+                            - Có số liệu về hiệu suất sử dụng thiết bị của toàn công ty năm 2016.
+                        </p>
+                        <p>
+                            - Số liệu chính xác, đủ tin cậy để dựa trên đó phân tích các yếu tố và mức
+                            độ tác động đến hiệu suất sử dụng thiết bị.
+                        </p>
+                        <p>
+                            - Kế hoạch thực hiện (tăng hiệu suất sử dụng thiết bị) phải tương ứng với
+                            các vấn đề được xác định thông qua phân tích thực trạng hiện tại nêu trên.
+                        </p>
+                        <p>
+                            - Các giải pháp đưa ra trong kế hoạch phải khả thi trên thực tế (về công
+                            nghệ, tài chính, năng lực nhân sự, văn hóa doanh nghiệp).
+                        </p>
+                        <ul type="disc">
+                            <li>
+                                <strong>T – Time bound: Có thời hạn cụ thể.</strong>
+                            </li>
+                        </ul>
+                        <p>
+                            Trả lời cho câu hỏi: “Mục tiêu đặt ra cần phải đạt được vào thời điểm nào?”
+                        </p>
+                        <p>
+                            Khác với mục đích/tầm nhìn (goal/vision) được đặt ra để thể hiện sự cam kết
+                            lâu dài, mọi mục tiêu công việc (objective) đều cần phải có thời hạn cụ thể
+                            để đo lường kết quả.
+                        </p>
+                        <p>
+                            Thông thường, thời hạn của KPI thường trùng với các mốc/chu kì của năm tài
+                            chính (quý/năm), và phải đảm bảo tính khả thi/thực tế.
+                        </p>
+                        <p>
+                            <strong>Kết luận:</strong>
+                            Làm thế nào để xây dựng KPI hiệu quả là câu hỏi không dễ dàng có ngay đáp
+                            án. Thậm chí, dù có “nằm lòng” đủ mọi lí thuyết, thì chặng đường để hiện
+                            thực hóa thành công vẫn rất dài. Cho nên, doanh nghiệp muốn phát huy sức
+                            mạnh của KPI cần phải liên tục đánh giá hiệu quả áp dụng, thực hiện cải
+                            tiến phù hợp với tình hình thực tế từng giai đoạn.
+                        </p>
+                        <p>
+                            <strong>
+                                Cloudjet KPI hiện là giải pháp chiến lược của Cloudjet Solutions giúp
+                                các doanh nghiệp xây dựng bộ KPI hoàn chỉnh cho cá nhân và phòng ban,
+                                đồng thời cung cấp hệ thống đo lường giúp việc quản lý KPI đơn giản và
+                                hiệu quả.
+                            </strong>
+                        </p>
+                        <p>
+                            <strong></strong>
+                        </p>
+                        <p>
+                            <strong>CLOUDJET SOLUTIONS CORP.</strong>
+                        </p>
+                        <p>
+                            Website: www.cloudjetkpi.com
+                        </p>
+                        <p>
+                            ĐT: (028) 66 808 662 hoặc (028) 665 99 998
+                        </p>
+                        <p>
+                            Email:
+                            <a href="mailto:hello@cloudjetsolutions.com">
+                                hello@cloudjetsolutions.com
+                            </a>
+                        </p>
+                    </div> <!-- /.post -->
+                </div> <!-- /.single-news -->
+            </div> <!-- /.blog-large-sidebar -->
+        </div> <!-- /.container -->
+    </div> <!-- /.blog-grid -->
+</div>
+
+<script>
+    $(document).ready(function(){
+        $('#library-active').addClass('active');
+    })
+</script>

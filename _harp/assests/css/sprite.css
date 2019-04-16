@@ -1,0 +1,51 @@
+.cjs_doanhnhan, .cjs_saigontime, .cjs_teachinasia, .cjs_congthuong, .cjs_ietstock,
+.cjs_logo-01, .cjs_vietnamnet, .cjs_ivc, .cjs_icon-banner {
+    max-width: 100%;
+    background-size: 100%;
+    background-image: url(../img/cjs-sprite.png);
+}
+
+.cjs_doanhnhan {
+    background-position: 0 0%;
+    background-size: 100%;
+}
+
+.cjs_saigontime {
+    background-position: 0 7.756233%;
+    background-size: 104.511278%;
+}
+
+.cjs_teachinasia {
+    background-position: 0 15.277778%;
+    background-size: 108.59375%;
+}
+
+.cjs_congthuong {
+    background-position: 0 22.739726%;
+    background-size: 127.522936%;
+}
+
+.cjs_ietstock {
+    background-position: 0 29.859155%;
+    background-size: 147.87234%;
+}
+
+.cjs_logo-01 {
+    background-position: 0 39.714286%;
+    background-size: 187.837838%;
+}
+
+.cjs_vietnamnet {
+    background-position: 0 50.571429%;
+    background-size: 195.774648%;
+}
+
+.cjs_ivc {
+    background-position: 0 63.988095%;
+    background-size: 198.571429%;
+}
+
+.cjs_icon-banner {
+    background-position: 0 100%;
+    background-size: 463.333333%;
+}
