@@ -1316,17 +1316,17 @@ url('/vn/assests/fonts/lato/Lato-ThinItalic.ttf') format('truetype');font-style:
                 <div class="footer__content_pd">
                     <h4>Sản phẩm</h4>
                     <div class="company-info">
-                        <a href="/vn/coporate/coporate.html">
+                        <a href="/vn/cloudjetkpi-corporate/corporate.html">
                             <p>
                                 Cloudjet KPI - Corporate
                             </p>
                         </a>
-                        <a  target="blank" href="https://www.sme.cloudjetkpi.com/">
+                        <a  target="blank" href="https://sme.cloudjetkpi.com/">
                             <p>
                                 Cloudjet KPI - SME
                             </p>
                         </a>
-                        <a  target="blank" href="https://www.academy.cloudjetkpi.com/">
+                        <a  target="blank" href="https://academy.cloudjetkpi.com/">
                             <p>
                                 Cloudjet Academy
                             </p>
@@ -1420,89 +1420,89 @@ url('/vn/assests/fonts/lato/Lato-ThinItalic.ttf') format('truetype');font-style:
         <!--right: 0;-->
     <!--}-->
 <!--</style>-->
-<!--<script type="text/javascript">-->
-    <!--var close = false;-->
-    <!--$(".close-facebook-like").click(function () {-->
-        <!--$("#facebook-box").fadeOut();-->
-        <!--close = true;-->
-    <!--})-->
-    <!--$(window).scroll(function () {-->
-        <!--if ($(document).height() - $(document).height() * 0.4 < window.scrollY && $(document).width() > 900 && !close) {-->
-            <!--$("#facebook-box").show();-->
-        <!--} else {-->
-            <!--$("#facebook-box").hide();-->
-        <!--}-->
-    <!--});-->
-    <!--function setCookie(c_name, value, hours) {-->
-        <!--var exdate = new Date();-->
-        <!--exdate.setTime(exdate.getTime() + hours * 3600 * 1000);-->
-        <!--var c_value = escape(value) + ((hours == null) ? "" : "; expires=" + exdate.toUTCString());-->
-        <!--c_value = c_value + "; path=/";-->
-        <!--document.cookie = c_name + "=" + c_value;-->
-    <!--}-->
+<script type="text/javascript">
+    var close = false;
+    $(".close-facebook-like").click(function () {
+        $("#facebook-box").fadeOut();
+        close = true;
+    })
+    $(window).scroll(function () {
+        if ($(document).height() - $(document).height() * 0.4 < window.scrollY && $(document).width() > 900 && !close) {
+            $("#facebook-box").show();
+        } else {
+            $("#facebook-box").hide();
+        }
+    });
+    function setCookie(c_name, value, hours) {
+        var exdate = new Date();
+        exdate.setTime(exdate.getTime() + hours * 3600 * 1000);
+        var c_value = escape(value) + ((hours == null) ? "" : "; expires=" + exdate.toUTCString());
+        c_value = c_value + "; path=/";
+        document.cookie = c_name + "=" + c_value;
+    }
 
-    <!--function getCookie(c_name) {-->
-        <!--var i, x, y, ARRcookies = document.cookie.split(";");-->
-        <!--for (i = 0; i < ARRcookies.length; i++) {-->
-            <!--x = ARRcookies[i].substr(0, ARRcookies[i].indexOf("="));-->
-            <!--y = ARRcookies[i].substr(ARRcookies[i].indexOf("=") + 1);-->
-            <!--x = x.replace(/^\s+|\s+$/g, "");-->
-            <!--if (x == c_name) {-->
-                <!--return unescape(y);-->
-            <!--}-->
-        <!--}-->
-    <!--}-->
+    function getCookie(c_name) {
+        var i, x, y, ARRcookies = document.cookie.split(";");
+        for (i = 0; i < ARRcookies.length; i++) {
+            x = ARRcookies[i].substr(0, ARRcookies[i].indexOf("="));
+            y = ARRcookies[i].substr(ARRcookies[i].indexOf("=") + 1);
+            x = x.replace(/^\s+|\s+$/g, "");
+            if (x == c_name) {
+                return unescape(y);
+            }
+        }
+    }
 
-    <!--function getURLParameter(name) {-->
-        <!--return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;-->
-    <!--}-->
+    function getURLParameter(name) {
+        return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
+    }
 
-    <!--var param = getURLParameter('utm_source');-->
-    <!--if (param && param != "") {-->
-        <!--setCookie('utm_source', param, 2);-->
-    <!--}-->
+    var param = getURLParameter('utm_source');
+    if (param && param != "") {
+        setCookie('utm_source', param, 2);
+    }
 
-    <!--var utm_medium = getURLParameter('utm_medium');-->
-    <!--if (utm_medium && utm_medium != '') {-->
-        <!--setCookie('utm_medium', utm_medium, 2);-->
-    <!--}-->
-<!--</script>-->
-<!--<style>-->
-    <!--.intercom-launcher-button {-->
-        <!--box-shadow: 0px 6px 13px 0px rgba(0, 0, 0, 0.23);-->
-    <!--}-->
+    var utm_medium = getURLParameter('utm_medium');
+    if (utm_medium && utm_medium != '') {
+        setCookie('utm_medium', utm_medium, 2);
+    }
+</script>
+<style>
+    .intercom-launcher-button {
+        box-shadow: 0px 6px 13px 0px rgba(0, 0, 0, 0.23);
+    }
 
-    <!--.intercom-launcher-button {-->
-        <!--background-image: url(https://js.intercomcdn.com/images/icon-launcher.png);-->
-        <!--background-size: 22px 22px;-->
-        <!--background-repeat: no-repeat;-->
-        <!--border-radius: 50%;-->
-        <!--border-style: solid;-->
-        <!--border-width: 1px;-->
-        <!--position: absolute;-->
-        <!--bottom: 0;-->
-        <!--right: 0;-->
-        <!--width: 48px;-->
-        <!--height: 48px;-->
-        <!--cursor: pointer;-->
-        <!--background-position: center;-->
-        <!--background-color: #3fa603;-->
-        <!--border-color: #177e00;-->
-    <!--}-->
+    .intercom-launcher-button {
+        background-image: url(https://js.intercomcdn.com/images/icon-launcher.png);
+        background-size: 22px 22px;
+        background-repeat: no-repeat;
+        border-radius: 50%;
+        border-style: solid;
+        border-width: 1px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 48px;
+        height: 48px;
+        cursor: pointer;
+        background-position: center;
+        background-color: #3fa603;
+        border-color: #177e00;
+    }
 
-    <!--.helpdesk {-->
-        <!--position: fixed;-->
-        <!--bottom: 15px;-->
-        <!--right: 15px;-->
-    <!--}-->
+    .helpdesk {
+        position: fixed;
+        bottom: 15px;
+        right: 15px;
+    }
 
-    <!--.helpdesk-body {-->
-        <!--background: url(//88.cjs.vn/img/helpdesk-bg.jpg) no-repeat;-->
-        <!--height: 100%;-->
-        <!--width: 100%;-->
-        <!--min-height: 288px;-->
-    <!--}-->
-<!--</style>-->
+    .helpdesk-body {
+        background: url(//88.cjs.vn/img/helpdesk-bg.jpg) no-repeat;
+        height: 100%;
+        width: 100%;
+        min-height: 288px;
+    }
+</style>
 
 
 <script type="text/javascript">
