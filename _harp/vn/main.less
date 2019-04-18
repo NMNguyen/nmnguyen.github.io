@@ -1553,7 +1553,7 @@ h3 {
     display: none !important;
   }
   #home-page .carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right, .carousel-control .icon-next, .carousel-control .icon-prev{
-    top:30%;
+    top:40%;
   }
   .content_about_us__title .dash-with-background{
     display:none;
@@ -1899,7 +1899,7 @@ h3 {
     min-height: 333px;
   }
   #home-page .item-slide-mobile{
-    height: 1024px;
+    height: 1100px;
   }
   #home-page .carousel-indicators{
      top: calc(50% + 34px);
@@ -1912,11 +1912,11 @@ h3 {
     bottom: 44px;
   }
   #home-page .logo-mobile{
-    top: 130px;
+    top: 20%;
     position: absolute;
   }
   #home-page #mobile-slide-homepage{
-    padding-left: 30px;
+    //padding-left: 30px;
   }
 }
 @media (max-width: 768px) {
@@ -1927,21 +1927,21 @@ h3 {
     min-width: 460px;
   }
   #home-page .logo-mobile{
-    top: 25%;
+    top: 15%;
     position: absolute;
   }
-  #home-page .logo-mobile{
-    top: calc(17% - 54px);
-    position: absolute;
-  }
+  //#home-page .logo-mobile{
+  //  top: calc(17% - 54px);
+  //  position: absolute;
+  //}
   #home-page .item-slide-mobile{
-    height: 920px;
+    height: 1050px;
   }
   #home-page .carousel-indicators{
-     top: calc(50% - 54px);
+     top: 52%;
   }
   #home-page .carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right, .carousel-control .icon-next, .carousel-control .icon-prev{
-    top:25%;
+    top:36%;
   }
   #home-page .team-section__content .content__box-shadow{
     padding: 15px 15px;
@@ -2013,6 +2013,14 @@ h3 {
   //}
 }
 @media (max-width: 577px) {
+  #home-page .carousel-control.right {
+    background: transparent;
+    width: 30px !important;
+  }
+  #home-page .carousel-control.left {
+    background: transparent;
+    width: 30px !important;
+  }
   #corporate-page .container-block-5 .signup-saleup__input-box{
     min-width: 460px;
   }
@@ -2024,17 +2032,21 @@ h3 {
     min-height: 340px;
   }
   #home-page .carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right, .carousel-control .icon-next, .carousel-control .icon-prev{
-    top:22%;
+    top:30%;
   }
   #home-page .logo-mobile{
     top: calc(15% - 54px);
     position: absolute;
   }
   #home-page .item-slide-mobile{
-    height: 820px;
+    height: 895px;
   }
   #home-page .carousel-indicators{
-     top: calc(50% - 54px);
+     top: 48%;
+  }
+  #home-page .logo-mobile{
+    top: 12%;
+    position: absolute;
   }
   //#home-page .item-slide-mobile{
   //  //  height: calc(100% + 200px);
@@ -2063,18 +2075,22 @@ h3 {
   #home-page .customer-section__content .input-box{
     min-width: 200px;
   }
+  #home-page .logo-mobile{
+    top: 10%;
+    position: absolute;
+  }
   #home-page .carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right, .carousel-control .icon-next, .carousel-control .icon-prev{
-    top:16%;
+    top:25%;
   }
   #home-page .logo-mobile{
     top: calc(10% - 54px);
     position: absolute;
   }
   #home-page .item-slide-mobile{
-    height: 800px;
+    height: 900px;
   }
   #home-page .carousel-indicators{
-     top: calc(50% - 54px);
+     top:40%;
   }
   //#home-page .item-slide-mobile{
   //  //  height: calc(100% + 200px);
@@ -2098,11 +2114,11 @@ h3 {
   }
 
   #home-page .carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right, .carousel-control .icon-next, .carousel-control .icon-prev {
-    top: 16%;
+    top: 25%;
   }
 
   #home-page .logo-mobile {
-    top: calc(10% - 54px);
+     top: 8%;
     position: absolute;
   }
 
@@ -2588,6 +2604,7 @@ h3 {
   line-height: normal;
   letter-spacing: 0.05em;
   margin-bottom: 24px;
+  text-align: left;
   color: #005BAA;;
 }
 #home-page .carousel-caption .logo-slide img{
@@ -2639,11 +2656,11 @@ h3 {
 
 #home-page .carousel-control.left{
   background: transparent;
-  width: 15px;
+  width: 100px;
 }
 #home-page .carousel-control.right{
   background: transparent;
-  width:15px;
+  width:100px;
 }
 #home-page .container-block__optimize{
    margin-top: 60px;
@@ -2811,4 +2828,17 @@ h3 {
 }
 #home-page .team-section__content.view-xs{
   padding-bottom: 45px;
+}
+#home-page .container-fluid.view-xs .carousel-inner .item-slide-mobile .content__text{
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: stretch;
+}
+#home-page .carousel-indicators{
+  width:100%;
+  margin: auto;
+  left:unset !important;
 }
