@@ -810,16 +810,29 @@ h3 {
 .footer-main h4{
   font-size:20px;
   margin-top:0px;
-  margin-bottom:39px;
+  margin-bottom:25px;
   font-weight:bold;
   line-height:normal;
 }
 .footer-main .row{
   //margin-left:100px;
 }
+.footer-main .footer__address_info, .footer-main .footer__location_info{
+  display:flex;
+  flex-wrap:wrap;
+}
+.footer-main .footer__location_info img{
+  margin-top:6px;
+}
+.footer-main .footer__address_info, .footer-main .footer__location_info::after {
+  content: '';
+  width: 100%;
+}
 .footer-main .footer__address_info p, .footer-main .footer__location_info p{
-  margin-bottom:8px;
-  line-height: 24px;
+  margin-bottom:0px;
+  margin-left:12px;
+  font-size:14px;
+  line-height: normal;
 }
 .footer-main a{
   color:inherit;
@@ -828,6 +841,8 @@ h3 {
 }
 .footer-main .footer__location_info{
   margin-top:10px;
+  align-items: flex-start;
+
 }
 .menu-footer{
   width: 1260px;
@@ -866,6 +881,8 @@ h3 {
 }
 .company-info p{
   margin-bottom: 7px;
+  font-size:14px;
+  line-height: normal;
 }
 .company-info .fa{
   padding-right: 15px;
@@ -1461,8 +1478,8 @@ h3 {
 
 // Footer
 .footer__content .footer__content_pd{
-  padding: 64px 15px;
-  padding-bottom:57px;
+  padding: 32px 15px;
+  padding-bottom:21px;
 }
 
 .footer__content_pd_15{
@@ -1561,14 +1578,20 @@ h3 {
   .content_about_us .col-md-9 .dash-with-background{
     display:block;
   }
+  .footer-section{
+    background: linear-gradient(87.02deg, #0064FF 0.37%, #00B0D0 100%);
+  }
   .footer__content{
     //padding:40px 0px;
-    padding-top:45px;
-    padding-bottom:56px;
+    padding-top:40px;
+    padding-bottom:53px;
   }
   .footer__content .footer__content_pd{
-    padding: 40px 15px;
+    padding: 24px 15px;
     padding-bottom:0px;
+  }
+  .footer-main h4{
+    margin-bottom:12px;
   }
   .content_about_us{
     padding: 15px 15px;
