@@ -1,0 +1,1 @@
+.position-activity{position:relative}.position-activity:before{content:"";position:absolute;top:1.25em;left:2.75em;width:4px;height:calc(100% - 2.5em);background-color:#ccc}
