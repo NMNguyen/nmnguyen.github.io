@@ -1,0 +1,29 @@
+image: catchdigital/node-sass
+
+before_script:
+  #  - apk add --update nodejs
+  #  - apk add yarn
+  - npm install yarn
+  - yarn install
+
+
+# Note: incase build error, comment out cache so that gitlab runner does not use cache
+#cache:
+#  paths:
+#    - node_modules/
+
+#
+#test_build:
+#  script:
+#    - yarn run build
+
+pages:
+  script:
+    - yarn run build
+    - rm -rf public/
+    - mv dist public
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
