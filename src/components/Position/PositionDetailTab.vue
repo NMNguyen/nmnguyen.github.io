@@ -2,7 +2,7 @@
 
 <template>
     <div class="main-content">
-        <h1>Position Details</h1>
+        <h1>Position Details The fucking shit</h1>
         <div>
             <b-form-input size="sm" class="input-common-css position-title" v-model="text"
                           placeholder="Position Title *">
