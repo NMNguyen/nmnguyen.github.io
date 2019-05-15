@@ -176,7 +176,7 @@
 
         dateSelect(objEvent: any): void {
             this.newEvent = objEvent;
-            (this.$refs.addEventModal as Modal).show();
+            (this.$refs.addEventModal as any).show();
         }
     }
 </script>
