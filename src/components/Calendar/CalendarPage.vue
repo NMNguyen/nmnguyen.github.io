@@ -77,7 +77,6 @@
     import dayGridPlugin from '@fullcalendar/daygrid';
     import timeGridPlugin from '@fullcalendar/timegrid';
     import InteractionPlugin from '@fullcalendar/interaction';
-    import {Modal} from 'bootstrap-vue';
 
     import viPlugin from "@fullcalendar/core/locales/vi";
     import OptionDropdown from "@/components/OptionDropdown/OptionDropdown.vue";
