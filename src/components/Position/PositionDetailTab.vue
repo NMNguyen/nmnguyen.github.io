@@ -1,4 +1,4 @@
-<style src="vue-multiselect/dist/vue-multiselect.min.css"></style>
+
 
 <template>
     <div class="main-content">
