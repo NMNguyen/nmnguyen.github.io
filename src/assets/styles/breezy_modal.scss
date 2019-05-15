@@ -1,0 +1,1059 @@
+.modal-content {
+     width: 100% !important;
+     overflow: inherit;
+}
+
+.modal-content .modal-main .main-content {
+     margin-left: 0 !important;
+}
+
+.modal-content .settings .main-content .footer {
+     position: static;
+}
+
+.modal-content .modal-main .main-content {
+     width: 100%;
+}
+
+a, a:focus {
+     color: #4c555c;
+     outline: none;
+}
+
+.modal-content .sidebar {
+     position: absolute;
+     left: 0;
+     bottom: 0;
+     border-right: none;
+     width: 174px;
+     background: #fcfcfc;
+}
+
+.sidebar {
+     position: absolute;
+     padding: 20px 0;
+     font-size: 14px;
+     -webkit-transition: .3s;
+     -moz-transition: .3s;
+     -ms-transition: .3s;
+     -o-transition: .3s;
+     transition: .3s;
+     top: 61px;
+     width: 250px;
+     left: -251px;
+     bottom: 0;
+     z-index: 1000;
+     background: #fff;
+     border-right: 1px solid #edeff0;
+     padding-top: 20px;
+     overflow: auto;
+}
+
+.nav {
+     padding-left: 0;
+     margin-bottom: 0;
+     list-style: none;
+}
+
+.nav > li {
+     position: relative;
+     display: block;
+}
+
+.breezy-nav-item {
+     color: #8a9ba8;
+     cursor: pointer;
+     display: block;
+     font-size: 13px;
+     font-weight: 200;
+     line-height: 30px;
+     padding: 7px 15px;
+     transition: .3s border-color ease;
+     white-space: nowrap;
+}
+
+.breezy-nav-item .router-link-exact-active i {
+     opacity: 1;
+     border-color: #76d691;
+     background-color: #76d691;
+     color: #fff;
+}
+
+.breezy-nav-item i {
+     transition: .3s;
+     font-size: 12px;
+     margin-right: 10px;
+     padding: 5px;
+     border: 2px solid #8a9ba8;
+     background-color: #fff;
+     border-radius: 50%;
+     background-color: #fff;
+     height: 26px;
+     width: 26px;
+     display: inline-block;
+     text-align: center;
+}
+
+.modal-content .modal-main .header {
+     margin-bottom: 20px;
+}
+
+.modal-content .modal-main .header h1, .modal-content .modal-main .header h2 {
+     margin-bottom: 10px;
+}
+
+h1 {
+     font-size: 24px;
+     font-weight: 400;
+     line-height: 1.5;
+}
+
+ul {
+     padding: 0;
+}
+
+h1 {
+     font-size: 24px !important;
+     font-weight: 400;
+     line-height: 1.5;
+}
+
+.header h1, .modal-content .modal-main .header h2 {
+     margin-bottom: 10px;
+}
+
+ul {
+     list-style: none;
+}
+
+.modal-content .settings .main-content .profile input {
+     margin-bottom: 10px;
+     display: block;
+}
+
+.layout input[type=radio] {
+     float: left;
+     margin-right: 5px;
+     margin-bottom: 0 !important;
+     margin-top: 0 !important;
+}
+
+.modal-content .settings .main-content .section h3 {
+     margin-bottom: 5px;
+     font-size: 16px;
+}
+
+.layout h3 {
+     font-weight: 400;
+     font-size: 16px;
+}
+
+.layout:first-child {
+     margin-right: 30px;
+}
+
+.layout {
+     display: inline-block;
+     margin-top: 10px;
+     margin-bottom: 20px;
+     width: 45%;
+     vertical-align: top;
+}
+
+.modal-content .settings .main-content .section h2 {
+     margin-bottom: 8px;
+}
+
+h2 {
+     font-size: 18px;
+     font-weight: 400;
+     line-height: 1.5;
+}
+
+
+.settings.portal .layout h3 .small {
+     color: inherit;
+     font-weight: 200;
+}
+
+.settings.portal .browser {
+     position: relative;
+     width: 250px;
+     height: 200px;
+     background: #edeff0;
+     border-radius: 4px;
+}
+
+.settings.portal .browser .controls {
+     position: absolute;
+     top: 2px;
+     height: 5px;
+     left: 2.5px;
+     right: 2.5px;
+}
+
+.settings.portal .browser .controls div {
+     position: relative;
+     display: inline;
+     width: 4px;
+     height: 4px;
+     border-radius: 4px;
+     background: #4c555c;
+}
+
+.settings.portal .browser .address-bar {
+     position: absolute;
+     top: 12px;
+     height: 5px;
+     left: 2.5px;
+     right: 2.5px;
+     background: #ffffff;
+}
+
+.settings.portal .browser .content {
+     position: absolute;
+     top: 20px;
+     bottom: 2.5px;
+     left: 2.5px;
+     right: 2.5px;
+     background: #ffffff;
+}
+
+.settings.portal .browser.bold .content .hero {
+     position: absolute;
+     top: 0;
+     height: 110px;
+     left: 0;
+     right: 0;
+}
+
+.modal-content .hero {
+     text-align: center;
+     padding: 20px 0;
+}
+
+.settings.portal .browser.bold .content .hero .hero-header {
+     background: #fff;
+}
+
+.settings.portal .browser.bold .content .hero .hero-header {
+     height: 16px;
+     background: #fff;
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+}
+
+.settings.portal .browser.bold .content .hero .logo {
+     position: absolute;
+     top: 5px;
+     background: #9b9b9b;
+     width: 30px;
+     left: 40px;
+     height: 6px;
+}
+
+.settings.portal .browser.bold .content .hero .actions {
+     position: absolute;
+     top: -5px;
+     right: 40px;
+     height: 4px;
+}
+
+.settings.portal .browser.bold .content .hero .actions .action {
+     display: inline-block;
+     background: #9b9b9b;
+     width: 10px;
+     height: 2px;
+     margin-left: 5px;
+}
+
+.settings.portal .browser.bold .content .hero .title {
+     background: #ffffff;
+     width: 140px;
+     height: 4px;
+     margin: 30px auto 10px;
+}
+
+.settings.portal .browser.bold .content .hero .sub-title {
+     background: #ffffff;
+     width: 100px;
+     height: 2px;
+     margin: 0px auto 10px;
+}
+
+.settings.portal .browser.bold .content .hero .cta {
+     width: 44px;
+     height: 14px;
+     margin: 0px auto 10px;
+}
+
+.settings.portal .browser.bold .content .video-container {
+     position: absolute;
+     top: 110px;
+     left: 0;
+     right: 0;
+     height: 60px;
+}
+
+.settings.portal .browser.bold .content .video-container .video {
+     position: absolute;
+     width: 100px;
+     background-color: #ddd;
+     height: 40px;
+     top: 15px;
+     left: 15px;
+}
+
+.settings.portal .browser.bold .content .video-container .copy {
+     position: absolute;
+     width: 100px;
+     left: 130px;
+     top: 15px;
+     bottom: 15px;
+}
+
+.settings.portal .browser.bold .content .video-container .line {
+     height: 2px;
+     background-color: #ddd;
+     margin-bottom: 4px;
+}
+
+.settings.portal .browser.simple .content .header {
+     background: #fff;
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+}
+
+.settings.portal .browser.simple .content .header .logo {
+     position: absolute;
+     top: 5px;
+     background: #9b9b9b;
+     width: 30px;
+     left: 40px;
+     height: 6px;
+}
+
+.settings.portal .browser.simple .content .header .actions {
+     position: absolute;
+     top: -5px;
+     right: 40px;
+     height: 4px;
+}
+
+.settings.portal .browser.simple .content .header .actions .action {
+     display: inline-block;
+     background: #9b9b9b;
+     width: 10px;
+     height: 2px;
+     margin-left: 5px;
+}
+
+.settings.portal .browser.simple .content .content-body {
+     position: absolute;
+     top: 15px;
+     bottom: 0;
+     left: 0;
+     right: 0;
+}
+
+.settings.portal .browser.simple .content .content-body .title {
+     position: absolute;
+     top: 20px;
+     left: 40px;
+     height: 5px;
+     background-color: #ddd;
+     width: 80px;
+}
+
+.settings.portal .browser.simple .content .content-body .meta {
+     position: absolute;
+     top: 20px;
+     left: 40px;
+     height: 3px;
+}
+
+.settings.portal .browser.simple .content .content-body .meta .meta-item {
+     display: inline-block;
+     background-color: #ddd;
+     margin-right: 4px;
+     width: 10px;
+     height: 3px;
+}
+
+.settings.portal .browser.simple .content .content-body .body {
+     position: absolute;
+     left: 40px;
+     top: 50px;
+     right: 40px;
+     bottom: 0;
+}
+
+
+.settings.portal .browser.simple .content .content-body .body .line {
+     height: 2px;
+     background-color: #ddd;
+     margin-bottom: 4px;
+}
+
+.settings.portal .browser.simple .content .content-body .body .video-container {
+     margin-top: 10px;
+     margin-bottom: 10px;
+}
+
+.settings.portal .browser.simple .content .content-body .body .video-container .video {
+     height: 60px;
+     background-color: #ddd;
+}
+
+
+.settings.portal .browser.simple .content .content-body .body .line {
+     height: 2px;
+     background-color: #ddd;
+     margin-bottom: 4px;
+}
+
+.modal-content .settings .footer {
+     margin-top: 20px;
+}
+
+.align-right {
+     text-align: right !important;
+}
+
+.modal-content .reasons .footer.align-right button, .modal-content .settings .footer.align-right button {
+     margin-right: 0;
+     margin-left: 10px;
+}
+
+.modal-content .reasons .footer button, .modal-content .settings .footer button {
+     margin-right: 10px;
+     min-width: 120px;
+     text-align: center;
+}
+
+.button.blue, .btn-blue {
+     background-color: #5ac0e5 !important;
+     color: #fff !important;
+}
+
+.modal-content .reasons .footer button.default .default, .modal-content .settings .footer button.default .default {
+     display: inline;
+}
+
+.modal-content .reasons .footer button i, .modal-content .settings .footer button i {
+     margin: 0 5px;
+}
+
+.modal-content .reasons .footer button.default .default, .modal-content .settings .footer button.default .default {
+     display: inline;
+}
+
+.modal-content .reasons .footer button.default .success, .modal-content .settings .footer button.default .success {
+     display: none;
+}
+
+.modal-content .reasons .footer button i, .modal-content .settings .footer button i {
+     margin: 0 5px;
+}
+
+.modal-content .reasons .footer button.default .default, .modal-content .settings .footer button.default .default {
+     display: inline;
+}
+
+.modal-content .settings .footer button i {
+     margin: 0 5px;
+}
+
+.footer button i {
+     margin: 0 5px;
+}
+
+
+.hero-image-controls .buttons .btn {
+     margin-right: 10px;
+}
+
+.btn.btn-xs {
+     font-size: 12px !important;
+     height: initial !important;
+     padding: 2px 8px;
+}
+
+.bzy-option .btn {
+     background: #edeff0;
+     color: #68747e !important;
+}
+
+.settings .main-content .section {
+     padding: 0;
+}
+
+.settings .main-content .profile .company-logo-container img {
+     max-width: 200px;
+     max-height: 100px;
+     margin-bottom: 10px;
+}
+
+.btn.btn-xs {
+     font-size: 12px !important;
+     height: initial !important;
+     padding: 2px 8px;
+}
+
+.button.blue, .btn-blue {
+     background-color: #5ac0e5 !important;
+     color: #fff !important;
+}
+
+.company-hero-container .hero-wrap {
+     margin-bottom: 10px;
+}
+
+.company-hero-container .hero-preview {
+     height: 175px;
+     background-position: center;
+     background-repeat: repeat, no-repeat;
+     background-size: 100%, cover;
+     padding-top: 40px;
+     text-align: center;
+     color: #fff;
+     line-height: 1.2;
+}
+
+.settings .main-content .section p {
+     line-height: 1.4;
+     margin-bottom: 15px;
+}
+
+.hero-preview h1 {
+     font-size: 28px;
+     margin-bottom: 10px;
+}
+
+.header-cap-styles li, .messenger .header-cap-styles li {
+     display: inline-block;
+     margin-right: 10px;
+}
+
+.header-cap-styles li a, .messenger .header-cap-styles li a {
+     display: inline-block;
+     height: 34px;
+     width: 34px;
+     border-radius: 4px;
+}
+
+a, a:focus {
+     color: #4c555c;
+     outline: none;
+}
+
+.active-color-container {
+     margin-top: 20px;
+}
+
+.selected-color {
+     float: left;
+     height: 34px;
+     width: 34px;
+     border-radius: 4px;
+     margin-right: 10px;
+}
+
+.profile input {
+     margin-bottom: 10px;
+     display: block;
+}
+
+.minicolors-theme-bootstrap .minicolors-input {
+     padding-left: 10px;
+}
+
+.minicolors-theme-bootstrap .minicolors-input {
+     float: none;
+     padding-left: 44px;
+}
+
+input {
+     border: 2px solid #edeff0;
+     background: #fff;
+     font-size: 14px;
+     color: #4c555c;
+     line-height: 20px;
+     padding: 6px 10px;
+     -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+     -ms-border-radius: 4px;
+     -o-border-radius: 4px;
+     border-radius: 4px;
+     -webkit-transition: .3s;
+     -moz-transition: .3s;
+     -ms-transition: .3s;
+     -o-transition: .3s;
+     transition: .3s;
+}
+
+.settings .favicon {
+     display: flex;
+     align-items: center;
+     margin-bottom: 10px;
+}
+
+.settings .favicon .preview {
+     margin-right: 10px;
+}
+
+.settings .favicon .preview img {
+     height: 16px;
+     width: 16px;
+}
+
+.main-content .section p {
+     line-height: 1.4;
+     margin-bottom: 15px;
+}
+
+
+ul.application-list-options {
+     background: #fafafa;
+     border: 1px solid #edeff0;
+     border-radius: 4px;
+     margin-bottom: 10px;
+}
+
+ul.application-list-options li {
+     border-bottom: 1px solid #edeff0;
+     margin: 0;
+}
+
+ul.application-list-options li .option-list-item {
+     padding: 10px;
+}
+
+ul.application-list-options li .option-list-header {
+     align-items: center;
+     display: flex;
+     width: 100%;
+}
+
+ul.application-list-options li .option-list-header h3 {
+     font-weight: 400;
+}
+
+
+ul.application-list-options li h3, ul.application-list-options li .option-label {
+     flex: 1;
+     font-size: 14px;
+     font-weight: 400;
+     margin-bottom: 0px !important;
+     overflow: hidden;
+     text-overflow: ellipsis;
+     vertical-align: middle;
+     white-space: nowrap;
+}
+
+ul.application-list-options li .actions {
+     color: #68747e;
+     font-size: 10px;
+}
+
+ul.application-list-options li {
+     border-bottom: 1px solid #edeff0;
+     margin: 0;
+}
+
+.bzy-switch {
+     border-radius: 4px;
+     display: inline-block;
+     position: relative;
+     vertical-align: middle;
+     white-space: nowrap;
+}
+
+.bzy-switch label input:checked ~ span.bzy-option {
+     background-color: #76d691;
+     border-color: #76d691;
+     color: #fff;
+     cursor: default;
+}
+
+.bzy-switch label:first-child span.bzy-option {
+     border-radius: 4px 0 0 4px;
+}
+
+.bzy-switch label span.bzy-option {
+     border: 1px solid #edeff0;
+     background-color: #edeff0;
+     cursor: pointer;
+     display: inline-block;
+     font-size: 12px;
+     line-height: 1.5;
+     padding: 1px 5px;
+     transition: .3s ease;
+}
+
+.bzy-switch label input {
+     display: none !important;
+}
+
+.modal-content .settings .main-content .section input[type='text'].full, .modal-content .settings .main-content .section input[type='url'].full {
+     width: 400px;
+}
+
+.modal-content .settings .main-content .profile input {
+     margin-bottom: 10px;
+     display: block;
+}
+
+.modal-content .modal-main .header {
+     margin-bottom: 20px;
+}
+
+.modal-content .settings .main-content .profile input {
+     margin-bottom: 10px;
+     display: block;
+}
+
+input[type=text], input[type=password], input[type=search], input[type=email], input[type=number] {
+     height: 34px;
+}
+
+.redactor-style {
+     border: 2px solid #edeff0 !important;
+     margin: 0;
+     padding: 0;
+     background: #fff;
+     border-radius: 3px;
+     box-shadow: none;
+}
+
+.settings.portal .perk-icons {
+     width: 400px;
+}
+
+.settings.portal .perk-icon {
+     display: inline-block;
+     margin-right: 10px;
+     margin-bottom: 10px;
+}
+
+
+.settings.portal .perk-icon a.active {
+     background-color: #76d691;
+     color: #fff;
+}
+
+.settings.portal .perk-icon a {
+     background-color: #eee;
+     border-radius: 4px;
+     padding: 8px;
+     display: block;
+     width: 32px;
+     text-align: center;
+}
+
+a, a:focus {
+     color: #4c555c;
+     outline: none;
+}
+
+.settings .main-content .section {
+     margin-bottom: 30px;
+}
+
+.settings.portal .testimonial-container .headshot-placeholder {
+     float: left;
+     height: 78px;
+     width: 78px;
+     margin-right: 10px;
+     border-radius: 4px;
+     cursor: pointer;
+     border: 2px solid #edeff0;
+     background: #fff;
+     font-size: 14px;
+     color: #4c555c;
+}
+
+.settings.portal .testimonial-container .headshot-placeholder .headshot i {
+     font-size: 32px;
+     color: #aaa;
+     margin-left: 22px;
+     margin-top: 22px;
+}
+
+.settings.portal .testimonial-container .headshot-placeholder .headshot, .settings.portal .testimonial-container .headshot-placeholder .headshot img {
+     height: 100%;
+     width: 100%;
+     border-radius: 0;
+}
+
+.settings .main-content .section input[type='text'].half {
+     width: 250px;
+}
+
+.settings .main-content .profile input {
+     margin-bottom: 10px;
+     display: block;
+}
+
+.settings.portal .testimonials .testimonial:last-child {
+     border: none;
+     margin-bottom: 0;
+}
+
+.settings.portal .testimonials .testimonial {
+     margin-bottom: 10px;
+     padding-bottom: 10px;
+     border-bottom: 1px solid #f9fafa;
+}
+
+.settings.portal .testimonials .testimonial .avatar {
+     float: left;
+}
+
+.avatar {
+     border-radius: 100%;
+     border: 2px solid #fff;
+     display: inline-block;
+     height: 40px;
+     vertical-align: middle;
+     width: 40px;
+}
+
+.settings.portal .testimonials .testimonial .content {
+     margin-left: 50px;
+     padding-top: 5px;
+}
+
+.settings.portal .testimonials .testimonial .content h4 {
+     font-size: 14px;
+     margin-bottom: 4px;
+     font-weight: 400;
+}
+
+.settings.portal .testimonials .testimonial .content h5 {
+     font-size: 12px;
+}
+
+h5 {
+     font-size: 14px;
+     font-weight: 400;
+     line-height: 1.5;
+}
+
+.settings.portal .testimonials .testimonial .content .body {
+     margin-top: 10px;
+}
+
+.settings.portal .section .remove {
+     font-size: 12px;
+     display: block;
+     color: #5ac0e5;
+     margin-top: 5px;
+}
+
+.settings.portal .testimonials .testimonial:last-child {
+     border: none;
+     margin-bottom: 0;
+}
+
+.settings.portal .testimonials .testimonial .avatar {
+     float: left;
+}
+
+.avatar {
+     border-radius: 100%;
+     border: 2px solid #fff;
+     display: inline-block;
+     height: 40px;
+     vertical-align: middle;
+     width: 40px;
+}
+
+.avatar img {
+     border-radius: 100%;
+     max-height: 100%;
+     max-width: 100%;
+     width: 100%;
+     height: 100%;
+     position: relative;
+     vertical-align: top;
+     z-index: 2;
+}
+
+.settings.portal .columns .column:first-child {
+     margin-right: 30px;
+}
+
+.settings.portal .columns .column {
+     width: 45%;
+     display: inline-block;
+     vertical-align: top;
+}
+
+.bzy-list {
+     position: relative;
+}
+
+.bzy-list .bzy-item.draggable {
+     cursor: move;
+     -webkit-touch-callout: none;
+     -webkit-user-select: none;
+     user-select: none;
+}
+
+.bzy-list .bzy-item {
+     border: solid 1px #edeff0;
+     background-color: #edeff0;
+     margin: 1px 2px 5px 1px;
+     min-height: 20px;
+     border-radius: 4px;
+}
+
+.bzy-list .bzy-item .bzy-item-container {
+     font-size: 14px;
+     position: relative;
+     padding: 0 10px 0 30px;
+}
+
+.bzy-list .bzy-item .bzy-item-container i.icon {
+     position: absolute;
+     left: 5px;
+     line-height: 30px;
+     text-align: center;
+     width: 20px;
+}
+
+.bzy-list .bzy-item .bzy-item-container label {
+     cursor: inherit;
+     display: block;
+     line-height: 30px;
+     margin-right: 60px;
+     overflow: hidden;
+     text-overflow: ellipsis;
+     white-space: nowrap;
+}
+
+.bzy-list .bzy-item .bzy-item-container nav {
+     color: #68747e;
+     position: absolute;
+     right: 5px;
+     top: 0;
+}
+
+.settings.portal .column ul.bzy-list li.bzy-item.enabled .disable-section {
+     display: inline-block;
+}
+
+.bzy-list .bzy-item .bzy-item-container nav a {
+     color: inherit;
+     cursor: pointer;
+     display: inline-block;
+     font-size: 10px;
+     line-height: 30px;
+     padding: 0 5px;
+     vertical-align: middle;
+}
+
+.settings.portal .layout-options {
+     margin-top: 20px;
+}
+
+.settings.portal .layout-options h4 {
+     font-weight: 400;
+     margin-bottom: 10px;
+}
+
+.settings.portal .layout-options ul {
+     font-size: 14px;
+}
+
+.settings.portal .layout-options ul li {
+     margin-bottom: 5px !important;
+}
+
+.modal-content .settings .main-content .profile input {
+     margin-bottom: 10px;
+     display: block;
+}
+
+.settings.portal .layout-options input[type=radio] {
+     display: inline-block !important;
+     margin-right: 10px;
+     margin-bottom: 5px !important;
+}
+
+.redactor-styles {
+     font-family: nimbus-sans, Helvetica Neue, Helvetica, Arial, sans-serif !important;
+     font-weight: 200;
+     font-size: 14px;
+     color: #4c555c;
+     line-height: 1.5;
+     padding: 10px;
+}
+
+.redactor-styles {
+     margin: 0;
+     padding: 16px 18px;
+     color: #333;
+     font-family: "Trebuchet MS", "Helvetica Neue", Helvetica, Tahoma, sans-serif;
+     font-size: 1em;
+     line-height: 1.5;
+     box-sizing: border-box;
+}
+
+.redactor-in {
+     position: relative;
+     overflow: auto;
+     white-space: normal;
+     box-sizing: border-box;
+}
+
+.settings .main-content .section p {
+     line-height: 1.4;
+     margin-bottom: 15px;
+}
+
+.modal-content .settings .main-content .section h3 {
+     margin-bottom: 5px;
+}
+
+.settings .meta .preview {
+     border: 4px solid #edeff0;
+     border-radius: 4px;
+     margin: 0 auto;
+}
+
+.main-content .section h3 {
+     margin-bottom: 5px;
+     font-size: 16px;
+}
+
+.settings .meta .preview .meta-text {
+     line-height: 18px;
+     padding: 10px;
+}
+
+
+.settings .meta .preview .meta-title {
+     font-size: 14px;
+     font-weight: 500;
+}
+
+
+.settings .meta .preview .meta-description {
+     line-height: 18px;
+     font-size: 12px;
+}
+
+.settings .meta .preview .meta-link {
+     color: #999;
+     font-size: 10px;
+}
+
+div.footer.align-right {
+     margin-bottom: 20px;
+}

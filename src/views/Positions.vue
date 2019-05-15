@@ -1,0 +1,732 @@
+<template>
+    <div class="about">
+        <header class="py-3 my-0 mx-0 border container" style="background:#F9FAFA; min-width: 100%;">
+            <h3>Vị trí</h3>
+        </header>
+        <header class="my-3 mx-0 container" style="min-width: 100%; z-index: 10; position: absolute;">
+            <div class="row px-3" style="width:100%">
+                <!-- Left buttons -->
+                <div class="col d-flex justify-content-start px-0">
+                    <!-- Filter -->
+                    <a class="btn mr-3 text-secondary" style="background: #E9ECEF; height: 30px;">
+                        <i class="fas fa-filter"></i>
+                    </a>
+                    <!-- Position filter -->
+                    <div class="mr-3 positionFilterSelect d-flex justify-content-start align-items-center">
+                        <div
+                            id="positionFilter"
+                            class="d-flex justify-content-start align-items-center"
+                            style="z-index: 2; position: absolute;"
+                        >
+                            <i style="float:left" class="fas fa-briefcase text-secondary"></i>
+                        </div>
+                        <div
+                            class="positionFilterSelect d-flex justify-content-start align-items-center"
+                            style="z-index: 0; position: absolute;"
+                        >
+                            <select class="form-control pl-10 py-0 my-2 border-0 text-secondary">
+                                <option>Mọi vị trí (Admin)</option>
+                                <option>Vị trí của tôi</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- Column checkboxes -->
+                    <form>
+                        <div class="multiselect">
+                            <div class="selectBox" onclick="showCheckboxes()">
+                                <select
+                                    class="form-control py-0 my-0 border-0 fa text-secondary"
+                                    style="width: 150px; height:30px ;background: #E9ECEF;"
+                                >
+                                    <option>&#xf0b1;&nbsp;&nbsp;&nbsp;Danh sách</option>
+                                </select>
+                                <div class="overSelect"></div>
+                            </div>
+                            <div class="shadow px-3 pt-3 pb-0 mb-3 bg-white rounded" id="checkboxes">
+                                <label class="px-2 text-secondary" aria-disabled="true">Danh sách</label>
+                                <label class="px-2" for="one">
+                                    <input type="checkbox">Lập trình viên
+                                </label>
+                                <label class="px-2" for="one">
+                                    <input type="checkbox">Lập trình viên
+                                </label>
+                                <label class="px-2" for="one">
+                                    <input type="checkbox">Lập trình viên
+                                </label>
+                                <label class="px-2" for="one">
+                                    <input type="checkbox">Lập trình viên
+                                </label>
+                                <label class="px-2" for="one">
+                                    <input type="checkbox">Lập trình viên
+                                </label>
+                                <label class="px-2" for="one">
+                                    <input type="checkbox">Lập trình viên
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- Right buttons -->
+                <div class="col d-flex justify-content-end px-0" style="width: 75%">
+                    <button
+                        class="btn mx-2 text-secondary"
+                        style="height: 30px; background: #E9ECEF"
+                        disabled
+                    >
+                        <i class="fas fa-arrows-alt-h"></i>&nbsp;&nbsp;Đổi trạng thái
+                    </button>
+                    <button class="btn mx-2" style="height: 30px; background: #5ac0e5; color: #fff">
+                        <i class="fas fa-plus"></i>&nbsp;&nbsp;Thêm nhóm
+                    </button>
+                    <button class="btn mx-2" style="height: 30px; background: #5ac0e5; color: #fff">
+                        <i class="fas fa-plus"></i>&nbsp;&nbsp;Thêm vị trí
+                    </button>
+                </div>
+            </div>
+        </header>
+        <!-- Task content -->
+        <div class="container" style="height: 75%; z-index: 0; position: absolute; margin-top: 60px">
+            <div class="row" style="height: 100%">
+                <!-- Left border -->
+                <div class="col-3 pr-4">
+                    <div class="container pl-0" style="height: 70vh; overflow-y: auto">
+                        <!-- Search filter -->
+                        <div class="container px-0">
+                            <input
+                                type="text"
+                                class="form-control my-3"
+                                style="font-size: 13px"
+                                placeholder="Username"
+                            >
+                            <h5 class="my-4">Filtering Options</h5>
+                        </div>
+                        <!-- Filter options -->
+                        <div class="container px-0">
+                            <!-- State -->
+                            <div class="form-check py-1" id="state-container">
+                                <!-- onclick="checkboxClickState()"  -->
+                                <input class="form-check-input" type="checkbox" value id="state-Check">
+                                <label class="form-check-label text-secondary" for="defaultCheck1">
+                                    <i class="fas fa-circle px-1"></i>&nbsp;Tình trạng
+                                </label>
+                            </div>
+                            <!-- Members -->
+                            <div class="form-check py-1" id="member-container">
+                                <input
+                                    class="form-check-input"
+                                    onclick="checkboxClick()"
+                                    type="checkbox"
+                                    value
+                                    id="member-Check"
+                                >
+                                <label class="form-check-label text-secondary" for="defaultCheck1">
+                                    <i class="fas fa-users px-1"></i>Thành viên
+                                </label>
+                            </div>
+                            <!-- Location -->
+                            <div class="form-check py-1" id="location-container">
+                                <input
+                                    class="form-check-input"
+                                    onclick="checkboxClick()"
+                                    type="checkbox"
+                                    value
+                                    id="location-Check"
+                                >
+                                <label class="form-check-label text-secondary" for="defaultCheck1">
+                                    <i class="fas fa-map-marker px-1"></i>&nbsp;&nbsp;Địa điểm
+                                </label>
+                            </div>
+                            <!-- Category -->
+                            <div class="form-check py-1" id="category-container">
+                                <input
+                                    class="form-check-input"
+                                    onclick="checkboxClick()"
+                                    type="checkbox"
+                                    value
+                                    id="category-Check"
+                                >
+                                <label class="form-check-label text-secondary" for="defaultCheck1">
+                                    <i class="fas fa-th-large px-1"></i>&nbsp;Phân loại
+                                </label>
+                            </div>
+                            <!-- PipelineStage -->
+                            <div class="form-check py-1" id="pipeline-container">
+                                <input
+                                    class="form-check-input"
+                                    onclick="checkboxClick()"
+                                    type="checkbox"
+                                    value
+                                    id="pipeline-Check"
+                                >
+                                <label class="form-check-label text-secondary" for="defaultCheck1">
+                                    <i class="fas fa-list-ol px-1"></i>&nbsp;Thứ tự
+                                </label>
+                            </div>
+                            <!-- Type -->
+                            <div class="form-check py-1" id="type-container">
+                                <input
+                                    class="form-check-input"
+                                    onclick="checkboxClick()"
+                                    type="checkbox"
+                                    value
+                                    id="type-Check"
+                                >
+                                <label class="form-check-label text-secondary" for="defaultCheck1">
+                                    <i class="fas fa-user-circle px-1"></i>&nbsp;Loại
+                                </label>
+                            </div>
+                            <!-- Tags -->
+                            <div class="form-check py-1" id="tag-container">
+                                <input
+                                    class="form-check-input"
+                                    onclick="checkboxClick()"
+                                    type="checkbox"
+                                    value
+                                    id="tag-Check"
+                                >
+                                <label class="form-check-label text-secondary" for="defaultCheck1">
+                                    <i class="fas fa-tag px-1"></i>&nbsp;Nhãn
+                                </label>
+                            </div>
+                            <!-- Created -->
+                            <div class="form-check py-1" id="created-container">
+                                <input
+                                    class="form-check-input"
+                                    onclick="checkboxClick()"
+                                    type="checkbox"
+                                    value
+                                    id="created-Check"
+                                >
+                                <label class="form-check-label text-secondary" for="defaultCheck1">
+                                    <i class="fas fa-clock px-1"></i>&nbsp;Được tạo
+                                </label>
+                            </div>
+                            <!-- Last updated -->
+                            <div class="form-check py-1" id="update-container">
+                                <input
+                                    class="form-check-input"
+                                    onclick="checkboxClick()"
+                                    type="checkbox"
+                                    value
+                                    id="update-Check"
+                                >
+                                <label class="form-check-label text-secondary" for="defaultCheck1">
+                                    <i class="fas fa-bolt px-1"></i>&nbsp;&nbsp;Cập nhật lần cuối
+                                </label>
+                            </div>
+                            <!-- Include achieved -->
+                            <div class="form-check py-1" id="achieved-container">
+                                <input
+                                    class="form-check-input"
+                                    onclick="checkboxClick()"
+                                    type="checkbox"
+                                    value
+                                    id="achieved-Check"
+                                >
+                                <label class="form-check-label text-secondary" for="defaultCheck1">
+                                    <i class="fas fa-archive px-1"></i>&nbsp;Hoàn thành
+                                </label>
+                            </div>
+                        </div>
+                        <!-- <div class="container rounded" style="background: #f9fafa">
+                            <select class="custom-select py-0 my-2" placeholder="Select option"
+                                style="width: 75%; height: 25px; background: #edeff0; color: #495057; font-size: 13px">
+                                <option disabled selected hidden>Choose...</option>
+                                <option value="1">Active</option>
+                                <option value="2">Draft</option>
+                                <option value="3">Closed</option>
+                            </select>
+                            <button class="btn text-secondary" style="background:transparent"><i class="fas fa-times"></i></button>
+                            <a href="#" class="d-flex justify-content-end align-items-center">
+                                <i class="fas fa-plus" style="font-size: 11px"></i>&nbsp;Thêm bộ lọc</a>
+                        </div>-->
+                    </div>
+                    <!-- Filter buttons -->
+                    <div class="btn-group pr-3" style="width: 100%">
+                        <button type="button" class="btn btn-cyan" style="width:100%">
+                            <i class="fas fa-filter"></i>&nbsp;&nbsp;Lọc
+                        </button>
+                        <button type="button" class="btn btn-cyan">
+                            <i class="fas fa-save"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right border -->
+                <div class="col-9 pl-0 pr-5">
+                    <div
+                        class="container pl-0 rounded"
+                        style="height: 77vh; overflow-y: auto; background:#F9FAFA; border: 1px solid #edeff0"
+                    >
+                        <!-- Table content -->
+                        <div class="container my-3 px-0">
+                            <div class="container my-3">
+                                <table style="width: 100%; border: whitesmoke" border="1" frame="void" rules="rows">
+                                    <tr style="font-size: 12px; text-align: center">
+                                        <td height="50">
+                                            <input type="checkbox">
+                                        </td>
+                                        <td height="50">
+                                            <i class="fas fa-circle"></i>
+                                            <span class="sortArrow"></span>
+                                        </td>
+                                        <td height="50" width="80" style="text-align: left">
+                                            Tên
+                                            <span class="sortArrow"></span>
+                                        </td>
+                                        <td height="50"></td>
+                                        <td height="50" style="text-align: left">
+                                            Địa điểm
+                                            <span class="sortArrow"></span>
+                                        </td>
+                                        <td height="50">
+                                            Chức vụ
+                                            <span class="sortArrow"></span>
+                                        </td>
+                                        <td height="50">
+                                            <i class="fas fa-users">
+                                                <span class="sortArrow"></span>
+                                            </i>
+                                        </td>
+                                        <td height="50">
+                                            <i class="fas fa-clock">
+                                                <span class="sortArrow"></span>
+                                            </i>
+                                        </td>
+                                        <td height="50">
+                                            <i class="fas fa-bolt">
+                                                <span class="sortArrow"></span>
+                                            </i>
+                                        </td>
+                                        <td height="50" style="text-align: left">
+                                            Nhóm thuê
+                                            <span class="sortArrow"></span>
+                                        </td>
+                                    </tr>
+                                    <tr style="font-size: 12px; text-align: center">
+                                        <td class="text-secondary" height="50">
+                                            <input type="checkbox">
+                                        </td>
+                                        <td class="text-secondary" height="50">
+                                            <div class="dropdown">
+                                                <button
+                                                    class="btn dropdown-toggle"
+                                                    type="button"
+                                                    id="stateDropdown"
+                                                    data-toggle="dropdown"
+                                                    aria-haspopup="true"
+                                                    aria-expanded="false"
+                                                    style="background:transparent; color: #76d691"
+                                                >
+                          <span>
+                            <i class="fas fa-circle"></i>
+                          </span>
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="stateDropdown">
+                                                    <a class="dropdown-item" href="#">
+                                                        <i class="fas fa-circle" style="color: #76d691"></i>Active
+                                                    </a>
+                                                    <a class="dropdown-item" href="#">
+                                                        <i class="fas fa-circle" style="color: #5ac0e5"></i>Draft
+                                                    </a>
+                                                    <a class="dropdown-item" href="#">
+                                                        <i class="fas fa-circle" style="color: #778591"></i>Closed
+                                                    </a>
+                                                    <a class="dropdown-item" href="#">
+                                                        <i class="fas fa-archive" style="background: "></i>Achieved
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="text-secondary" height="50" style="text-align: left">hoo hoo</td>
+                                        <td class="text-secondary" height="50" style="text-align: right">
+                                            <div class="dropdown">
+                                                <button
+                                                    class="btn"
+                                                    type="button"
+                                                    id="positionDropdown"
+                                                    data-toggle="dropdown"
+                                                    aria-haspopup="true"
+                                                    aria-expanded="false"
+                                                    style="background:#edeff0; color: #778591; height: 28px;"
+                                                >
+                          <span>
+                            <i class="fas fa-ellipsis-v"></i>
+                          </span>
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="positionDropdown">
+                                                    <a class="dropdown-item" href="#">Sửa vị trí</a>
+                                                    <a class="dropdown-item" href="#">Nhân bản vị trí</a>
+                                                    <a class="dropdown-item" href="#">Chia sẻ vị trí</a>
+                                                    <a class="dropdown-item" href="#">Xem trên portal</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="text-secondary" height="50" style="text-align: left"></td>
+                                        <td class="text-secondary" height="50">
+                      <span>
+                        <i class="fas fa-user-circle"></i>
+                      </span>
+                                        </td>
+                                        <td class="text-secondary" height="50">0</td>
+                                        <td class="text-secondary" height="50">20 phút trước</td>
+                                        <td class="text-secondary" height="50">20 phút trước</td>
+                                        <td class="text-secondary" height="50" width="90">
+                                            <div class="container d-flex justify-content-center">
+                                                <img
+                                                    src="https://breezy-avatars.imgix.net/8b49f/20190325095513.jpg?w=200&amp;h=200&amp;crop=faces&amp;fit=crop"
+                                                    class="rounded-circle"
+                                                    alt="Cinque Terre"
+                                                    width="20px"
+                                                    height="20px"
+                                                >
+                                                <button
+                                                    class="d-flex justify-content-center align-items-center"
+                                                    style="background:transparent; border-radius:50%; width: 20px; height: 20px;"
+                                                >
+                                                    <i class="fas fa-plus" style="font-size: 10px"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr style="font-size: 12px; text-align: center">
+                                        <td class="text-secondary" height="50">
+                                            <input type="checkbox">
+                                        </td>
+                                        <td class="text-secondary" height="50">
+                                            <div class="dropdown">
+                                                <button
+                                                    class="btn dropdown-toggle"
+                                                    type="button"
+                                                    id="stateDropdown"
+                                                    data-toggle="dropdown"
+                                                    aria-haspopup="true"
+                                                    aria-expanded="false"
+                                                    style="background:transparent; color: #76d691"
+                                                >
+                          <span>
+                            <i class="fas fa-circle"></i>
+                          </span>
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="stateDropdown">
+                                                    <a class="dropdown-item" href="#">
+                                                        <i class="fas fa-circle" style="color: #76d691"></i>Active
+                                                    </a>
+                                                    <a class="dropdown-item" href="#">
+                                                        <i class="fas fa-circle" style="color: #5ac0e5"></i>Draft
+                                                    </a>
+                                                    <a class="dropdown-item" href="#">
+                                                        <i class="fas fa-circle" style="color: #778591"></i>Closed
+                                                    </a>
+                                                    <a class="dropdown-item" href="#">
+                                                        <i class="fas fa-archive" style="background: "></i>Achieved
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="text-secondary" height="50" style="text-align: left">hoho</td>
+                                        <td class="text-secondary" height="50" style="text-align: right">
+                                            <div class="dropdown">
+                                                <button
+                                                    class="btn"
+                                                    type="button"
+                                                    id="positionDropdown"
+                                                    data-toggle="dropdown"
+                                                    aria-haspopup="true"
+                                                    aria-expanded="false"
+                                                    style="background:#edeff0; color: #778591; height: 28px;"
+                                                >
+                          <span>
+                            <i class="fas fa-ellipsis-v"></i>
+                          </span>
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="positionDropdown">
+                                                    <a class="dropdown-item" href="#">Sửa vị trí</a>
+                                                    <a class="dropdown-item" href="#">Nhân bản vị trí</a>
+                                                    <a class="dropdown-item" href="#">Chia sẻ vị trí</a>
+                                                    <a class="dropdown-item" href="#">Xem trên portal</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="text-secondary" height="50" style="text-align: left"></td>
+                                        <td class="text-secondary" height="50">
+                      <span>
+                        <i class="fas fa-user-circle"></i>
+                      </span>
+                                        </td>
+                                        <td class="text-secondary" height="50">0</td>
+                                        <td class="text-secondary" height="50">17 phút trước</td>
+                                        <td class="text-secondary" height="50">17 phút trước</td>
+                                        <td class="text-secondary" height="50" width="90">
+                                            <div class="container d-flex justify-content-center">
+                                                <img
+                                                    src="https://breezy-avatars.imgix.net/8b49f/20190325095513.jpg?w=200&amp;h=200&amp;crop=faces&amp;fit=crop"
+                                                    class="rounded-circle"
+                                                    alt="Cinque Terre"
+                                                    width="20px"
+                                                    height="20px"
+                                                >
+                                                <button
+                                                    class="d-flex justify-content-center align-items-center"
+                                                    style="background:transparent; border-radius:50%; width: 20px; height: 20px;"
+                                                >
+                                                    <i class="fas fa-plus" style="font-size: 10px"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr style="font-size: 12px; text-align: center">
+                                        <td class="text-secondary" height="50">
+                                            <input type="checkbox">
+                                        </td>
+                                        <td class="text-secondary" height="50">
+                                            <div class="dropdown">
+                                                <button
+                                                    class="btn dropdown-toggle"
+                                                    type="button"
+                                                    id="stateDropdown"
+                                                    data-toggle="dropdown"
+                                                    aria-haspopup="true"
+                                                    aria-expanded="false"
+                                                    style="background:transparent; color: #76d691"
+                                                >
+                          <span>
+                            <i class="fas fa-circle"></i>
+                          </span>
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="stateDropdown">
+                                                    <a class="dropdown-item" href="#">
+                                                        <i class="fas fa-circle" style="color: #76d691"></i>Active
+                                                    </a>
+                                                    <a class="dropdown-item" href="#">
+                                                        <i class="fas fa-circle" style="color: #5ac0e5"></i>Draft
+                                                    </a>
+                                                    <a class="dropdown-item" href="#">
+                                                        <i class="fas fa-circle" style="color: #778591"></i>Closed
+                                                    </a>
+                                                    <a class="dropdown-item" href="#">
+                                                        <i class="fas fa-archive" style="background: "></i>Achieved
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="text-secondary" height="50" style="text-align: left">Tester</td>
+                                        <td class="text-secondary" height="50" style="text-align: right">
+                                            <div class="dropdown">
+                                                <button
+                                                    class="btn"
+                                                    style="height: 28px; background: #76d691; color:white; font-size: 12px"
+                                                >
+                                                    <i class="fas fa-bullhorn"></i>Ủy quyền
+                                                </button>
+                                                <button
+                                                    class="btn"
+                                                    type="button"
+                                                    id="positionDropdown"
+                                                    data-toggle="dropdown"
+                                                    aria-haspopup="true"
+                                                    aria-expanded="false"
+                                                    style="background:#edeff0; color: #778591; height: 28px;"
+                                                >
+                          <span>
+                            <i class="fas fa-ellipsis-v"></i>
+                          </span>
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="positionDropdown">
+                                                    <a class="dropdown-item" href="#">Sửa vị trí</a>
+                                                    <a class="dropdown-item" href="#">Nhân bản vị trí</a>
+                                                    <a class="dropdown-item" href="#">Chia sẻ vị trí</a>
+                                                    <a class="dropdown-item" href="#">Xem trên portal</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="text-secondary" height="50" style="text-align: left">Mỹ</td>
+                                        <td class="text-secondary" height="50">
+                      <span>
+                        <i class="fas fa-briefcase"></i>
+                      </span>
+                                        </td>
+                                        <td class="text-secondary" height="50">0</td>
+                                        <td class="text-secondary" height="50">1 tiếng trước</td>
+                                        <td class="text-secondary" height="50">1 tiếng trước</td>
+                                        <td class="text-secondary" height="50" width="90">
+                                            <div class="container d-flex justify-content-center">
+                                                <img
+                                                    src="https://breezy-avatars.imgix.net/8b49f/20190325095513.jpg?w=200&amp;h=200&amp;crop=faces&amp;fit=crop"
+                                                    class="rounded-circle"
+                                                    alt="Cinque Terre"
+                                                    width="20px"
+                                                    height="20px"
+                                                >
+                                                <button
+                                                    class="d-flex justify-content-center align-items-center"
+                                                    style="background:transparent; border-radius:50%; width: 20px; height: 20px;"
+                                                >
+                                                    <i class="fas fa-plus" style="font-size: 10px"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr style="font-size: 12px; text-align: center">
+                                        <td class="text-secondary" height="50">
+                                            <input type="checkbox">
+                                        </td>
+                                        <td class="text-secondary" height="50">
+                                            <div class="dropdown">
+                                                <button
+                                                    class="btn dropdown-toggle"
+                                                    type="button"
+                                                    id="stateDropdown"
+                                                    data-toggle="dropdown"
+                                                    aria-haspopup="true"
+                                                    aria-expanded="false"
+                                                    style="background:transparent; color: #5ac0e5"
+                                                >
+                          <span>
+                            <i class="fas fa-circle"></i>
+                          </span>
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="stateDropdown">
+                                                    <a class="dropdown-item" href="#">
+                                                        <i class="fas fa-circle" style="color: #76d691"></i>Active
+                                                    </a>
+                                                    <a class="dropdown-item" href="#">
+                                                        <i class="fas fa-circle" style="color: #5ac0e5"></i>Draft
+                                                    </a>
+                                                    <a class="dropdown-item" href="#">
+                                                        <i class="fas fa-circle" style="color: #778591"></i>Closed
+                                                    </a>
+                                                    <a class="dropdown-item" href="#">
+                                                        <i class="fas fa-archive" style="background: "></i>Achieved
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="text-secondary" height="50" style="text-align: left">Dev</td>
+                                        <td class="text-secondary" height="50" style="text-align: right">
+                                            <div class="dropdown">
+                                                <button
+                                                    class="btn"
+                                                    type="button"
+                                                    id="positionDropdown"
+                                                    data-toggle="dropdown"
+                                                    aria-haspopup="true"
+                                                    aria-expanded="false"
+                                                    style="background:#edeff0; color: #778591; height: 28px;"
+                                                >
+                          <span>
+                            <i class="fas fa-ellipsis-v"></i>
+                          </span>
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="positionDropdown">
+                                                    <a class="dropdown-item" href="#">Sửa vị trí</a>
+                                                    <a class="dropdown-item" href="#">Nhân bản vị trí</a>
+                                                    <a class="dropdown-item" href="#">Chia sẻ vị trí</a>
+                                                    <a class="dropdown-item" href="#">Xem trên portal</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="text-secondary" height="50" style="text-align: left">Việt Nam</td>
+                                        <td class="text-secondary" height="50">
+                      <span>
+                        <i class="fas fa-briefcase"></i>
+                      </span>
+                                        </td>
+                                        <td class="text-secondary" height="50">3</td>
+                                        <td class="text-secondary" height="50">8 ngày trước</td>
+                                        <td class="text-secondary" height="50">1 tiếng trước</td>
+                                        <td class="text-secondary" height="50" width="90">
+                                            <div class="container d-flex justify-content-center">
+                                                <img
+                                                    src="https://breezy-avatars.imgix.net/8b49f/20190325095513.jpg?w=200&amp;h=200&amp;crop=faces&amp;fit=crop"
+                                                    class="rounded-circle"
+                                                    alt="Cinque Terre"
+                                                    width="20px"
+                                                    height="20px"
+                                                >
+                                                <button
+                                                    class="d-flex justify-content-center align-items-center"
+                                                    style="background:transparent; border-radius:50%; width: 20px; height: 20px;"
+                                                >
+                                                    <i class="fas fa-plus" style="font-size: 10px"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<style lang="css">
+    .positionFilterSelect select {
+        width: 200px;
+        height: 30px;
+        background: transparent;
+        padding-left: 30px;
+    }
+
+    .positionFilterSelect {
+        width: 200px;
+        height: 30px;
+        background: #e9ecef;
+        position: relative;
+        border-radius: 3px;
+    }
+
+    #positionFilter {
+        padding-left: 15px;
+    }
+
+    .multiselect {
+        width: 200px;
+    }
+
+    .selectBox {
+        position: relative;
+    }
+
+    .selectBox select {
+        width: 100%;
+        font-weight: bold;
+    }
+
+    .overSelect {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+
+    #checkboxes {
+        display: none;
+        border: 1px #dadada solid;
+    }
+
+    #checkboxes label {
+        display: block;
+    }
+
+    #checkboxes label:hover {
+        background-color: #acacac;
+        border-radius: 3px;
+    }
+</style>
+
+<script lang="ts">
+    import Vue from "vue";
+    import "@/assets/customPositonExpanse.js";
+    import ModalWrapper from "@/components/ModalWrapper.vue";
+
+    export default Vue.extend({
+        components: {
+            ModalWrapper,
+        }
+    });
+</script>

@@ -1,0 +1,22 @@
+.cjs-nav-item {
+    i.fa, i.fas {
+        background-color: white;
+        border-radius: 50%;
+        border: 2px solid grey;
+        width: 26px;
+        height: 26px;
+        line-height: 26px;
+        text-align: center;
+        &::before {
+            font-size: 13px;
+        }
+    }
+
+    .router-link-active {
+        i.fa, i.fas {
+            background-color: #00e557;
+            color: white;
+            border-color: #00e557;
+        }
+    }
+}

@@ -1,0 +1,280 @@
+/* TIME LINE */
+
+.position-inbox-conversation {
+    .activity-stream-pending .timeline, .activity-stream-container .timeline {
+        top: 50px;
+        left: 13.5px;
+    }
+}
+
+.activity-stream-container {
+    overflow: hidden;
+    position: relative;
+
+    .timeline {
+        position: absolute;
+        width: 3px;
+        top: 20px;
+        bottom: 0;
+        background: #edeff0;
+        margin-left: 13px;
+    }
+}
+
+.activity-stream-pending .timeline {
+    border-left: 3px dashed #eee;
+    position: absolute;
+    width: 0;
+    top: 20px;
+    bottom: -20px;
+    left: 13px;
+    z-index: 0;
+}
+
+.activity-stream-container.with-end-dot {
+    .timeline-wrap {
+        padding-bottom: 35px;
+    }
+
+    .timeline:after {
+        background: #eee;
+        border-radius: 100%;
+        bottom: 0;
+        left: -7px;
+        content: "";
+        position: absolute;
+        height: 18px;
+        width: 18px;
+    }
+}
+
+/* ACTIVITY-STREAM-PENDING WITH-END-DOT*/
+
+.position-inbox-conversation {
+    .activity-stream-pending.with-end-dot, .activity-stream-container.with-end-dot {
+        margin-top: 50px;
+    }
+}
+
+.position-inbox .activity-stream-container.with-end-dot {
+    margin-top: 50px;
+}
+
+.activity-stream-container.with-end-dot {
+    padding-bottom: 35px;
+}
+
+/* ACTIVITY-STREAM-PENDING */
+
+.position-inbox-conversation {
+    .activity-stream-pending, .activity-stream-container {
+        overflow: visible;
+        padding-top: 20px;
+    }
+
+    .activity-stream-pending .load-more, .activity-stream-container .load-more {
+        margin-left: 90px;
+        width: 510px;
+    }
+
+    .activity-stream-pending .load-more a, .activity-stream-container .load-more a {
+        padding: 10px;
+        background: #efefef;
+        border-radius: 5px;
+        display: block;
+        text-align: center;
+    }
+}
+
+/* ACTIVITY-OBJECT */
+
+.activity {
+    .activity-object {
+        &.low-priority {
+            .activity-type {
+                width: 15px;
+                height: 15px;
+                left: 7px;
+                top: 8px;
+
+                i {
+                    display: none;
+                }
+            }
+
+            .activity-info {
+                margin-left: 37px;
+            }
+
+            .avatar {
+                margin-left: 13px;
+                display: none;
+            }
+        }
+
+        &.high-priority {
+            .activity-type {
+                display: none;
+            }
+
+            .activity-info {
+                margin-left: 37px;
+            }
+        }
+    }
+
+    .activity-footer .timestamp, .activity-timestamp .timestamp {
+        color: #84929f;
+        font-size: 10px;
+        margin-top: 10px;
+        text-transform: lowercase;
+    }
+
+    .activity-header {
+        margin-right: 50px;
+        padding-top: 2.5px;
+
+        .author-name {
+            font-size: 14px;
+            font-weight: 400;
+            margin-top: 4px;
+            margin-bottom: 4px;
+
+            span {
+                font-size: 12px;
+                font-weight: 200;
+                color: #68747e;
+            }
+        }
+
+        .author-username {
+            font-size: 12px;
+        }
+    }
+
+    &.candidate-assigned .activity-type {
+        background: #5ac0e5;
+        color: #fff;
+    }
+}
+
+/* TIMESTAMP */
+
+/* ACITVITY-HEADER */
+
+/* candidate-interview-added */
+
+.position-inbox-conversation, .activity-stream-pending, .activity.candidate-interview-added, .activity-type, .position-inbox-conversation, .activity-stream-container, .activity.candidate-interview-added, .activity-type {
+    left: 8px;
+}
+
+.activity {
+    &.candidate-interview-added {
+        .activity-type {
+            background: #ef9748;
+            color: #fff;
+
+            i {
+                top: 5px;
+            }
+        }
+
+        .activity-body {
+            margin-top: 5px;
+            border-left: 3px solid #eee;
+            padding-left: 10px;
+        }
+    }
+
+    &.candidate-interview-canceled .activity-body {
+        margin-top: 5px;
+        border-left: 3px solid #eee;
+        padding-left: 10px;
+    }
+
+    &.candidate-interview-added .title, &.candidate-interview-canceled .title {
+        font-weight: 400;
+        margin-bottom: 2px;
+    }
+
+    &.candidate-interview-added .location, &.candidate-interview-canceled .location {
+        font-size: 12px !important;
+        color: #84929f;
+    }
+
+    &.candidate-interview-added .location i, &.candidate-interview-canceled .location i {
+        margin-right: 5px;
+        width: 14px;
+        padding-left: 2px;
+    }
+
+    &.candidate-interview-added .datetime, &.candidate-interview-canceled .datetime {
+        font-size: 12px !important;
+        color: #84929f;
+    }
+
+    &.candidate-interview-added .datetime i, &.candidate-interview-canceled .datetime i {
+        margin-right: 5px;
+    }
+
+    .activity-type {
+        position: relative;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        top: 3px;
+        background: #fff;
+        font-size: 14px;
+        float: left;
+        margin-right: 10px;
+        border: 2px solid #edeff0;
+        z-index: 300;
+        left: 3px;
+    }
+
+    &.candidate-interview-added .attendees .attendee {
+        display: inline-block;
+        margin-top: 5px;
+    }
+
+    .activity-timestamp {
+        float: right;
+        margin-top: 8px;
+
+        i {
+            color: #84929f;
+            font-size: 10px;
+            margin-right: 5px;
+        }
+    }
+
+    &.company-message .activity-type i {
+        color: #84929f;
+    }
+
+    &.note .activity-info .activity-body, &.company-message .activity-info .activity-body, &.candidate-message .activity-info .activity-body {
+        padding: 6px 10px;
+        border-radius: 4px;
+        background: #fff;
+        margin-top: 15px;
+        border: 1px solid #edeff0;
+        position: relative;
+    }
+
+    .activity-info .activity-error {
+        padding-left: 5px;
+        color: #e15258;
+        font-size: 10px;
+    }
+}
+
+/* Bonus */
+
+.position-inbox-conversation, .activity-stream-pending, .activity.candidate-interview-added, .activity-type, .position-inbox-conversation, .activity-stream-container, .activity.candidate-interview-added, .activity-type {
+    left: 8px;
+}
+
+.activity-container {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}

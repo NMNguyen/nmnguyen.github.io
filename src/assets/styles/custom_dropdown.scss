@@ -1,0 +1,13 @@
+.custom-dropdown {
+    width: 100%;
+
+    > button.dropdown-toggle {
+        text-align: left;
+        &::after {
+            position: absolute;
+            right: 1em;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}

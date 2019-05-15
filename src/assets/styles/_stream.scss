@@ -1,0 +1,1684 @@
+@import "constants";
+
+.position-inbox-conversation {
+     .message-compose {
+          margin-top: $margin * 2;
+     }
+}
+
+.message-compose {
+     position: relative;
+     margin-bottom: $margin * 2;
+
+
+     .template-dropdown {
+          .insert-tabs {
+               background-color: #f9fafa;
+               //padding: 5px
+               //padding-bottom: 0
+               background-color: $background-color-2;
+               border-right: 1px solid $border-color;
+               //padding-top: 40px
+               width: 140px;
+
+               ul {
+                    li.tab {
+                         border-left: 4px solid transparent;
+                         border-bottom: 1px solid transparent;
+                         border-top: 1px solid transparent;
+                         cursor: pointer;
+                         //display: inline-block
+                         padding: 10px 5px 10px 10px;
+                         //margin: 0 10px
+                         transition: 300ms all;
+                         white-space: nowrap;
+
+                         &:first-child {
+                              border-top: none !important;
+                         }
+
+                         &.active {
+                              border-bottom: 1px solid $border-color;
+                              border-top: 1px solid $border-color;
+                              background-color: #fff;
+                              border-left-color: $color-green;
+                              font-weight: 500;
+                              margin-right: -1px;
+                         }
+                    }
+               }
+          }
+
+          .insert-wrap {
+               display: flex;
+          }
+
+          .dropdown-menu {
+               padding: 0;
+          }
+
+          //width: 400px
+          .dropdown-menu-wrap {
+               display: flex;
+               flex-direction: column;
+               height: 300px;
+               width: 300px;
+          }
+
+          .local-scheduling-link {
+               position: relative;
+
+               i.fa.fa-user {
+                    margin-right: $margin / 2;
+               }
+
+               i.fa.fa-times {
+                    position: absolute;
+                    right: $padding;
+               }
+          }
+
+          a, .fake-link {
+               padding: 8px $margin;
+               display: block;
+               overflow: hidden;
+               text-overflow: ellipsis;
+               color: $text-color-default !important;
+               margin: 0 $margin;
+               border-radius: $border-radius;
+               white-space: nowrap;
+
+               span {
+                    font-weight: 400;
+               }
+          }
+
+          a {
+               &:hover {
+                    background-color: #f5f5f5;
+               }
+          }
+
+          .dropdown-menu-wrap > ul {
+               overflow: auto;
+               padding-top: 5px;
+               flex: 1;
+
+               li {
+                    &.header {
+                         padding: $padding / 2;
+                         padding-top: 0;
+                         //margin-bottom: 5px
+                         input {
+                              width: 100%;
+                         }
+                    }
+
+                    a {
+                         padding: 8px $margin !important;
+                    }
+
+                    p {
+                         overflow: hidden;
+                         text-overflow: ellipsis;
+                         opacity: 0.7;
+                         line-height: 1.3;
+                         margin-bottom: 0;
+                    }
+
+                    &:last-child {
+                         padding-bottom: $padding / 2;
+                    }
+
+                    &.folder-link {
+                         a {
+                              padding: 16px $margin !important;
+
+                              .fa-folder {
+                                   margin-right: 10px;
+                              }
+
+                              .actions {
+                                   margin-top: 0px;
+                              }
+                         }
+                    }
+
+                    &.back-link {
+                         color: $color-blue;
+                         padding: 10px;
+                         margin-left: 10px;
+
+                         span {
+                              cursor: pointer;
+                         }
+                    }
+               }
+          }
+
+          .edit-templates {
+               border-top: 1px solid $border-color;
+               background: #fff;
+               padding: $padding / 2 0;
+
+               a {
+                    padding: 8px $margin !important;
+
+                    i.fa {
+                         margin-right: $margin / 2;
+                    }
+               }
+          }
+     }
+}
+
+
+.message-compose.conversation .textarea,
+.message-compose.conversation textarea {
+     background-color: #fff7ef;
+}
+
+.message-compose.text-message .meta-actions-container {
+     .meta-section-header {
+          width: initial;
+     }
+}
+
+.message-compose .meta-actions-container {
+     margin-bottom: $margin;
+     font-size: $text-small;
+
+     a {
+          font-size: $text-small;
+     }
+
+     strong {
+          font-weight: 400;
+     }
+
+     input[type=text] {
+          width: 250px;
+          margin-right: $margin / 2;
+     }
+
+     .meta-section-header {
+          display: inline-block;
+          width: 50px;
+          text-align: right;
+          margin-right: $margin;
+     }
+
+     .meta-section-main {
+          display: inline-block;
+          width: 255px;
+     }
+
+     .meta-section-hide {
+          display: inline-block;
+     }
+
+
+     .meta-section {
+          .additional-signer {
+               margin-top: $margin;
+          }
+
+          margin-bottom: $margin;
+
+          &.recipient {
+               margin-bottom: 0;
+
+               .meta-section-main {
+                    //width: 280px
+                    span {
+                         display: inline-block;
+                         line-height: 20px;
+                         padding: 8px 10px;
+                    }
+               }
+          }
+     }
+
+     .bcc-toggle-container {
+          float: right;
+
+          a {
+               color: $color-blue;
+               margin-top: $margin;
+               margin-left: $margin;
+               font-weight: 400;
+               display: inline-block;
+          }
+     }
+
+     .templates-container {
+          float: right;
+
+          .dropdown-menu {
+               right: 0;
+               left: initial;
+          }
+     }
+}
+
+.candidate-conversation, .position-inbox-conversation {
+     &.sms-composer {
+          button.compose-email {
+               background: $border-color !important;
+               color: $text-color-default !important;
+
+               &:hover, &:hover, &:focus, &:focus {
+                    background: #d7dada !important;
+                    color: $text-color-default !important;
+               }
+          }
+
+          .sms-composer-container {
+               display: block;
+
+               .meta-section-header {
+                    width: initial;
+               }
+
+               .meta-section-main {
+                    span {
+                         padding: 0 10px !important;
+                    }
+               }
+
+               .templates-container {
+                    margin-top: 0;
+                    margin-bottom: $margin;
+               }
+          }
+     }
+
+     &.email-composer {
+          button.compose-sms {
+               background: $border-color !important;
+               color: $text-color-default !important;
+
+               &:hover, &:hover, &:focus, &:focus {
+                    background: #d7dada !important;
+                    color: $text-color-default !important;
+               }
+          }
+
+          .email-composer-container {
+               display: block;
+
+               .templates-container {
+                    margin-top: $margin/2;
+               }
+          }
+     }
+
+
+     .sms-composer-container,
+     .email-composer-container {
+          display: none;
+     }
+}
+
+
+.message-compose .subject-container {
+     margin-bottom: $margin;
+     font-size: $text-small;
+     margin-bottom: $margin;
+     margin-top: $margin * 2;
+
+     span {
+          line-height: 1.5;
+          max-width: 320px;
+          overflow: hidden;
+          display: inline-block;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+     }
+}
+
+.message-compose .subject-container strong {
+     font-weight: 400;
+}
+
+.message-compose .subject-container a {
+     display: none;
+     color: $color-blue;
+     margin-left: $margin;
+}
+
+.message-compose .subject-container:hover a {
+     display: inline-block;
+}
+
+.message-compose .subject-container input.subject {
+     width: 320px;
+}
+
+.message-compose .actions-container {
+     min-height: 35px;
+}
+
+.modal-sm .message-compose .file-attachments {
+}
+
+//width: 180px !important
+
+.message-compose .file-attachments {
+     display: inline-block;
+     margin-left: $margin;
+     margin-top: $margin / 2;
+     overflow: hidden;
+     //-width: 170px
+     text-overflow: ellipsis;
+     font-size: 12px;
+}
+
+.message-compose .file-attachments .file-attachment {
+     margin-bottom: $margin;
+}
+
+.message-compose .file-attachments .file-attachment i {
+     margin-right: $margin / 2;
+}
+
+.message-compose .file-attachments .file-attachment .remove {
+     margin-left: $margin / 2;
+}
+
+.message-compose .actions {
+     float: right;
+     margin-top: $margin / 2;
+}
+
+
+.message-compose .actions {
+     &.email-action {
+          .docsigning-only {
+               display: none;
+          }
+     }
+
+     &.docsigning-action {
+          .emailsend-only {
+               display: none;
+
+               .send-message {
+                    i {
+                         margin-right: $margin / 2;
+                    }
+               }
+          }
+
+          .docsigning-only {
+               .send-message {
+                    width: 140px;
+
+                    img.icon-signature {
+                         width: 14px;
+                         margin-right: $margin / 2;
+                         margin-bottom: -3px;
+                    }
+               }
+          }
+     }
+}
+
+
+@media (max-width: 768px) {
+     .message-compose .subject-container input.subject {
+          width: 100%;
+     }
+}
+
+.message-compose textarea,
+.message-compose .textarea {
+     width: 100%;
+     max-height: 400px;
+     min-height: 80px;
+     margin-bottom: 5px;
+}
+
+.message-compose .textarea {
+     background-color: #fff;
+     border: 2px solid $border-color;
+     border-radius: $border-radius;
+     color: $color-dark-grey;
+     font-size: 14px;
+     line-height: 20px;
+     outline: none;
+     overflow: auto;
+     padding: 6px 10px;
+     transition: .3s;
+     white-space: pre-line;
+
+     &:focus {
+          border-color: $color-blue;
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+     }
+}
+
+//[contenteditable=true]:empty:before
+//content: attr(placeholder)
+//color: $color-grey-lighter
+//display: block
+//font-size: 14px
+//line-height: 20px
+
+.message-compose .actions .post-note {
+     width: 72px;
+}
+
+.message-compose .actions .send-message {
+     width: 100px;
+
+     i {
+          margin-right: $margin / 2;
+     }
+}
+
+.campaign-in-progress {
+     background-color: #edf7fb;
+     color: #5c98ae;
+     border: 1px solid rgba(0, 0, 0, 0.05);
+     padding: $margin;
+     margin-bottom: 15 * 2;
+     width: 100%;
+     border-radius: 4px;
+
+     .icon-container {
+          float: left;
+          font-size: 18px;
+          padding: 6px 12px 0 0;
+          opacity: .8;
+     }
+
+     .main-container {
+          opacity: .8;
+
+          h3 {
+               font-size: 14px;
+               margin-bottom: $margin / 2;
+          }
+
+          p {
+               font-size: 13px;
+               line-height: 1;
+          }
+     }
+}
+
+.message-compose .status {
+     float: left;
+     font-size: $text-smaller;
+     margin-top: 8px;
+     padding: 0 $padding;
+}
+
+.message-compose .status i {
+     margin-right: $margin/2;
+}
+
+.message-compose .status .remove {
+     visibility: hidden;
+}
+
+.message-compose .status:hover .remove {
+     visibility: visible;
+}
+
+.message-compose .actions {
+     text-align: right;
+}
+
+
+.message-compose .actions li.action {
+     display: inline;
+     margin-left: $margin;
+
+     .dropdown-right-align {
+          .dropdown-menu {
+               left: auto;
+               right: 0;
+          }
+     }
+
+     .schedule-button {
+          border-left: 1px solid $color-blue-hover;
+     }
+}
+
+.team-mention-suggestions {
+     background-color: #ffffff;
+     border: 2px solid $border-color;
+     border-radius: $border-radius;
+     box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+     color: $text-color-default;
+     max-height: 350px;
+     overflow-y: auto;
+     position: absolute;
+     text-overflow: ellipsis;
+     transition: .3s;
+     width: 300px;
+     z-index: 100;
+
+     .member {
+          background-color: #ffffff;
+          border: 1px solid #fff;
+          padding: 10px;
+          border-bottom: 1px solid $background-color-3;
+          cursor: pointer;
+
+          &:last-child {
+               border-bottom: none;
+          }
+
+          &.active {
+               background-color: $background-color-2;
+          }
+
+          .avatar {
+               float: left;
+               border-radius: 20px;
+          }
+
+          .member-info {
+               margin-left: 40px;
+          }
+
+          .member-header h3 {
+               line-height: 24px;
+               font-size: $text-default;
+               color: $text-color-darker;
+               font-weight: 400;
+               padding: 0 !important;
+               margin: 0;
+          }
+
+          .member-header p {
+               font-size: $text-smaller;
+               color: $text-color-light;
+               line-height: 1;
+               white-space: nowrap;
+               overflow: hidden;
+               text-overflow: ellipsis;
+          }
+     }
+}
+
+.message-compose .suggestions {
+     top: 80px;
+     width: 300px;
+     max-height: 350px;
+     overflow-y: auto;
+     padding: 0px;
+}
+
+.message-compose .suggestions.visible {
+     display: block !important;
+}
+
+.message-compose .suggestions .member {
+     background: #ffffff;
+     padding: 10px;
+     border-radius: 4px;
+     border-bottom: 1px solid $background-color-2;
+     cursor: pointer;
+}
+
+.message-compose .suggestions .member.focused {
+     background: $background-color-2;
+}
+
+.message-compose .suggestions .member:last-child {
+     border-bottom: none;
+}
+
+.message-compose .suggestions .member .avatar {
+     float: left;
+     border-radius: 20px;
+}
+
+.message-compose .suggestions .member .member-info {
+     margin-left: 40px;
+}
+
+.message-compose .suggestions .member .member-header h3 {
+     line-height: 24px;
+     font-size: $text-default;
+     color: $text-color-darker;
+     font-weight: 400;
+     padding: 0 !important;
+     margin: 0;
+}
+
+.message-compose .suggestions .member-header p {
+     font-size: $text-smaller;
+     color: $text-color-light;
+     line-height: 18px;
+     white-space: nowrap;
+     overflow: hidden;
+     text-overflow: ellipsis;
+}
+
+.activity-stream-container {
+     overflow-y: auto;
+     overflow-x: auto;
+     position: relative;
+}
+
+.activity-stream-container.large {
+     max-width: 800px;
+}
+
+.timeline-wrap {
+     position: relative;
+}
+
+.activity-stream-container .timeline {
+     position: absolute;
+     width: 3px;
+     top: 20px;
+     bottom: 0;
+     background: $background-color;
+     left: 13px;
+}
+
+$color-pending-light: #edf7fb;
+$color-pending-dark: #5c98ae;
+.activity-stream-pending {
+     //border-top: 2px solid $border-color
+     margin: $margin 0;
+     padding-bottom: $padding;
+     position: relative;
+
+     & + .activity-stream-container {
+          margin-top: 0 !important;
+     }
+
+     .timeline {
+          border-left: 3px dashed #eee;
+          position: absolute;
+          width: 0;
+          top: 20px;
+          bottom: -20px;
+          left: 13px;
+          z-index: 0;
+     }
+
+     .show-pending-queue {
+          background-color: $color-pending-light;
+          border: 1px solid rgba(0, 0, 0, 0.05);
+          border-radius: $border-radius;
+          cursor: pointer;
+          margin-top: $margin;
+          text-align: center;
+          position: relative;
+          z-index: 1;
+
+          h3 {
+               color: $color-pending-dark;
+               line-height: 30px;
+               font-weight: 400;
+               font-size: 14px;
+          }
+     }
+
+     .activity.pending_messageToCandidatePosted {
+          .activity-type {
+               background-color: $color-pending-light;
+               color: #fff;
+
+               i {
+                    color: $color-pending-dark;
+                    right: 7px;
+                    top: 6px;
+               }
+          }
+
+          .avatar {
+               border-radius: 100%;
+               //-height: 50px
+               //-width: 50px
+               //-left: 0px
+               //-margin-right: 5px
+               &.css-initial {
+                    //-font-size: 25px
+               }
+          }
+
+          //-line-height: 46px
+          .activity-info .activity-body {
+               background: $color-pending-light;
+               color: $color-pending-dark;
+               border-color: rgba(0, 0, 0, 0.05);
+               //background-image: repeating-linear-gradient(45deg, #fcf8e3, #fcf8e3 10px, #fefcf2 10px, #fefcf2 20px)
+               //border-color: #f7ecb5
+               //&:before
+               //  border-color: transparent transparent #f7ecb5 transparent
+
+               &:before {
+                    border-color: transparent transparent rgba(0, 0, 0, 0.05) transparent;
+               }
+
+               &:after {
+                    border-color: transparent transparent $color-pending-light transparent;
+               }
+          }
+
+          .timestamp {
+          }
+
+          //color: $color-pending-dark
+          .activity-footer .actions {
+               float: right;
+
+               .action {
+                    display: inline-block;
+                    margin-left: $margin;
+
+                    a {
+                         display: inline-block;
+
+                         span, i {
+                              color: #97a8b6;
+                              cursor: pointer;
+                              font-size: 10px;
+                              font-weight: 200;
+                         }
+                    }
+               }
+          }
+     }
+}
+
+
+.modal .activity-stream-pending .activity.pending_messageToCandidatePosted .avatar {
+     height: 30px;
+     width: 30px;
+}
+
+.position-inbox {
+     .activity-stream-container.with-end-dot {
+          margin-top: 50px;
+     }
+}
+
+.activity-stream-container.with-end-dot {
+     padding-bottom: 35px;
+
+     .timeline-wrap {
+          padding-bottom: 35px;
+     }
+
+     .timeline {
+          //bottom: -35px
+          &:after {
+               background: #eee;
+               border-radius: 100%;
+               bottom: 0;
+               left: -7px;
+               content: '';
+               position: absolute;
+               height: 18px;
+               width: 18px;
+          }
+     }
+}
+
+
+.activity {
+     padding: $padding 0;
+     border-radius: 4px;
+}
+
+.activity strong {
+     font-weight: 400 !important;
+}
+
+.activity .activity-info {
+     span.state {
+          i {
+               font-size: 12px;
+          }
+
+          strong {
+               text-transform: capitalize;
+          }
+     }
+
+     p.activity-interview-links a {
+          font-size: 12px;
+          margin-right: $margin;
+
+          i {
+               margin-right: $margin/2;
+          }
+     }
+}
+
+.activity .activity-object {
+     &.low-priority {
+          .activity-type {
+               width: 15px;
+               height: 15px;
+               left: 7px;
+               top: 8px;
+
+               i {
+                    display: none;
+               }
+          }
+
+          .activity-info {
+               margin-left: 37px;
+          }
+
+          .avatar {
+               margin-left: 13px;
+               display: none;
+          }
+     }
+
+     &.high-priority {
+          .activity-type {
+               display: none;
+          }
+
+          .activity-info {
+               margin-left: 37px;
+          }
+     }
+}
+
+.activity .activity-type {
+     position: relative;
+     width: 24px;
+     height: 24px;
+     border-radius: 50%;
+     top: 3px;
+     background: #fff;
+     font-size: $text-small;
+     float: left;
+     margin-right: $margin;
+     border: 2px solid $border-color;
+     z-index: 300;
+     left: 3px;
+}
+
+.activity-stream-container {
+     .candidates-activity-full {
+          .avatar {
+               left: 7.5px;
+               width: 35px;
+               height: 35px;
+               border-radius: 25px;
+               margin-right: 15px;
+          }
+
+          .activity.messageFromCandidatePosted, .activity.messageToCandidatePosted, .activity.companyNotePosted {
+               .activity-body {
+                    margin-top: 40px;
+                    margin-left: -54px;
+               }
+          }
+
+          .activity .activity-info {
+               margin-left: 90px;
+          }
+     }
+}
+
+//.candidates-activity-full .activity .activity-type
+//  left: 5.5px
+
+.activity-stream-container.large .activity .activity-type {
+     width: 40px;
+     height: 40px;
+     border-radius: 20px;
+}
+
+
+.activity.note .activity-type, .activity.company-message .activity-type {
+     background: #fff;
+}
+
+.activity .activity-type i {
+     position: absolute;
+     right: 6px;
+     top: 5px;
+     font-size: 10px;
+}
+
+
+.activity.candidateDocumentAdded .activity-type i,
+.activity.candidateDocumentDeleted .activity-type i {
+     right: 6.5px;
+}
+
+.activity.companyPositionUpdated .activity-type i {
+     right: 5px;
+}
+
+.activity.company-message {
+     .other-recipients {
+          font-size: 12px;
+
+          .label {
+               color: $text-color-lighter;
+               font-weight: 400;
+               text-transform: uppercase;
+          }
+
+          .email {
+               margin-right: $margin;
+          }
+     }
+}
+
+.activity.company-message .activity-type i {
+     color: $text-color-lighter;
+}
+
+.activity.note .activity-type i {
+     color: $text-color-lighter;
+     right: 5.5px !important;
+}
+
+.activity.candidate-backgroundcheck.alerts-found .activity-type {
+     background-color: $color-15 !important;
+}
+
+.activity.candidate-backgroundcheck.no-alerts .activity-type {
+     background-color: $color-green !important;
+}
+
+.activity.candidate-backgroundcheck.check-waiting .activity-type {
+     background-color: $color-green !important;
+}
+
+.activity.candidate-added .activity-type, .activity.candidate-message .activity-type {
+     background: $color-green;
+     color: #fff;
+}
+
+
+.activity.consent-requested .activity-type {
+     background-color: #5ac0e5;
+}
+
+.activity.consent-requested .activity-type i {
+     right: 4px;
+     top: 4px;
+     color: #fff;
+}
+
+.activity.consent-denied .activity-type {
+     background-color: $color-15;
+}
+
+.activity.consent-denied .activity-type i {
+     right: 4px;
+     top: 4px;
+     color: #fff;
+}
+
+.activity.consent-given .activity-type {
+     background-color: $color-13;
+}
+
+.activity.consent-given .activity-type i {
+     right: 4px;
+     top: 4px;
+     color: #fff;
+}
+
+
+.activity.candidate-deleted .activity-type {
+     background-color: $color-15;
+}
+
+.activity.candidate-deleted .activity-type i {
+     right: 4px;
+     top: 4px;
+     color: #fff;
+}
+
+.activity.candidate-added .activity-type i {
+     right: 6px;
+     top: 4px;
+}
+
+.activity.candidate-message .activity-type i {
+}
+
+.activity.questionnaire-response .activity-type {
+     background-color: $color-4;
+     color: #fff;
+}
+
+.activity.questionnaire-response .activity-type i {
+     right: 5px;
+}
+
+.activity.note {
+     &:hover {
+          .activity-actions {
+               display: block;
+          }
+     }
+
+     .activity-actions {
+          display: none;
+          margin-top: 8px;
+          float: right;
+
+          li {
+               display: inline-block;
+               margin-right: $margin;
+
+               a {
+                    color: $text-color-lighter;
+                    font-size: $text-smallest;
+               }
+          }
+     }
+}
+
+
+.activity.note .activity-type i, .activity.candidate-down-vote .activity-type i, .activity.candidate-up-vote .activity-type i {
+     right: 4.5px;
+}
+
+.activity.task .activity-body {
+     .title {
+          font-weight: 400;
+          margin-top: 5px;
+          margin-bottom: 4px;
+     }
+
+     .datetime {
+          font-size: 10px;
+          text-transform: lowercase;
+     }
+}
+
+.activity.candidate-assigned .activity-type {
+     background: #5ac0e5;
+     color: #fff;
+}
+
+.activity.candidate-up-vote .activity-type {
+     background: $color-13;
+     color: #fff;
+}
+
+.activity.candidate-down-vote .activity-type {
+     background: $color-14;
+     color: #fff;
+}
+
+.activity.candidateDocumentSignatureCompleted .activity-type img.icon-signature {
+     width: 10px;
+     position: absolute;
+     left: 4.5px;
+     top: 4px;
+}
+
+.activity.candidateDocumentSignatureCompleted .activity-type {
+     background-color: $color-green !important;
+}
+
+.activity.candidate-esig {
+     .activity-header {
+          p {
+               margin-top: 3px;
+          }
+     }
+}
+
+.activity.candidate-document-added, .activity.candidate-document-removed {
+     .size {
+          margin-left: $margin;
+          font-size: 12px;
+          opacity: .8;
+     }
+}
+
+.activity.candidate-document-added .activity-type {
+     background: $color-11;
+     color: #fff;
+}
+
+.activity.candidate-document-added .activity-type i {
+     //right: 6px
+}
+
+//top: 5px
+
+.activity.candidate-document-added .document, .activity.candidate-document-removed .document {
+     margin-top: 10px;
+     border-left: 3px solid #eee;
+     padding-left: 10px;
+     cursor: pointer;
+     font-size: 14px;
+}
+
+.activity.candidate-document-added .document .document-type, .activity.candidate-document-removed .document .document-type {
+     float: left;
+     //margin-right: 5px
+     margin-top: -1px;
+
+     i {
+          font-size: 12px;
+          padding-top: 3px;
+     }
+}
+
+.activity.candidate-document-added .document .details, .activity.candidate-document-removed .document .details {
+     margin-left: 18px;
+}
+
+.activity.candidate-document-added .document h3, .activity.candidate-document-removed .document h3, .activity.candidate-document-added .document a {
+     font-weight: 400 !important;
+     color: $color-dark-grey !important;
+
+     line-height: 1.3;
+}
+
+.activity.candidate-document-removed .activity-type {
+     background: $color-10;
+     color: #fff;
+}
+
+.activity.candidate-document-removed .activity-type i {
+     //right: 6px
+}
+
+//top: 5px
+
+.activity.candidate-interview-canceled .activity-type {
+     background: $color-red;
+     color: #fff;
+}
+
+.activity.candidate-interview-canceled .activity-type i {
+     //right: 5.5px
+     top: 5px;
+}
+
+.activity.candidate-interview-added .activity-type {
+     background: $color-5;
+     color: #fff;
+}
+
+.activity.candidate-backgroundcheck .activity-type {
+     background-color: #fff !important;
+}
+
+.activity.candidate-backgroundcheck.no-alerts .activity-type {
+     background-color: $color-green !important;
+}
+
+.activity.candidate-backgroundcheck.with-alerts .activity-type {
+     background-color: $color-red !important;
+}
+
+.activity.candidate-backgroundcheck.check-processing .activity-type {
+     background-color: #f5d44f !important;
+}
+
+.activity.candidate-backgroundcheck.with-alerts .activity-type i,
+.activity.candidate-backgroundcheck.no-alerts .activity-type i,
+.activity.candidate-backgroundcheck.check-processing .activity-type i {
+     color: #fff !important;
+}
+
+.activity.candidate-backgroundcheck .activity-type i {
+     right: 4.5px;
+     color: #97a8b6;
+}
+
+.activity.candidate-interview-added .activity-type i {
+     //right: 5.5px
+     top: 5px;
+}
+
+.activity.candidate-interview-added .activity-body, .activity.candidate-interview-canceled .activity-body {
+     margin-top: 5px;
+     border-left: 3px solid #eee;
+     padding-left: 10px;
+}
+
+.activity.candidate-interview-added .title, .activity.candidate-interview-canceled .title {
+     font-weight: 400;
+     margin-bottom: 2px;
+}
+
+
+.activity.candidate-interview-added .location,
+.activity.candidate-interview-canceled .location {
+     font-size: 12px !important;
+     color: $text-color-lighter;
+}
+
+.activity.candidate-interview-added .location i,
+.activity.candidate-interview-canceled .location i {
+     margin-right: 5px;
+     width: 14px;
+     padding-left: 2px;
+}
+
+.activity.candidate-interview-added .datetime, .activity.candidate-interview-canceled .datetime {
+     font-size: 12px !important;
+     color: $text-color-lighter;
+}
+
+.activity.candidate-interview-added .datetime i, .activity.candidate-interview-canceled .datetime i {
+     margin-right: 5px;
+}
+
+.activity.candidate-interview-added .attendees .attendee {
+     display: inline-block;
+     margin-top: 5px;
+}
+
+.secondary .activity.candidate-interview-added .attendees .attendee {
+     margin-top: 2px;
+     position: relative;
+
+     .meeting-status {
+          border: 1px solid #fafafa;
+          width: 7px;
+          height: 7px;
+          border-radius: 4px;
+          display: inline-block;
+          position: absolute;
+          left: 13px;
+          top: 13px;
+          z-index: 1000;
+
+          &.accepted {
+               background: $color-green;
+          }
+
+          &.declined {
+               background: $color-red;
+          }
+     }
+}
+
+.activity.candidate-interview-added .attendees .attendee .avatar {
+     display: inline;
+     width: 20px;
+     height: 20px;
+     margin-left: 0;
+     margin-right: 2px;
+     border-width: 1px;
+     border: 2px solid #fff;
+}
+
+.activity.candidate-interview-added .attendees .attendee .avatar.css-initial {
+     line-height: 18px !important;
+     font-size: 8px !important;
+     border-radius: 14px;
+     padding-left: 1px;
+     vertical-align: bottom;
+}
+
+
+.activity.candidate-status-update .activity-type {
+     background: $color-9;
+     color: #fff;
+}
+
+.activity.candidate-status-update .activity-type i {
+     right: 4.5px;
+     top: 4.5px;
+}
+
+.activity.position-state-update .activity-type {
+     background: $color-7;
+     color: #fff;
+}
+
+.activity.position-state-update .activity-type i {
+     right: 4.5px;
+     top: 5.5px;
+}
+
+.activity.companyPositionUpdated .activity-type {
+     background: $color-9;
+     color: #fff;
+}
+
+.activity .avatar {
+     width: 30px;
+     height: 30px;
+     margin-right: $margin;
+     float: left;
+     position: relative;
+     z-index: 300;
+     border: 2px solid $border-color;
+}
+
+.candidates-activity-full .activity .avatar {
+     margin-left: 5px;
+}
+
+.activity .avatar {
+     border-color: $border-color;
+}
+
+.activity .avatar.css-initial {
+     line-height: 27px;
+     font-size: $text-smaller;
+}
+
+.candidates-activity-full .activity-stream-container .activity-container {
+     margin-bottom: 10px;
+}
+
+
+.activity.notepad .activity-info {
+     margin-left: 40px;
+}
+
+.activity.notepad .activity-info .activity-body {
+     padding: 6px 10px;
+     border-radius: 4px;
+     background: #fff;
+     border: 1px solid $border-color;
+     position: relative;
+}
+
+.activity.note .activity-info .activity-body, .activity.company-message .activity-info .activity-body, .activity.candidate-message .activity-info .activity-body {
+     //margin-left: 40px
+     padding: 6px 10px;
+     border-radius: 4px;
+     background: #fff;
+     margin-top: 15px;
+     border: 1px solid $border-color;
+     position: relative;
+
+     &:before,
+     &:after {
+          border-style: solid;
+          content: '';
+          height: 0;
+          position: absolute;
+          width: 0;
+     }
+
+     &:before {
+          border-width: 0 10px 10px 10px;
+          border-color: transparent transparent $border-color transparent;
+          left: 10px;
+          top: -10px;
+     }
+
+     &:after {
+          border-width: 0 8px 8px 8px;
+          border-color: transparent transparent #fff transparent;
+          left: 12px;
+          top: -8px;
+     }
+
+     img {
+          max-width: 100%;
+          max-height: 500px;
+     }
+}
+
+.activity .activity-info.activity-error .activity-body {
+     background-color: $border-color;
+
+     &:after {
+          border: none;
+     }
+}
+
+.activity .activity-info .activity-error {
+     padding-left: 5px;
+     color: $color-red;
+     font-size: $text-smallest;
+
+     i.fa-exclamation-circle {
+          margin-right: 5px;
+     }
+}
+
+.activity .activity-info .activity-body p {
+     font-size: $text-small;
+     word-break: break-word;
+}
+
+.activity .activity-info .activity-body p:last-child {
+     margin-bottom: 0;
+}
+
+.activity .activity-info .activity-body p.truncate-height-to {
+     overflow: hidden;
+     position: relative;
+}
+
+.activity .activity-info .activity-body p.truncate-height-to.fader:before {
+     background-image: -webkit-linear-gradient(top, rgba(0, 255, 255, 0), rgba(255, 255, 255, 1));
+     bottom: 0;
+     content: '';
+     display: block !important;
+     height: 63px;
+     left: 0;
+     position: absolute;
+     width: 100%;
+}
+
+.activity .activity-info .activity-body p.truncate-height-to.fader:after {
+     bottom: 0;
+     content: 'Show More';
+     cursor: pointer;
+     font-size: $text-smaller;
+     font-weight: 400;
+     position: absolute;
+     right: 0;
+}
+
+.activity .activity-attachments {
+     float: right;
+     margin-left: 40px;
+     padding: 10px 10px;
+     border-radius: 4px;
+     font-size: $text-smaller;
+     text-align: right;
+
+     span.show-more {
+          color: $color-blue;
+          cursor: pointer;
+          font-size: $text-smallest;
+
+          &:hover {
+               color: $color-blue-hover;
+          }
+     }
+}
+
+.activity .activity-attachments .attachment {
+     margin-bottom: 8px;
+}
+
+.activity .activity-attachments i {
+     margin-left: 2px;
+}
+
+.activity .activity-attachments strong {
+     font-weight: 400;
+}
+
+.activity .activity-info {
+     margin-left: 74px;
+}
+
+.activity .activity-info .activity-body .username {
+     background-color: #eee;
+     border-radius: 4px;
+     padding: 0px 4px;
+}
+
+.activity .activity-info .activity-body a {
+     font-weight: 200;
+     color: $color-blue;
+}
+
+.activity .activity-info .activity-body a:hover {
+     font-weight: 200;
+     color: $color-blue-hover;
+}
+
+.activity .activity-header {
+     padding-top: 2.5px;
+}
+
+.activity.note .activity-header, .activity.candidate-message .activity-header, .activity.company-message .activity-header {
+     margin-bottom: $margin;
+}
+
+.activity.note .activity-body {
+     margin-bottom: 4px;
+}
+
+.activity.note .activity-header p, .activity.candidate-message .activity-header p, .activity.company-message .activity-header p {
+}
+
+//  margin-right: 50px
+
+.activity .activity-body .uppercase {
+     font-weight: 400;
+     text-transform: capitalize;
+}
+
+.activity .activity-footer {
+     margin-top: 5px !important;
+     //margin-left: 12px
+}
+
+//text-align: right
+
+
+.activity .activity-footer a {
+     display: none;
+}
+
+.activity.notepad .activity-footer i {
+     margin-right: 3px;
+}
+
+.activity.notepad.private {
+     .activity-body {
+          background-color: #fff7ef;
+     }
+}
+
+.activity.notepad:hover .activity-footer li.action {
+     display: inline !important;
+}
+
+.activity.notepad .activity-footer li.action {
+     display: none !important;
+}
+
+.activity.notepad .activity-footer .meta-data {
+     li {
+          display: inline;
+
+          &.action {
+               i {
+                    margin-right: 0px !important;
+               }
+          }
+
+          margin-right: $margin / 2;
+
+          span {
+               padding: 0 $margin / 2 0 0;
+          }
+
+          i, a {
+               color: #97a8b6;
+               font-size: 10px;
+               font-weight: 200;
+          }
+     }
+}
+
+.activity.notepad .activity-footer .activity-attachments {
+     float: right;
+     padding: 4px 0 0;
+}
+
+.activity.notepad .activity-footer a {
+     display: inline-block;
+}
+
+.activity .activity-footer {
+}
+
+.activity .activity-footer .label {
+     color: $text-color-lighter;
+     font-size: $text-smallest;
+     margin-top: $margin;
+     margin-right: 0px;
+     font-weight: 400;
+}
+
+.activity .activity-timestamp {
+     float: right;
+     margin-top: 8px;
+
+     i {
+          color: $text-color-lighter;
+          font-size: $text-smallest;
+          margin-right: $margin/2;
+     }
+}
+
+
+.activity .activity-header {
+     margin-right: 50px;
+}
+
+.activity .activity-timestamp .edited {
+     margin-right: $margin;
+}
+
+.activity:hover .activity-timestamp .edited {
+     display: none;
+}
+
+.activity .activity-footer .timestamp, .activity .activity-timestamp .timestamp {
+     color: $text-color-lighter;
+     font-size: $text-smallest;
+     margin-top: $margin;
+     text-transform: lowercase;
+}
+
+.activity .activity-footer .read-state {
+     font-size: $text-smallest;
+     font-weight: 400;
+     margin-top: $margin;
+     margin-left: $margin / 2;
+}
+
+.activity .activity-header .author-name {
+     font-size: $text-small;
+     font-weight: 400;
+     margin-top: 4px;
+     margin-bottom: 4px;
+}
+.activity .activity-header .author-name span {
+     font-size: $text-smaller;
+     font-weight: 200;
+     color: $text-color-light;
+}
+.activity .activity-header .author-username {
+     font-size: $text-smaller;
+}

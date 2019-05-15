@@ -1,1 +1,0 @@
-(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d21dfe7"],{d456:function(e,n,t){"use strict";t.r(n);var l=function(){var e=this,n=e.$createElement,t=e._self._c||n;return t("h1",[e._v("Message Template")])},s=[],u=t("2877"),a={},c=Object(u["a"])(a,l,s,!1,null,null,null);n["default"]=c.exports}}]);

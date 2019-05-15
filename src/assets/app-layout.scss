@@ -1,0 +1,61 @@
+@import "styles/constants";
+@import "styles/app_color";
+@import "styles/custom_dropdown";
+@import "styles/nav_item";
+@import "styles/breezy_modal";
+@import "styles/defaults_controls";
+
+body {
+    height: 100vh;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.app {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+
+    &-sidebar {
+        background-color: #292d32;
+        width: 70px;
+        flex-shrink: 0;
+        transition: width 100ms;
+        position: relative;
+
+        &.open {
+            width: 230px;
+        }
+
+        &:not(.open) &-control {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+
+            > div {
+                padding: 1em 0;
+            }
+        }
+        &:not(.open) .nav-link {
+            padding-left: 0;
+            padding-right: 0;
+            margin: 0 auto;
+        }
+
+        .menu i {
+            font-size: 1.5em;
+        }
+    }
+
+    &-content {
+        flex: 1 1 auto;
+        overflow: auto;
+    }
+}
+
+.user_sign  .editr--content {
+    max-height: 200px;
+}

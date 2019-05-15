@@ -1,0 +1,16 @@
+export default {
+    'photo': {text: 'Hình ảnh', check: true},
+    'name': {text: 'Tên', check: true},
+    'score': {text: 'Điểm', check: true},
+    'headline': {text: 'Tiêu đề', check: false},
+    'resume': {text: 'Hồ sơ / CV', check: false},
+    'tags': {text: 'Thẻ', check: false},
+    'email': {text: 'Email', check: true},
+    'position-pool': {text: 'Vị trí / Pools', check: false},
+    'phone': {text: 'Điện thoại', check: true},
+    'location': {text: 'Nơi sinh sống', check: false},
+    'stage': {text: 'Trạng thái', check: true},
+    'source': {text: 'Nguồn', check: false},
+    'added': {text: 'Đã thêm vào', check: false},
+    'last-activity': {text: 'Hoạt động gần nhất', check: false},
+}

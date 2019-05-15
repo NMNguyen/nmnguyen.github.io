@@ -1,0 +1,82 @@
+$color-blue: #5ac0e5;
+$color-blue-hover: #4cabcd;
+$color-green-light: #89dca0;
+$color-green: #76d691;
+$color-green-hover: #5ec27a;
+$color-red-light: #e5676c;
+$color-red: #e15258;
+$color-red-hover: #d9444a;
+$color-yellow: #F9E921;
+$color-dark-grey: #202020;
+$color-grey: #778591;
+$color-grey-light: #68747e; //#84929f
+$color-grey-lighter: #84929f; //#97a8b6
+$color-grey-lighter-hover: #97a8b6; //#90a0ad
+//$color-dark-grey: #68747e
+$color-grey-very-light: #bbb;
+
+
+$color-dark-type: #4c555c;
+$color-dark-grey: $color-dark-type;
+$color-modal-nav: $color-grey-very-light;
+
+$color-highlight: #fdfdcc;
+$color-highlight-border: #fafa9b;
+
+//$color-green-light: #d9f9e2
+
+$color-1: #30a6d1;
+$color-2: #e32256;
+$color-3: #f36e3a;
+$color-4: #8357c1;
+$color-5: #ef9748;
+$color-6: #e73e3e;
+$color-7: #c6abed;
+$color-8: #f58b2d;
+$color-9: #ffa955;
+$color-10: #4775b1;
+$color-11: #75a7e8;
+$color-12: #99dab8;
+$color-13: #5ec27a;
+$color-14: #e15258;
+$color-15: #d9444a;
+
+$padding: 10px;
+$margin: 10px;
+
+
+$font-serif: "freight-text-pro", "droid-serif", "Georgia", serif;
+$font-sans-serif: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+$font-nutino: "Nunito", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+
+$text-default: 16px;
+$text-small: $text-default - 2;
+$text-smaller: $text-default - 4;
+$text-smallest: $text-default - 6;
+$text-large: $text-default + 2;
+$text-larger: $text-default + 4;
+$text-largest: $text-default + 8;
+
+
+$text-color-default: $color-dark-type; //$color-dark-grey //$color-grey
+$text-color-default-inverse: #60676d;
+$text-color-darker: $color-dark-grey;
+$text-color-light: $color-grey-light;
+$text-color-lighter: $color-grey-lighter;
+$text-color-blue: $color-blue;
+$text-color-red: $color-red;
+$text-color-green: $color-green;
+
+$border-color: #edeff0;
+
+$background-color: #edeff0;
+$background-color-2: #f9fafa;
+$background-color-3: #e0e0e0;
+
+
+$background-color-inverse: #384047;
+$background-color-inverse-2: #2c363f;
+
+$header-height: 60px;
+
+$border-radius: 4px;

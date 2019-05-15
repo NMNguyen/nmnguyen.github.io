@@ -1,0 +1,611 @@
+@import "constants";
+
+.modal-body.create-task-modal {
+     .section.assign {
+          .user-selector {
+               width: 220px;
+               display: inline-block;
+               margin-right: $margin;
+
+               li {
+                    a {
+                         padding: 3px 0 !important;
+
+                         .user {
+                              padding-left: 5px;
+
+                              span, img {
+                                   margin-right: 5px;
+                                   vertical-align: middle;
+                              }
+                         }
+                    }
+               }
+          }
+     }
+
+     .attach-file {
+          margin-top: $margin;
+     }
+}
+
+.candidate-modal-view-container {
+     .tasks-content {
+          .task {
+               .actions {
+                    .action.target {
+                         display: none;
+                    }
+               }
+          }
+     }
+}
+
+.task-selected {
+     position: initial;
+     overflow-y: visible;
+
+     .activity-section-container {
+          margin-top: 20px;
+          border-top: 1px solid #eee;
+          padding-top: 20px;
+
+          h3 {
+               font-weight: 400;
+          }
+
+          .activity-stream {
+               margin-top: 10px;
+
+               .activity {
+                    padding: 2px;
+
+                    .activity-info {
+                         margin-left: 34px;
+                    }
+
+                    .activity-footer {
+                         margin-top: -8px !important;
+                    }
+               }
+          }
+     }
+}
+
+.tasks-empty {
+     color: $color-grey-light;
+     display: flex;
+     height: 100%;
+     width: 100%;
+
+     div {
+          align-self: center;
+          display: inline-block;
+          margin: 0 auto;
+          text-align: center;
+     }
+
+     i {
+          font-size: 80px;
+     }
+
+     p {
+          font-size: $text-small;
+          margin-top: $padding / 2;
+     }
+}
+.tasks-stream {
+     //height: calc(100% - 20px);
+     //max-width: 1338px;
+
+     .bzy-content.contained {
+          //max-width: 980px
+          padding: 10px 20px !important;
+     }
+
+     .bzy-content.contained {
+          max-width: 658px;
+     }
+
+     .task-list {
+          border-radius: 0;
+     }
+
+     .tasks-section {
+          margin-bottom: 30px;
+
+          h2 {
+               font-size: 18px;
+               display: inline-block;
+          }
+
+          .task {
+               .activity-type {
+                    width: 32px;
+                    height: 32px;
+                    transition: .3s;
+                    cursor: pointer;
+
+                    &:hover {
+                         background-color: $color-green;
+                         border-color: $color-green !important;
+                         color: #fff;
+                    }
+
+                    i {
+                         font-size: 14px;
+                         top: 7px;
+                         right: 7px;
+                    }
+               }
+
+               .activity-info {
+                    margin-left: 46px;
+                    white-space: nowrap;
+
+                    p.title {
+                         font-size: 14px;
+                         overflow: hidden;
+                         text-overflow: ellipsis;
+                    }
+               }
+          }
+     }
+}
+
+.task-filters {
+     position: relative;
+     width: 300px;
+
+     .task-filter-type {
+          margin-right: $margin;
+          width: 185px;
+     }
+
+     .tasks-settings {
+          position: absolute;
+          right: 0;
+          top: 0;
+
+          a.add-task {
+               margin-left: $margin;
+          }
+
+          button.btn {
+          }
+
+          //-background-color: transparent
+          .dropdown-menu {
+               left: initial;
+               right: 0;
+               width: 70px;
+          }
+     }
+
+     .btn span.caret {
+          margin-left: 5px;
+     }
+
+     label.check-item {
+          margin: 3px 10px;
+          min-width: 120px;
+          border-radius: 4px;
+          cursor: pointer;
+          display: block;
+          line-height: 1.4;
+          padding: 3px 3px 3px 20px;
+          position: relative;
+          transition: 0.3s all;
+
+          input[type="checkbox"],
+          input[type="radio"] {
+               left: 3px;
+               position: absolute;
+               margin: 0;
+               top: 6px;
+          }
+
+          &:hover {
+               background-color: $background-color;
+          }
+     }
+}
+
+.tasks-content {
+     .task-overdue {
+          .task {
+               .activity-type {
+                    border-color: #e79195;
+
+                    i {
+                         color: #e79195;
+                    }
+               }
+          }
+     }
+
+     .task-today {
+          .task {
+               .activity-type {
+                    border-color: #f5e49f;
+
+                    i {
+                         color: #f5e49f;
+                    }
+               }
+          }
+     }
+
+     .task-complete {
+          .task {
+               .activity-type {
+                    border-color: #76d691;
+                    cursor: default;
+
+                    i {
+                         color: #76d691;
+                    }
+
+                    &:hover {
+                         background-color: #fff !important;
+                         border-color: #76d691 !important;
+
+                         i {
+                              color: #76d691 !important;
+                         }
+                    }
+               }
+          }
+     }
+
+     .task {
+          .activity-type {
+               &:hover {
+                    border-color: #edeff0 !important;
+
+                    i {
+                         color: #fff !important;
+                    }
+               }
+          }
+     }
+}
+
+
+.tasks-stream .tasks-content {
+     width: 300px;
+     max-width: 300px;
+
+     .task-list {
+          background-color: $background-color-2;
+
+          .activity-container {
+               &:hover {
+                    background-color: #fff;
+               }
+          }
+     }
+}
+
+.tasks-content {
+     background-color: $background-color-2;
+     border: 1px solid $border-color;
+     border-radius: $border-radius;
+     //overflow: hidden
+     //padding-right: 2px
+     //min-width: 300px
+     //width: 300px
+     //margin-right: $margin * 2;
+
+     overflow: auto;
+
+     -ms-overflow-style: scrollbar;
+     -webkit-overflow-scrolling: touch;
+     -webkit-transform: translate3d(0, 0, 0);
+
+     &::-webkit-scrollbar {
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          height: 8px;
+          width: 8px;
+     }
+
+     &::-webkit-scrollbar-thumb {
+          border-radius: 8px;
+          border: none;
+          background-color: rgba(0, 0, 0, .2);
+     }
+
+     &::-webkit-scrollbar-track-piece {
+          border-radius: 8px;
+          background: $background-color-3;
+     }
+
+     h2 {
+          padding: $padding;
+     }
+
+     h4 {
+          font-weight: 400;
+          margin-bottom: $margin;
+          font-size: 12px;
+          padding: 4px 6px;
+          border-radius: 4px;
+          display: inline-block;
+
+          &.overdue {
+               background-color: #e15258;
+               color: #fff;
+          }
+
+          &.today {
+               background-color: #f5d44f;
+               color: #fff;
+          }
+
+          &.upcoming {
+          }
+     }
+
+
+     .task-list {
+          background-color: #fff;
+          border-top: 1px solid $border-color;
+          border-bottom: 1px solid $border-color;
+          border-radius: 4px;
+          margin-bottom: $margin * 4;
+          overflow: hidden;
+
+          .activity-container {
+               border-left: 9px solid transparent;
+               border-bottom: 1px solid $border-color;
+               cursor: pointer;
+               margin-bottom: 0;
+
+               &:last-child {
+                    border-bottom: none;
+               }
+
+               &.selected {
+                    background-color: #fff;
+                    border-left-color: $color-green;
+               }
+          }
+
+          .task {
+               padding: 10px 5px;
+               transition: .3s;
+
+               &.active {
+                    background-color: #f5fff8;
+
+                    .activity-type {
+                         background-color: $color-green;
+
+                         i.inactive {
+                              display: none !important;
+                         }
+
+                         i.active {
+                              color: #fff;
+                              display: inline !important;
+                         }
+                    }
+               }
+
+               &.inactive {
+                    .activity-type {
+                         i.inactive {
+                              display: inline !important;
+                         }
+
+                         i.active {
+                              display: none !important;
+                         }
+                    }
+               }
+
+               .activity-type {
+                    transition: .3s;
+                    cursor: pointer;
+
+                    &:hover {
+                         background-color: $color-green;
+                         border-color: $color-green !important;
+                         color: #fff;
+                    }
+
+                    i {
+                         right: 5.2px;
+                    }
+               }
+
+               .activity-info {
+                    margin-left: 36px;
+
+                    .activity-body {
+                         p {
+                              margin-bottom: 0;
+                         }
+                    }
+               }
+
+               .actions {
+                    margin-bottom: 4px;
+
+                    .action {
+                         color: #84929f;
+                         display: inline-block;
+                         font-size: 12px;
+                         margin-right: 10px;
+
+                         a {
+                              color: $color-dark-grey;
+                              outline: none;
+                         }
+                    }
+               }
+
+               .datetime {
+                    font-size: 12px;
+
+                    i {
+                         margin-right: $margin/2;
+                    }
+
+                    span {
+                         text-transform: initial;
+                    }
+               }
+          }
+     }
+}
+
+.task-selected {
+     //position: relative
+     //overflow-y: auto
+
+     .activity-type {
+          &:hover {
+               background-color: #76d691;
+               border-color: #76d691 !important;
+               color: #fff;
+
+               i {
+                    color: #fff !important;
+               }
+          }
+     }
+
+     .activity-type.task-complete, .activity-type.task-complete:hover {
+          border-color: #76d691;
+          background-color: #fff !important;
+          cursor: default;
+
+          i {
+               color: #76d691 !important;
+          }
+     }
+
+     .task-header {
+          display: inline-block;
+          margin-left: 10px;
+     }
+
+     .meta {
+          color: #84929f;
+          font-size: $text-small;
+          line-height: 18px;
+
+          li {
+               display: inline-block;
+               margin-right: $margin * 1.5;
+          }
+
+          strong {
+               font-weight: 400;
+          }
+
+          i.fa-circle {
+               font-size: 12px;
+               margin-right: 3px;
+          }
+
+          a {
+               color: $color-blue;
+          }
+     }
+
+     .details-container {
+          margin-top: 15px;
+          border-top: 1px solid #eee;
+          padding-top: 15px;
+
+          h3 {
+               font-weight: 400;
+               margin-bottom: $margin / 2;
+          }
+     }
+
+     .task-header-actions {
+          float: right;
+
+          .actions {
+               text-align: right;
+               margin-bottom: $margin / 2;
+          }
+
+          .action {
+               display: inline-block;
+               margin: 3px;
+          }
+
+          .dropdown-menu {
+               left: initial;
+               right: 0;
+               width: 70px;
+          }
+     }
+
+     .activity-type {
+          background-color: #fff;
+          position: relative;
+          display: inline-block;
+          width: 48px;
+          height: 48px;
+          display: inline-block;
+          vertical-align: top;
+          border: 3px solid #eee;
+          border-radius: 50%;
+          margin-top: 3px;
+
+          i {
+               position: absolute;
+               right: 11px;
+               top: 12px;
+               font-size: 20px;
+          }
+     }
+
+     h2 {
+          margin-bottom: $margin;
+     }
+
+     .task-position {
+          margin-top: 15px;
+          padding-top: 15px;
+          border-top: 1px solid #eee;
+     }
+}
+
+.selected-user {
+     display: flex;
+     position: relative;
+     flex-direction: row;
+     align-items: center;
+     width: 100%;
+     background: $background-color-2;
+     border: 1px solid $border-color;
+     padding: 10px;
+
+     &:first-child {
+          border-top-left-radius: 4px;
+          border-top-right-radius: 4px;
+     }
+
+     &:last-child {
+          border-bottom-right-radius: 4px;
+          border-bottom-left-radius: 4px;
+     }
+
+     .avatar {
+          margin-right: 10px;
+     }
+
+     .fa-times {
+          position: absolute;
+          right: 10px;
+          font-size: $text-smaller;
+          cursor: pointer;
+     }
+}
